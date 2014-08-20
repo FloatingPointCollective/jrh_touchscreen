@@ -1,21 +1,24 @@
 <!doctype html>
-<html ng-app>
+<html ng-app ng-controller="uiCtrl" class="showCursor-{{hideMouse}}">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     
     <title></title>
 
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script src="js/angular.min.js"></script>
   </head>
 
-  <body>
+  <body ng-app="jrh"  ng-keyup="onKeyUp($event)">
 
     <div id="wrapper">
     <header>
       <h1>JAMES R. HERMAN MEMORIAL</h1>
       <h2>TIDES OF CHANGE</h2>
     </header>
+
+    <div id="homeButton">
+      Watch Jimmy's Story and Speeches
+    </div>
 
     <footer>
       <div class="container">
@@ -27,6 +30,10 @@
     </footer>
 
   </div>
+
+
+    <script src="js/angular1.2.js"></script>
+    <script src="js/controller.js"></script>
 
   </body>
 
