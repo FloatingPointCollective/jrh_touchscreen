@@ -42,7 +42,7 @@ body{
   	font-family: Futura;
   	height: 100%;
 
-  	
+  	overflow: hidden;
 }
 
 #wrapper {
@@ -65,10 +65,31 @@ header{
 	}
 }
 
-.homeButton{
+.sectionButton{
 	background: url(../img/home_1.jpg);
 	width:486px;
 	height: 686px;
+	position: relative;
+	margin: 20px auto;
+
+	span{
+		position: absolute;
+   		bottom: 0;
+   		color: white;
+   		font-size: 36px;
+   		padding: 20px 30px;
+   		text-transform: uppercase;
+	}
+
+	&:before {
+	    content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: linear-gradient(to bottom right,rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+	}
 }
 
 footer{
