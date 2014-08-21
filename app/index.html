@@ -8,29 +8,35 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
 
-  <body ng-app="jrh"  ng-keyup="onKeyUp($event)">
+  <body ng-app="jrh" ng-keyup="onKeyUp($event)">
 
-    <div id="wrapper">
-    <header>
-      <h1>JAMES R. HERMAN MEMORIAL</h1>
-      <h2>TIDES OF CHANGE</h2>
-    </header>
+    <video id="videoPlayer" width="100%" height="100%" ng-show="videoPlaying" controls poster="">
 
-    <div class="sectionButton">
-      <span>Watch Jimmy's Story</span>
-    </div>
+      <source ng-src="{{'video/jimmy_story.'+type}}" type="video/{{type}}" ng-repeat="type in ['mp4', 'webm', 'ogg']">
+     
+      Your browser does not support the video tag.
+    </video>
 
-    <footer>
-      <div class="container">
-        <div class="section">About the ILWU</div>
-        <div class="section">SF Port Commision</div>
-        <div class="section">Credits</div>
-        <span class="stretch"></span>
+    <div id="wrapper" ng-hide="videoPlaying" >
+      <header>
+        <h1>JAMES R. HERMAN MEMORIAL</h1>
+        <h2>TIDES OF CHANGE</h2>
+      </header>
+
+      <div class="sectionButton" ng-click="playVideo()">
+        <span>Watch<br>Jimmy's Story</span>
       </div>
-    </footer>
 
-  </div>
+      <footer>
+        <div class="container" ng-hide="footerMenuIsHidden">
+          <div ng-repeat="fi in footerItems" ng-click="selectFooterMenu($index)">{{fi.label}}</div>
+        </div>
+        
+        <h1 ng-show="footerMenuIsHidden" ng-click="goHome()">James R. Herman Memorial</h1>
+        <div class="homeBtn" ng-show="footerMenuIsHidden" ng-click="goHome()">HOME</div>
 
+      </footer>
+   </div>
 
     <script src="js/angular1.2.js"></script>
     <script src="js/controller.js"></script>

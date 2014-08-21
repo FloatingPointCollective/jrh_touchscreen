@@ -1,5 +1,4 @@
 html{
-	
 }
 
 .showCursor-false{
@@ -29,8 +28,6 @@ html{
 @font-face {
     font-family: Futura LT Light, "Trebuchet MS", Arial, sans-serif;
 }
-
-
 
 body{
 	background: url(../img/bg_water.jpg) no-repeat center center fixed;
@@ -71,12 +68,13 @@ header{
 	height: 686px;
 	position: relative;
 	margin: 20px auto;
+	box-shadow: 0px 0px 50px #888888;
 
 	span{
 		position: absolute;
    		bottom: 0;
    		color: white;
-   		font-size: 36px;
+   		font-size: 39px;
    		padding: 20px 30px;
    		text-transform: uppercase;
 	}
@@ -88,7 +86,7 @@ header{
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-image: linear-gradient(to bottom right,rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+		background-image: linear-gradient(to bottom left,rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
 	}
 }
 
@@ -98,7 +96,7 @@ footer{
 	position:absolute;
 	bottom:0;
 	left:0;
-	background: rgba(0,0,0,.8);
+	background: rgba(0,0,0,.85);
 	color: white;
 	text-align: justify;
     -ms-text-justify: distribute-all-lines;
@@ -109,18 +107,33 @@ footer{
     	text-align: center;
     	padding-top: 25px;
 		div{
-			margin: 20px;
+			margin: 17px 70px;
 			display: inline-block;
 			*display: inline;
 			text-align: center;
+			font-size: 24px;
+			opacity: .8;
 		}
 
-		.stretch {
-		    width: 100%;
-		    display: inline-block;
-		    font-size: 0;
-		    line-height: 0
-		}
+	}
+
+	h1{
+		font-family: Futura LT Pro;
+		text-transform: uppercase;
+		padding: 35px;
+		opacity: .8;
+		display: inline-block;
+		float: left;
+	}
+
+	.homeBtn{
+		float: right;
+		height: 100%;
+		border-left: 1px solid rgba(255,255,255,.5);
+		font-size: 28px;
+		opacity: .5;
+		line-height: 114px;
+		padding: 0px 45px;
 	}
 }
 
