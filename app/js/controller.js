@@ -1,7 +1,7 @@
 
 function uiCtrl($scope) {
 
-  $scope.hideMouse = true;
+  $scope.showMouse = false;
   $scope.videoPlaying = false;
   $scope.activeVideoName = "";
   $scope.footerMenuIsHidden = false;
@@ -14,10 +14,10 @@ function uiCtrl($scope) {
 
     $scope.onKeyUp = function ($event) {
         if($event.keyCode == 32){
-          $scope.hideMouse = ! $scope.hideMouse;
+          $scope.showMouse = ! $scope.showMouse;
         }
-        console.log("keypressed: " + $event.keyCode);
-        console.log("$scope.hideMouse: "+$scope.hideMouse);
+        //console.log("keypressed: " + $event.keyCode);
+        //console.log("$scope.hideMouse: "+$scope.hideMouse);
     };
 
     $scope.playVideo = function(videoName){
