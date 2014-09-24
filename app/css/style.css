@@ -37,11 +37,12 @@ header h1 {
   font-size: 61px;
   margin-bottom: 0; }
 header h2 {
-  font-family: Futura LT Light;
+  font-family: Futura;
   font-size: 77px;
   text-align: right;
   margin-right: 210px;
-  margin-top: 0; }
+  margin-top: 0;
+  font-weight: lighter; }
 
 .sectionButton {
   background: url(../img/home_1.jpg);
@@ -54,7 +55,7 @@ header h2 {
     position: absolute;
     bottom: 0;
     color: white;
-    font-size: 39px;
+    font-size: 38px;
     padding: 20px 30px;
     text-transform: uppercase; }
   .sectionButton:before {

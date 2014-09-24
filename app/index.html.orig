@@ -22,15 +22,21 @@
           <h2>TIDES OF CHANGE</h2>
         </header>
 
-      <div class="sectionButton" ng-click="playVideo()">
-        <span>Touch Here to Watch Jimmy's Story</span>
+        <div class="sectionButton" ng-click="playVideo()">
+          <span>Watch<br>Jimmy's Story</span>
+        </div>
       </div>
 
+<<<<<<< HEAD
       <div id="aboutPages">
         <h1></h1>
+=======
+      <div class="sectionButton" ng-click="playVideo()">
+        <span>Touch Here to Watch Jimmy's Story</span>
+>>>>>>> FETCH_HEAD
       </div>
 
-      <footer>
+      <footer ng-hide="true">
         <div class="container" ng-hide="footerMenuIsHidden">
           <div ng-repeat="fi in footerItems" ng-click="selectFooterMenu($index)">{{fi.label}}</div>
         </div>
