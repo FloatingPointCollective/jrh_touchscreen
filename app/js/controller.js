@@ -6,11 +6,12 @@ function uiCtrl($scope) {
   $scope.activeVideoName = "";
   $scope.footerMenuIsHidden = false;
   $scope.showHomeScreen = true;
+  $scope.activeAboutPage = null;
 
-  $scope.footerItems = [
-    {label:'About the ILWU', text:''},
-    {label:'SF Port Commission', text:''},
-    {label:'Credits', text:''},
+  $scope.aboutPages = [
+    {label:'About the ILWU', text:'Text about the ILWU'},
+    {label:'SF Port Commission', text:'Text about the Port'},
+    {label:'Credits', text:'Credits text lorem ipsum.'},
     ];
 
     $scope.onKeyUp = function ($event) {
@@ -44,6 +45,7 @@ function uiCtrl($scope) {
     $scope.selectFooterMenu = function(index){
       $scope.hideFooterMenu();
       $scope.showHomeScreen = false;
+      $scope.activeAboutPage = index;
     }
 
     $scope.hideFooterMenu = function(){
@@ -64,6 +66,10 @@ function uiCtrl($scope) {
       myVideo.currentTime = 0;
       $scope.videoPlaying = false;
       $scope.$apply();
+    }
+
+    $scope.loadAboutPage = function(pageID){
+      $scope.activeAboutPage = pageID;
     }
 
 }
