@@ -31,6 +31,8 @@ function uiCtrl($scope) {
 
       myVideo.addEventListener('ended',$scope.onVideoDone,false);
 
+      $scope.hideFooterMenu();
+
     }
 
     $scope.onVideoDone = function(e){
@@ -55,6 +57,13 @@ function uiCtrl($scope) {
     $scope.goHome = function(){
       $scope.showFooterMenu();
       $scope.showHomeScreen = true;
+
+      //stop video
+      var myVideo = document.getElementById("videoPlayer"); 
+      myVideo.pause();
+      myVideo.currentTime = 0;
+      $scope.videoPlaying = false;
+      $scope.$apply();
     }
 
 }

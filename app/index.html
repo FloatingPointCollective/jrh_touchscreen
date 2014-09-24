@@ -10,8 +10,7 @@
 
   <body ng-app="jrh" ng-keyup="onKeyUp($event)">
 
-    <video id="videoPlayer" width="100%" height="100%" ng-show="videoPlaying" controls poster="">
-
+    <video id="videoPlayer" width="100%" height="100%" ng-show="videoPlaying" poster="">
       <source ng-src="{{'video/jimmy_story.'+type}}" type="video/{{type}}" ng-repeat="type in ['mp4', 'webm', 'ogg']">
     </video>
 
@@ -22,24 +21,24 @@
           <h2>TIDES OF CHANGE</h2>
         </header>
 
-      <div class="sectionButton" ng-click="playVideo()">
-        <span>Touch Here to Watch Jimmy's Story</span>
+        <div class="sectionButton" ng-click="playVideo()">
+          <span>Touch Here to Watch Jimmy's Story</span>
+        </div>
       </div>
 
-      <div id="aboutPages">
-        <h1></h1>
+        <div id="aboutPages">
+          <h1></h1>
+        </div>
       </div>
 
-      <footer>
+    <footer>
         <div class="container" ng-hide="footerMenuIsHidden">
           <div ng-repeat="fi in footerItems" ng-click="selectFooterMenu($index)">{{fi.label}}</div>
         </div>
         
         <h1 ng-show="footerMenuIsHidden" ng-click="goHome()">James R. Herman Memorial</h1>
         <div class="homeBtn" ng-show="footerMenuIsHidden" ng-click="goHome()">HOME</div>
-
-      </footer>
-   </div>
+    </footer>
 
     <script src="js/angular1.2.js"></script>
     <script src="js/controller.js"></script>
