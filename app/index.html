@@ -16,13 +16,19 @@
     </video>
 
     <div id="wrapper" ng-hide="videoPlaying" >
-      <header>
-        <h1>JAMES R. HERMAN MEMORIAL</h1>
-        <h2>TIDES OF CHANGE</h2>
-      </header>
+      <div id="homeScreen" ng-show="showHomeScreen">
+        <header>
+          <h1>JAMES R. HERMAN MEMORIAL</h1>
+          <h2>TIDES OF CHANGE</h2>
+        </header>
 
-      <div class="sectionButton" ng-click="playVideo()">
-        <span>Watch<br>Jimmy's Story</span>
+        <div class="sectionButton" ng-click="playVideo()">
+          <span>Watch<br>Jimmy's Story</span>
+        </div>
+      </div>
+
+      <div id="aboutPages">
+        <h1></h1>
       </div>
 
       <footer>

@@ -5,6 +5,7 @@ function uiCtrl($scope) {
   $scope.videoPlaying = false;
   $scope.activeVideoName = "";
   $scope.footerMenuIsHidden = false;
+  $scope.showHomeScreen = true;
 
   $scope.footerItems = [
     {label:'About the ILWU', text:''},
@@ -40,6 +41,7 @@ function uiCtrl($scope) {
 
     $scope.selectFooterMenu = function(index){
       $scope.hideFooterMenu();
+      $scope.showHomeScreen = false;
     }
 
     $scope.hideFooterMenu = function(){
@@ -52,6 +54,7 @@ function uiCtrl($scope) {
 
     $scope.goHome = function(){
       $scope.showFooterMenu();
+      $scope.showHomeScreen = true;
     }
 
 }
