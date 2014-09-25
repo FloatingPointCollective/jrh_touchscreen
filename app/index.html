@@ -11,30 +11,47 @@
   <body ng-app="jrh" ng-keyup="onKeyUp($event)">
 
     <video id="videoPlayer" width="100%" height="100%" ng-show="videoPlaying" poster="">
-
       <source ng-src="{{'video/jimmy_story.'+type}}" type="video/{{type}}" ng-repeat="type in ['mp4', 'webm', 'ogg']">
     </video>
 
     <div id="wrapper" ng-hide="videoPlaying" >
-      <header>
-        <h1>JAMES R. HERMAN MEMORIAL</h1>
-        <h2>TIDES OF CHANGE</h2>
-      </header>
 
-      <div class="sectionButton" ng-click="playVideo()">
-        <span>Touch Here to Watch Jimmy's Story</span>
+      <div id="homeScreen" ng-show="showHomeScreen">
+        <header>
+          <h1>JAMES R. HERMAN MEMORIAL</h1>
+          <h2>TIDES OF CHANGE</h2>
+          <div class="message">
+            <h3 ng-hide="debug">NO PHOTOS PLEASE</h3>
+            <h3 ng-hide="debug">Installation in progress</h3>
+          </div>
+        </header>
+        <div class="sectionButton" ng-click="playVideo()" ng-show="debug">
+          <span>Touch Here to Watch Jimmy's Story</span>
+        </div>
       </div>
 
-      <footer ng-hide="true">
+      <!-- ABOUT PAGES -->
+      <div id="aboutPages" ng-hide="activeAboutPage == null">
+
+        <div class="aboutPage" ng-repeat="aboutPage in aboutPages" ng-show="activeAboutPage == $index ">
+          <h1>{{aboutPage.label}}</h1>
+          <div class="copy">
+            {{aboutPage.text}}
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <footer>
         <div class="container" ng-hide="footerMenuIsHidden">
-          <div ng-repeat="fi in footerItems" ng-click="selectFooterMenu($index)">{{fi.label}}</div>
+          <div ng-repeat="fi in aboutPages" ng-click="selectFooterMenu($index)" ng-show="debug">{{fi.label}}</div>
         </div>
         
         <h1 ng-show="footerMenuIsHidden" ng-click="goHome()">James R. Herman Memorial</h1>
         <div class="homeBtn" ng-show="footerMenuIsHidden" ng-click="goHome()">HOME</div>
-
-      </footer>
-   </div>
+    </footer>
 
     <script src="js/angular1.2.js"></script>
     <script src="js/controller.js"></script>
