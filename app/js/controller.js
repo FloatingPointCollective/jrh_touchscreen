@@ -60,6 +60,7 @@ function uiCtrl($scope) {
     $scope.goHome = function(){
       $scope.showFooterMenu();
       $scope.showHomeScreen = true;
+      $scope.activeAboutPage = null;
 
       //stop video
       var myVideo = document.getElementById("videoPlayer"); 

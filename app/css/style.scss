@@ -71,7 +71,12 @@ header{
 		font-weight: normal;
 	}
 	.message{
+		background-color: rgba(0,0,0,.8);
 		margin-top: 200px;
+		width: 100%;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		color: rgba(255,255,255,.9);
 	}
 }
 
