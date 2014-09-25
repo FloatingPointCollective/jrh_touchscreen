@@ -10,7 +10,7 @@
 
   <body ng-app="jrh" ng-keyup="onKeyUp($event)">
 
-    <video id="videoPlayer" width="100%" height="100%" ng-show="videoPlaying" controls poster="">
+    <video id="videoPlayer" width="100%" height="100%" ng-show="videoPlaying" poster="">
 
       <source ng-src="{{'video/jimmy_story.'+type}}" type="video/{{type}}" ng-repeat="type in ['mp4', 'webm', 'ogg']">
     </video>
