@@ -49,6 +49,12 @@ header h2 {
   margin-right: 210px;
   margin-top: 0;
   font-weight: lighter; }
+header h3 {
+  text-align: center;
+  font-size: 100px;
+  font-weight: normal; }
+header .message {
+  margin-top: 200px; }
 
 .sectionButton {
   background: url(../img/home_1.jpg);
@@ -83,6 +89,8 @@ video {
   width: 100%;
   height: 100%;
   color: white; }
+  #aboutPages .aboutPage {
+    padding: 50px; }
 
 footer {
   z-index: 1;

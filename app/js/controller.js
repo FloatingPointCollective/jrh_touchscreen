@@ -7,19 +7,20 @@ function uiCtrl($scope) {
   $scope.footerMenuIsHidden = false;
   $scope.showHomeScreen = true;
   $scope.activeAboutPage = null;
+  $scope.debug = false;
 
   $scope.aboutPages = [
-    {label:'About the ILWU', text:'Text about the ILWU'},
-    {label:'SF Port Commission', text:'Text about the Port'},
-    {label:'Credits', text:'Credits text lorem ipsum.'},
+    {label:'About the ILWU', id:'ilwu', text:'Text about the ILWU'},
+    {label:'SF Port Commission', id:'port', text:'Text about the Port'},
+    {label:'Credits', id:'credits', text:'Credits text lorem ipsum.'},
     ];
 
     $scope.onKeyUp = function ($event) {
+      //hide/show cursor on spacebar
         if($event.keyCode == 32){
           $scope.showMouse = ! $scope.showMouse;
+          $scope.debug = !$scope.debug;
         }
-        //console.log("keypressed: " + $event.keyCode);
-        //console.log("$scope.hideMouse: "+$scope.hideMouse);
     };
 
     $scope.playVideo = function(videoName){

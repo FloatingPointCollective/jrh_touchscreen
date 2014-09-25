@@ -65,6 +65,14 @@ header{
 		margin-top: 0;
 		font-weight: lighter;
 	}
+	h3{
+		text-align: center;
+		font-size: 100px;
+		font-weight: normal;
+	}
+	.message{
+		margin-top: 200px;
+	}
 }
 
 .sectionButton{
@@ -106,6 +114,10 @@ video{
 	width: 100%;
 	height: 100%;
 	color: white;
+
+	.aboutPage{
+		padding: 50px;
+	}
 
 	.copy{
 
