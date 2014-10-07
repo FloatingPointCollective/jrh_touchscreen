@@ -35,9 +35,9 @@
 
         <div class="aboutPage" ng-repeat="aboutPage in aboutPages" ng-show="activeAboutPage == $index ">
           <h1>{{aboutPage.label}}</h1>
-          <div class="copy">
-            {{aboutPage.text}}
-          </div>
+
+          <div ng-include="'partials/about_pages/'+aboutPage.id+'.html'"/>
+
         </div>
 
       </div>
@@ -51,6 +51,7 @@
         
         <h1 ng-show="footerMenuIsHidden" ng-click="goHome()">James R. Herman Memorial</h1>
         <div class="homeBtn" ng-show="footerMenuIsHidden" ng-click="goHome()">HOME</div>
+
     </footer>
 
     <script src="js/angular1.2.js"></script>

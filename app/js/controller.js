@@ -10,9 +10,9 @@ function uiCtrl($scope) {
   $scope.debug = false;
 
   $scope.aboutPages = [
-    {label:'About the ILWU', id:'ilwu', text:'Text about the ILWU'},
-    {label:'SF Port Commission', id:'port', text:'Text about the Port'},
-    {label:'Credits', id:'credits', text:'Credits text lorem ipsum.'},
+    {label:'About the ILWU', id:'ilwu'},
+    {label:'SF Port Commission', id:'port'},
+    {label:'Credits', id:'credits'},
     ];
 
     $scope.onKeyUp = function ($event) {
