@@ -1,0 +1,56 @@
+<!doctype html>
+<html class="showCursor-{{showMouse}}">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+
+  <body>
+
+    <div id="wdysf" ng-show="showHomeScreen">
+      <header>
+        <h2>What do <strong>you</strong> stand for?</h2>
+        <div class="description">         
+          <p>James R. Herman spent his life fighting for many social justice causes. <br>Select the issue that is most relevant to your life, and see the common ground that you and Herman share.</p>
+        </div> 
+      </header>
+        <div id="wdysf_main">
+          <div id="wdysfButton" ng-repeat"issue in issues">
+            <span>{{issue.title}}</span>
+          </div>
+          <div id="wdysfButton2">
+            <span>Rehabilitation</span>
+          </div>
+           <div id="wdysfButton3">
+            <span>Economic Justice</span>
+          </div>
+           <div id="wdysfButton4">
+            <span>Civil Rights</span>
+          </div>
+           <div id="wdysfButton5">
+            <span>Affordable Housing</span>
+          </div>
+           <div id="wdysfButton6">
+            <span>International Solidarity</span>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <footer>
+        <h1 >James R. Herman Memorial</h1>
+        <div class="homeBtn">HOME</div>
+    </footer>
+
+    <script src="js/angular1.2.js"></script>
+    <script src="js/controller.js"></script>
+
+  </body>
+
+</html>

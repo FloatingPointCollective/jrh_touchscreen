@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="showCursor-{{showMouse}}">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+
+  <body>
+
+<!--     <video id="videoPlayer" width="100%" height="100%" show="videoPlaying" poster="">
+      <source src="{{'video/jimmy_story.'+type}}" type="video/{{type}}" repeat="type in ['mp4', 'webm', 'ogg']">
+    </video> -->
+
+    <div id="wrapper" ng-hide="videoPlaying" >
+
+      <div id="homeScreen" ng-show="showHomeScreen">
+        <header>
+          <h1>JAMES R. HERMAN MEMORIAL</h1>
+          <h2>TIDES OF CHANGE</h2>
+<!--           <div class="message" >
+            <h3>NO PHOTOS PLEASE</h3>
+            <h3>Installation in progress</h3>
+          </div> -->
+        </header>
+        <div id="main">
+          <div class="sectionButton">
+            <span>Touch Here to Watch Jimmy's Story</span>
+          </div>
+          <div id="sectionButton2">
+            <span>What do you stand for?</span>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <footer>
+        <div class="container">
+          <div >About the ILWU</div>
+          <div >SF Port Commission</div>
+          <div >Credits</div>
+        </div>
+        
+        <h1 >James R. Herman Memorial</h1>
+        <div class="homeBtn">HOME</div>
+    </footer>
+
+    <script src="js/angular1.2.js"></script>
+    <script src="js/controller.js"></script>
+
+  </body>
+
+</html>

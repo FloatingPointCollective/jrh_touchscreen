@@ -78,45 +78,64 @@ header{
 		padding-bottom: 50px;
 		color: rgba(255,255,255,.9);
 	}
+	.description {
+		width: 695px;
+		height: 75px;
+		float: right;
+		padding: 20px 80px 20px 20px;
+		background-color: rgba(255,255,255,0.6);
+		font-size: 1.3em;
+	}
 }
 
+#main {
 
-#topLevelButtons{
-	margin-left: auto;
-	margin-right: auto;
+	width: 100%;
+	height: 995px;
 	position: relative;
-	text-align: center;
-}
+	padding: 0px 0px 100px 0px;
 
-.sectionButton{
+	#topLevelButtons{
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.sectionButton {
+	background: url(../img/home_1.jpg);
 	width:486px;
 	height: 686px;
 	position: relative;
-	margin: 20px auto;
+	margin: 50px 7% 0 15%;
 	box-shadow: 0px 0px 50px #888888;
-	display: inline-block;
+	float:left;
+		span{
+			position: absolute;
+	   		bottom: 0;
+	   		color: white;
+	   		font-size: 38px;
+	   		padding: 20px 30px;
+	   		text-transform: uppercase;
+		}
 
-	span{
-		position: absolute;
-		width:100%;
-   		bottom: 0;
-   		color: white;
-   		font-size: 38px;
-   		padding: 20px 30px;
-   		text-transform: uppercase;
-   		text-align: left;
+		&:before {
+		    content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-image: linear-gradient(to bottom left,rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+		}
 	}
 
-	&:before {
-	    content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background-image: linear-gradient(to bottom left,rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+	#sectionButton2 {
+		@extend .sectionButton;
+		background: url(../img/home_2.jpg);
+		float: right;
+		margin: 50px 16% 0px 0%;
 	}
 }
+
 
 video{
 	z-index: -1;
@@ -132,10 +151,26 @@ video{
 
 	.aboutPage{
 		padding: 50px;
-	}
 
-	.copy{
+		h1{
+			text-transform: uppercase;
+			font-size: 3em;
+		}
 
+		p {
+			padding: 10px 0px;
+		}
+
+		.copy{
+			font-size: 1.5em;
+			width: 960px;
+		}
+
+		.logo {
+			background: url(../img/ilwu_logo.png) no-repeat;
+			width: 362px;
+			height: 362px;
+		}
 	}
 }
 
@@ -151,7 +186,7 @@ video{
 		position: relative;
 		padding-top: 140px;
 
-		#wdysfButton1 {
+		#wdysfButton {
 			background: url(../img/wdysf_laborrights_alt.jpg);
 			width:580px;
 			height: 255px;
@@ -181,32 +216,32 @@ video{
 		}
 
 		#wdysfButton2 {
-			@extend #wdysfButton1;
+			@extend #wdysfButton;
 			background: url(../img/wdysf_rehabilitation.jpg);
 			width: 650px;
 		}
 
 		#wdysfButton3 {
-			@extend #wdysfButton1;
+			@extend #wdysfButton;
 			background: url(../img/wdysf_econjustice.jpg);
 			width: 680px;
 			margin: 0px 0px 5px 0px;
 		}
 
 		#wdysfButton4 {
-			@extend #wdysfButton1;
+			@extend #wdysfButton;
 			background: url(../img/wdysf_civilrights.jpg);
 			width: 630px;
 		}
 
 		#wdysfButton5 {
-			@extend #wdysfButton1;
+			@extend #wdysfButton;
 			background: url(../img/wdysf_affordablehousing.jpg);
 			width: 640px;
 		}
 
 		#wdysfButton6 {
-			@extend #wdysfButton1;
+			@extend #wdysfButton;
 			background: url(../img/wdysf_intlsolidarity.jpg);
 			width: 640px;
 			margin: 0px 0px 5px 0px;
@@ -263,7 +298,7 @@ video{
 	.wdysf_synopsis {
 		background-color: rgba(0,0,0,.8);
 		padding-top: 0px;
-		height: 1080px;
+		height: 100%;
 		margin: 0 auto;
 		.visuals {
 			width: 1300px;
@@ -331,6 +366,8 @@ video{
 	}
 }
 
+
+
 footer{
 	z-index: 1;
 	width:100%;
@@ -359,10 +396,10 @@ footer{
 	}
 
 	h1{
-		font-family: Futura LT Pro;
+		/*font-family: Futura LT Pro;*/
 		text-transform: uppercase;
 		padding: 35px;
-		opacity: .8;
+		opacity: .5;
 		display: inline-block;
 		float: left;
 	}

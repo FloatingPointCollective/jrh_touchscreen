@@ -1,52 +1,57 @@
 <!doctype html>
-<html ng-app ng-controller="uiCtrl" class="showCursor-{{showMouse}}">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     
-    <title></title>
+        <title></title>
 
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-  </head>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
 
-  <body ng-app="jrh" ng-keyup="onKeyUp($event)">
+    <body ng-app="jrhApp" ng-keyup="onKeyUp($event)" ng-controller="uiCtrl" class="showCursor-{{showMouse}}">
 
-    <video id="videoPlayer" width="100%" height="100%" ng-show="videoPlaying" poster="">
-      <source ng-src="{{'video/jimmy_story.'+type}}" type="video/{{type}}" ng-repeat="type in ['mp4', 'webm', 'ogg']">
-    </video>
+      <video id="videoPlayer" width="100%" height="100%" ng-show="videoPlaying" poster="" >
+        <source ng-src="video/jimmy_story.mp4" type="video/mp4"/>
+      </video> 
 
-    <div id="wrapper" ng-hide="videoPlaying" >
+        <div id="wrapper">
 
-      <div id="homeScreen" ng-show="showHomeScreen">
-        <header>
-          <h1>JAMES R. HERMAN MEMORIAL</h1>
-          <h2>TIDES OF CHANGE</h2>
-          <div class="message" ng-hide="debug">
-            <h3>NO PHOTOS PLEASE</h3>
-            <h3>Installation in progress</h3>
-          </div>
-        </header>
-        <div class="sectionButton" ng-click="playVideo()" ng-show="debug">
-          <span>Touch Here to Watch Jimmy's Story</span>
-        </div>
-      </div>
+            <div ui-view></div>
+
+<!--       <div id="homeScreen" ng-show="showHomeScreen">
+                <header>
+                    <h1>JAMES R. HERMAN MEMORIAL</h1>
+                    <h2>TIDES OF CHANGE</h2>
+                    <div class="message" ng-hide="debug">
+                        <h3>NO PHOTOS PLEASE</h3>
+                        <h3>Installation in progress</h3>
+                    </div>
+                </header>
+                <div id="topLevelButtons">
+                    <div style="background:url(img/home_{{$index+1}}.jpg);" class="sectionButton" ng-click="onTopLevelClick($index)" ng-show="debug" ng-repeat="page in topLevelPages">
+                        <span >{{page.title}}</span>
+                    </div>
+                </div>
+            </div> -->
 
       <!-- ABOUT PAGES -->
-      <div id="aboutPages" ng-hide="activeAboutPage == null">
-
+<!--       <div id="aboutPages" ng-hide="activeAboutPage == null">
         <div class="aboutPage" ng-repeat="aboutPage in aboutPages" ng-show="activeAboutPage == $index ">
           <h1>{{aboutPage.label}}</h1>
-
           <div ng-include="'partials/about_pages/'+aboutPage.id+'.html'"/>
-
         </div>
+      </div> -->
 
-      </div>
-
-    </div>
+       <!-- ISSUES PAGES -->
+<!--       <div id="wdysf" ng-show"showIssues"> 
+          <div id="wdysf_main">
+            <div ng-include="partials/issues_pages/issues.html"/>
+      </div> -->
+    </div> 
 
     <footer>
         <div class="container" ng-hide="footerMenuIsHidden">
-          <div ng-repeat="fi in aboutPages" ng-click="selectFooterMenu($index)" ng-show="debug">{{fi.label}}</div>
+          <div ng-repeat="about in aboutPages" ui-sref="about({aboutId:about.id})">{{about.label}}</div>
         </div>
         
         <h1 ng-show="footerMenuIsHidden" ng-click="goHome()">James R. Herman Memorial</h1>
@@ -55,7 +60,11 @@
     </footer>
 
     <script src="js/angular1.2.js"></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/controller.js"></script>
+    <script src="js/issuesController.js"></script>
+    <script src="js/videoController.js"></script>
 
   </body>
 

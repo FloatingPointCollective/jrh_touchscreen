@@ -60,37 +60,49 @@ header .message {
   padding-top: 50px;
   padding-bottom: 50px;
   color: rgba(255, 255, 255, 0.9); }
+header .description {
+  width: 695px;
+  height: 75px;
+  float: right;
+  padding: 20px 80px 20px 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 1.3em; }
 
-#topLevelButtons {
-  margin-left: auto;
-  margin-right: auto;
+#main {
+  width: 100%;
+  height: 995px;
   position: relative;
-  text-align: center; }
-
-.sectionButton {
-  width: 486px;
-  height: 686px;
-  position: relative;
-  margin: 20px auto;
-  box-shadow: 0px 0px 50px #888888;
-  display: inline-block; }
-  .sectionButton span {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    color: white;
-    font-size: 38px;
-    padding: 20px 30px;
-    text-transform: uppercase;
-    text-align: left; }
-  .sectionButton:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(to bottom left, transparent 0%, black 100%); }
+  padding: 0px 0px 100px 0px; }
+  #main #topLevelButtons {
+    margin-left: auto;
+    margin-right: auto; }
+  #main .sectionButton, #main #sectionButton2 {
+    background: url(../img/home_1.jpg);
+    width: 486px;
+    height: 686px;
+    position: relative;
+    margin: 50px 7% 0 15%;
+    box-shadow: 0px 0px 50px #888888;
+    float: left; }
+    #main .sectionButton span, #main #sectionButton2 span {
+      position: absolute;
+      bottom: 0;
+      color: white;
+      font-size: 38px;
+      padding: 20px 30px;
+      text-transform: uppercase; }
+    #main .sectionButton:before, #main #sectionButton2:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to bottom left, transparent 0%, black 100%); }
+  #main #sectionButton2 {
+    background: url(../img/home_2.jpg);
+    float: right;
+    margin: 50px 16% 0px 0%; }
 
 video {
   z-index: -1;
@@ -104,6 +116,18 @@ video {
   color: white; }
   #aboutPages .aboutPage {
     padding: 50px; }
+    #aboutPages .aboutPage h1 {
+      text-transform: uppercase;
+      font-size: 3em; }
+    #aboutPages .aboutPage p {
+      padding: 10px 0px; }
+    #aboutPages .aboutPage .copy {
+      font-size: 1.5em;
+      width: 960px; }
+    #aboutPages .aboutPage .logo {
+      background: url(../img/ilwu_logo.png) no-repeat;
+      width: 362px;
+      height: 362px; }
 
 #wdysf {
   width: 100%;
@@ -115,7 +139,7 @@ video {
     height: 995px;
     position: relative;
     padding-top: 140px; }
-    #wdysf #wdysf_main #wdysfButton1, #wdysf #wdysf_main #wdysfButton2, #wdysf #wdysf_main #wdysfButton3, #wdysf #wdysf_main #wdysfButton4, #wdysf #wdysf_main #wdysfButton5, #wdysf #wdysf_main #wdysfButton6 {
+    #wdysf #wdysf_main #wdysfButton, #wdysf #wdysf_main #wdysfButton2, #wdysf #wdysf_main #wdysfButton3, #wdysf #wdysf_main #wdysfButton4, #wdysf #wdysf_main #wdysfButton5, #wdysf #wdysf_main #wdysfButton6 {
       background: url(../img/wdysf_laborrights_alt.jpg);
       width: 580px;
       height: 255px;
@@ -123,7 +147,7 @@ video {
       margin: 0px 5px 5px 0px;
       box-shadow: 0px 0px 50px #888888;
       float: left; }
-      #wdysf #wdysf_main #wdysfButton1 span, #wdysf #wdysf_main #wdysfButton2 span, #wdysf #wdysf_main #wdysfButton3 span, #wdysf #wdysf_main #wdysfButton4 span, #wdysf #wdysf_main #wdysfButton5 span, #wdysf #wdysf_main #wdysfButton6 span {
+      #wdysf #wdysf_main #wdysfButton span, #wdysf #wdysf_main #wdysfButton2 span, #wdysf #wdysf_main #wdysfButton3 span, #wdysf #wdysf_main #wdysfButton4 span, #wdysf #wdysf_main #wdysfButton5 span, #wdysf #wdysf_main #wdysfButton6 span {
         position: absolute;
         bottom: 0;
         right: 0;
@@ -131,7 +155,7 @@ video {
         font-size: 38px;
         padding: 10px 20px;
         text-transform: uppercase; }
-      #wdysf #wdysf_main #wdysfButton1:before, #wdysf #wdysf_main #wdysfButton2:before, #wdysf #wdysf_main #wdysfButton3:before, #wdysf #wdysf_main #wdysfButton4:before, #wdysf #wdysf_main #wdysfButton5:before, #wdysf #wdysf_main #wdysfButton6:before {
+      #wdysf #wdysf_main #wdysfButton:before, #wdysf #wdysf_main #wdysfButton2:before, #wdysf #wdysf_main #wdysfButton3:before, #wdysf #wdysf_main #wdysfButton4:before, #wdysf #wdysf_main #wdysfButton5:before, #wdysf #wdysf_main #wdysfButton6:before {
         content: '';
         position: absolute;
         top: 0;
@@ -197,7 +221,7 @@ video {
   #wdysf_synopses .wdysf_synopsis {
     background-color: rgba(0, 0, 0, 0.8);
     padding-top: 0px;
-    height: 1080px;
+    height: 100%;
     margin: 0 auto; }
     #wdysf_synopses .wdysf_synopsis .visuals {
       width: 1300px;
@@ -269,10 +293,10 @@ footer {
       font-size: 24px;
       opacity: .8; }
   footer h1 {
-    font-family: Futura LT Pro;
+    /*font-family: Futura LT Pro;*/
     text-transform: uppercase;
     padding: 35px;
-    opacity: .8;
+    opacity: .5;
     display: inline-block;
     float: left; }
   footer .homeBtn {
