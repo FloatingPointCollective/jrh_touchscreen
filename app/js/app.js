@@ -24,21 +24,6 @@ angular
                 templateUrl: 'templates/about.html',
                 controller: 'uiCtrl' 
             })
-            //  .state('about.credits', {
-            //     url:'/credits',
-            //     templateUrl:'partials/about_pages/credits.html',
-            //     controller: 'uiCtrl'
-            //  })
-            // .state('about.ilwu', {
-            //     url:'/ilwu',
-            //     templateUrl:'partials/about_pages/ilwu.html',
-            //     controller: 'uiCtrl'
-            //  })
-            // .state('about.port', {
-            //     url:'/port',
-            //     templateUrl:'partials/about_pages/port.html',
-            //     controller: 'uiCtrl'
-            //  })
             .state('issues', {
                 url:'/issues',
                 templateUrl: 'partials/issues_pages/issues.html',
@@ -54,9 +39,9 @@ angular
                 templateUrl: 'partials/issues_pages/issues.synopsis.html',
                 controller: 'issuesController'
             })
-            .state('video', {
-                url:'jimmy-story',
-                templateUrl:'partials/video_pages/video.html',
-                controller: 'uiCtrl'
-            })
+            // .state('video', {
+            //     url:'jimmy-story',
+            //     templateUrl:'partials/video_pages/video.html',
+            //     controller: 'uiCtrl'
+            // })
         }])
