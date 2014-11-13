@@ -39,9 +39,9 @@ angular
                 templateUrl: 'partials/issues_pages/issues.synopsis.html',
                 controller: 'issuesController'
             })
-            // .state('video', {
-            //     url:'jimmy-story',
-            //     templateUrl:'partials/video_pages/video.html',
-            //     controller: 'uiCtrl'
-            // })
+             .state('video', {
+                 url:'jimmy-story',
+                 templateUrl:'partials/video_pages/video.html',
+                 controller: 'uiCtrl'
+             })
         }])

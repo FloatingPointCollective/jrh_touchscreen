@@ -10,9 +10,9 @@
 
     <body ng-app="jrhApp" ng-keyup="onKeyUp($event)" ng-controller="uiCtrl" class="showCursor-{{showMouse}}">
 
-      <video id="videoPlayer" width="100%" height="100%" ng-show="videoPlaying" poster="" >
-        <source ng-src="video/jimmy_story.mp4" type="video/mp4"/>
-      </video> 
+    <!--  <video id="videoPlayer" width="100%" height="100%" ng-show="videoPlaying" poster="" >
+        <source ng-src="video/jimmy_story.{{type}}" type="video/{{type}}" ng-repeat="type in [mp4,ogg,webm]"/>
+      </video> -->
 
         <div id="wrapper">
 
@@ -64,7 +64,7 @@
     <script src="js/app.js"></script>
     <script src="js/controller.js"></script>
     <script src="js/issuesController.js"></script>
-    <script src="js/videoController.js"></script>
+   <!-- <script src="js/videoController.js"></script> -->
 
   </body>
 

@@ -1,3 +1,3 @@
-<video id="videoPlayer" width="100%" height="100%" ng-show="videoPlaying" poster="" >
-    <source ng-src="video/jimmy_story.mp4" type="video/mp4"/>
-</video> 
+<video id="videoPlayer" width="100%" height="100%" poster="" autoplay>
+    <source ng-src="{{'video/jimmy_story.'+type}}" type="video/{{type}}" ng-repeat="type in ['mp4','ogg','webm']"/>
+</video>

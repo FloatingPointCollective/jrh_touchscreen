@@ -35,7 +35,8 @@ angular
 
         $scope.onTopLevelClick = function(index){
             if(index === 0) {
-                //$state.go('video');
+                $state.go('video');
+               // $scope.$apply();
                 $scope.playVideo();
             } else if(index === 1) {
                 $state.go('issues');
@@ -50,12 +51,11 @@ angular
             console.log("videoPlaying is:"+ $scope.videoPlaying);
 
             var myVideo = document.getElementById("videoPlayer"); 
-            myVideo.play();
+           // myVideo.play();
 
             myVideo.addEventListener('ended',$scope.onVideoDone,false);
 
             $scope.hideFooterMenu();
-
         }
 
         $scope.onVideoDone = function(e){
