@@ -9,63 +9,23 @@
     </head>
 
     <body ng-app="jrhApp" ng-keyup="onKeyUp($event)" ng-controller="uiCtrl" class="showCursor-{{showMouse}}">
-
-    <!--  <video id="videoPlayer" width="100%" height="100%" ng-show="videoPlaying" poster="" >
-        <source ng-src="video/jimmy_story.{{type}}" type="video/{{type}}" ng-repeat="type in [mp4,ogg,webm]"/>
-      </video> -->
-
         <div id="wrapper">
+            <div ui-view="main"></div>
+        </div> 
 
-            <div ui-view></div>
+        <footer ui-view="footer" ng-hide="footerMenuIsHidden"></footer>
 
-<!--       <div id="homeScreen" ng-show="showHomeScreen">
-                <header>
-                    <h1>JAMES R. HERMAN MEMORIAL</h1>
-                    <h2>TIDES OF CHANGE</h2>
-                    <div class="message" ng-hide="debug">
-                        <h3>NO PHOTOS PLEASE</h3>
-                        <h3>Installation in progress</h3>
-                    </div>
-                </header>
-                <div id="topLevelButtons">
-                    <div style="background:url(img/home_{{$index+1}}.jpg);" class="sectionButton" ng-click="onTopLevelClick($index)" ng-show="debug" ng-repeat="page in topLevelPages">
-                        <span >{{page.title}}</span>
-                    </div>
-                </div>
-            </div> -->
+        <script src="js/angular1.2.js"></script>
+        <script src="js/angular-ui-router.js"></script>
+        <script src="js/angular-media-player.js"></script>
+        <script src="js/angular-websocket.js"></script>
+        <script src="js/app.js"></script>
+    <!--   <script src="js/angular-socket.js"></script> -->
+        <script src="js/controller.js"></script>
+        <script src="js/issuesController.js"></script>
+        <script src="js/videoController.js"></script>
 
-      <!-- ABOUT PAGES -->
-<!--       <div id="aboutPages" ng-hide="activeAboutPage == null">
-        <div class="aboutPage" ng-repeat="aboutPage in aboutPages" ng-show="activeAboutPage == $index ">
-          <h1>{{aboutPage.label}}</h1>
-          <div ng-include="'partials/about_pages/'+aboutPage.id+'.html'"/>
-        </div>
-      </div> -->
 
-       <!-- ISSUES PAGES -->
-<!--       <div id="wdysf" ng-show"showIssues"> 
-          <div id="wdysf_main">
-            <div ng-include="partials/issues_pages/issues.html"/>
-      </div> -->
-    </div> 
-
-    <footer>
-        <div class="container" ng-hide="footerMenuIsHidden">
-          <div ng-repeat="about in aboutPages" ui-sref="about({aboutId:about.id})">{{about.label}}</div>
-        </div>
-        
-        <h1 ng-show="footerMenuIsHidden" ng-click="goHome()">James R. Herman Memorial</h1>
-        <div class="homeBtn" ng-show="footerMenuIsHidden" ng-click="goHome()">HOME</div>
-
-    </footer>
-
-    <script src="js/angular1.2.js"></script>
-    <script src="js/angular-ui-router.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/controller.js"></script>
-    <script src="js/issuesController.js"></script>
-   <!-- <script src="js/videoController.js"></script> -->
-
-  </body>
+    </body>
 
 </html>

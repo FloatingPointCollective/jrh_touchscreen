@@ -1,4 +1,4 @@
-<div id="wdysf" ng-controller="issuesController">
+<div id="wdysf">
     <header>
         <h2>What do <strong>you</strong> stand for?</h2>
         <div class="description">         
@@ -6,7 +6,7 @@
         </div> 
     </header>
     <div id="wdysf_main">
-        <div id="wdysfButton{{$index+1}}" ng-repeat="issue in issuePages" ui-sref="quote({issue:issue.id})" >
+        <div id="wdysfButton{{$index+1}}" ng-repeat="issue in issuePages" ui-sref="quote({issue:issue.id})" ng-click="setCurrentIssue(issue)">
             <span>{{issue.title}}</span>
         </div>
     </div>

@@ -1,27 +1,21 @@
 angular
     .module('jrhApp')
-    .controller('videoController', ['$scope', '$stateParams', '$state', function($scope, $stateParams, $state) {
+    .controller('videoController', ['$scope', '$stateParams', '$state',  function($scope, $stateParams, $state) {
         $scope.videoPlaying = false;
 
-        $scope.playVideo = function(videoName){
-            $scope.videoPlaying = true;
-            $scope.activeVideoName = videoName;
-            console.log("play video!");
-            console.log("videoPlaying is:"+ $scope.videoPlaying);
+        $scope.videoPlaylist = [
+            {src: 'video/jimmy_story.mp4', type: 'video/mp4'}
+        ];
 
-            var myVideo = document.getElementById("videoPlayer"); 
-            myVideo.play();
+        window.$vscope = $scope;
+        console.log('HERE', $scope.player);
 
-            myVideo.addEventListener('ended',$scope.onVideoDone,false);
-
-            //$scope.hideFooterMenu();
-
-        }
-
-        $scope.onVideoDone = function(e){
-            console.log("video finished playing");
-            $scope.videoPlaying = false;
-            $scope.$apply();
-        }
-
+        setTimeout(function(){
+            $scope.player.play();
+            $scope.player.on('ended', function(){
+                console.log('ended');
+                $state.go('home');
+                $scope.showFooterMenu();
+            })
+        },0);
 }]);

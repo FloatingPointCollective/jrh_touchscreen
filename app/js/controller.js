@@ -1,16 +1,24 @@
 angular
     .module('jrhApp')
-    .controller('uiCtrl', ['$scope', '$stateParams', '$state', function($scope, $stateParams, $state) {
+
+    .controller('uiCtrl', ['$scope', '$stateParams', '$state', 'WebSocket', function($scope, $stateParams, $state, WebSocket) {
         $scope.showMouse = true;
         $scope.videoPlaying = false;
         $scope.activeVideoName = "";
         $scope.footerMenuIsHidden = false;
         $scope.showHomeScreen = true;
-        $scope.activeAboutPage = null;
+        
         $scope.debug = false;
         $scope.aboutId = $stateParams.aboutId;
 
         console.log($stateParams);
+        //console.log($scope.mediaPlayer)
+        window.$scope = $scope;
+
+
+        // $scope.messages = MessagesService.get();
+        // $scope.status = TestWebSocket.status();
+        var wsUri = "ws://127.0.0.1:9092";
 
         $scope.topLevelPages = [
             {title:"Watch Jimmy's Story"},
@@ -24,6 +32,8 @@ angular
             {label:'Credits', id:'credits'},
         ];
 
+
+
         $scope.onKeyUp = function ($event) {
             //hide/show cursor on spacebar
             if($event.keyCode === 32){
@@ -36,38 +46,11 @@ angular
         $scope.onTopLevelClick = function(index){
             if(index === 0) {
                 $state.go('video');
-               // $scope.$apply();
-                $scope.playVideo();
+                $scope.hideFooterMenu();
+
             } else if(index === 1) {
                 $state.go('issues');
-                $scope.hideFooterMenu();
             }
-        }
-
-        $scope.playVideo = function(videoName){
-            $scope.videoPlaying = true;
-            $scope.activeVideoName = videoName;
-            console.log("play video!");
-            console.log("videoPlaying is:"+ $scope.videoPlaying);
-
-            var myVideo = document.getElementById("videoPlayer"); 
-           // myVideo.play();
-
-            myVideo.addEventListener('ended',$scope.onVideoDone,false);
-
-            $scope.hideFooterMenu();
-        }
-
-        $scope.onVideoDone = function(e){
-            console.log("video finished playing");
-            $scope.videoPlaying = false;
-            $scope.$apply();
-        }
-
-        $scope.selectFooterMenu = function(index){
-            $scope.hideFooterMenu();
-            $scope.showHomeScreen = false;
-            $scope.activeAboutPage = index;
         }
 
         $scope.hideFooterMenu = function(){
@@ -79,19 +62,19 @@ angular
         }
 
         $scope.goHome = function(){
-            $scope.showFooterMenu();
-            $scope.showHomeScreen = true;
-            $scope.activeAboutPage = null;
-
-            //stop video
-            var myVideo = document.getElementById("videoPlayer"); 
-            myVideo.pause();
-            myVideo.currentTime = 0;
-            $scope.videoPlaying = false;
-            $scope.$apply();
+            $state.go('home');
         }
 
-        $scope.loadAboutPage = function(pageID){
-            $scope.activeAboutPage = pageID;
-        }
+        WebSocket.onopen(function() {
+            console.log('connection open');
+            WebSocket.send('Hello World');
+        });
+
+        WebSocket.onclose(function() {
+            console.log('connection closed');
+        });
+
+        WebSocket.onmessage(function(event) {
+            console.log('message: ', event.data);
+        });
 }]);
