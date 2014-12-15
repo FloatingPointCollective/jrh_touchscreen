@@ -24,11 +24,15 @@ html{
 }
 
 @font-face {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-family: Futura;
+    src: url('fonts/Futura.ttf');
+    src: local('Futura'), url('fonts/Futura.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: Futura LT Light, "Trebuchet MS", Arial, sans-serif;
+    font-family: Futura LT Light;
+    src: url('fonts/FuturLight.ttf');
+    src: local('Futura LT Light'), url('fonts/FuturLight.ttf') format('truetype');
 }
 
 body{
@@ -43,6 +47,14 @@ body{
   	height: 100%;
 
   	overflow: hidden;
+}
+
+#offScreen {
+	width:100%;
+	height: 1200px;
+	position: relative;
+	z-index: 100;
+	background: rgba(0,0,0,1);
 }
 
 #wrapper {
@@ -92,14 +104,15 @@ header{
 	width:486px;
 	height: 686px;
 	position: relative;
-	margin: 20px auto;
+	margin: 20px 10px;
 	box-shadow: 0px 0px 50px #888888;
 	display: inline-block;
 
 	span{
 		position: absolute;
-		width:100%;
+		width:80%;
    		bottom: 0;
+   		left: -5px;
    		color: white;
    		font-size: 38px;
    		padding: 20px 30px;
@@ -126,16 +139,52 @@ video{
 
 #aboutPages{
 	background-color: rgba(0,0,0,.8);
-	width: 100%;
-	height: 100%;
+	width: 1920px;
+	height: 1080px;
 	color: white;
 
 	.aboutPage{
 		padding: 50px;
+/*		width: 960px;*/
 	}
 
-	.copy{
+	.credits {
+		line-height: 200%;
+	}
 
+	.about-left-column {
+		float: left;
+		width: 45%;
+	}
+
+	.about-right-column {
+		float: right;
+		width: 45%;
+	}
+
+	.logo {
+		/*background: url(../img/ilwu_logo.png) no-repeat;*/
+		width: 362px;
+		height: 362px;
+	}
+
+	p {
+		padding: 20px 0px;
+		font-size: 1.5em;
+	}
+
+	ul {
+		padding: 5px 0px;
+		font-size: 1.3em;
+	}
+
+	h1 {
+		text-transform: uppercase;
+		font-size: 2.2em;
+	}
+
+	h2 {
+		padding-top: 10px;
 	}
 }
 
@@ -359,7 +408,7 @@ footer{
 	}
 
 	h1{
-		font-family: Futura LT Pro;
+		font-family: 'Futura LT Light', Futura, sans-serif;
 		text-transform: uppercase;
 		padding: 35px;
 		opacity: .8;

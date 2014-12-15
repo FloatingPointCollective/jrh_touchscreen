@@ -22,17 +22,15 @@ angular
 
         $scope.topLevelPages = [
             {title:"Watch Jimmy's Story"},
-            {title:"What Do You Stand For?"},
-            {title:"Timeline"}
+            {title:"What Do You Stand For?"}
+            // {title:"Timeline"}
         ];
 
         $scope.aboutPages = [
             {label:'About the ILWU', id:'ilwu'},
-            {label:'SF Port Commission', id:'port'},
+            {label:'About the SF Port Commission', id:'port'},
             {label:'Credits', id:'credits'},
         ];
-
-
 
         $scope.onKeyUp = function ($event) {
             //hide/show cursor on spacebar
@@ -76,5 +74,18 @@ angular
 
         WebSocket.onmessage(function(event) {
             console.log('message: ', event.data);
+            if(event.data === 'mute') {
+                console.log('mute video');
+                //TODO: figure out how to mute video
+            } else if (event.data === 'unmute') {
+                console.log('unmute video');
+                //TODO: figure out how to unmute video
+            } else if (event.data === 'off') {
+                console.log('turn off');
+                $state.go('black');
+            } else if (event.data === 'on') {
+                console.log('turn on');
+                $state.go('home');
+            }
         });
 }]);

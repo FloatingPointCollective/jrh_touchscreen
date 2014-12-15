@@ -1,6 +1,7 @@
 <!-- ABOUT PAGES -->
 <div id="aboutPages" >
     <div class="aboutPage" ng-repeat="about in aboutPages" ng-show="about.id === aboutId">
+          <div style="background:url(img/about_{{$index+1}}.png) no-repeat;" class="logo"></div>
           <h1>{{about.label}}</h1>
           <div ng-include="'partials/about_pages/'+about.id+'.html'"/>
     </div>

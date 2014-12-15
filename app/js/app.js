@@ -1,6 +1,7 @@
 angular
     .module('jrhApp', [
         'ui.router',
+        // 'ui.keypress',
         'mediaPlayer',
         'angular-websocket'
     ])
@@ -87,19 +88,30 @@ angular
                     }
                 }
             })
-             .state('video', {
-                 url:'jimmy-story',
-                 views: {
+            .state('video', {
+                url:'jimmy-story',
+                views: {
                     'main': {
                         templateUrl:'partials/video_pages/video.html',
                         controller: 'videoController'
                     },
-                    'footer': {
-                        template: '<div class="container" style="display:none"></div>'
-                        //controller: 'uiCtrl'
+                     'footer': {
+                        templateUrl: 'templates/footer_secondary.html',
+                        controller: 'uiCtrl'
                     }
                 }
-
-                 //onEnter: ''
+            })
+            .state('black', {
+                url:'/',
+                views: {
+                    'main': {
+                        templateUrl: 'templates/off.html',
+                        controller: 'uiCtrl'
+                    },
+                    'footer': {
+                        template: '<div class="container" style="background:rgba(0,0,0,1)" height="100px"></div>',
+                        controller: 'uiCtrl'
+                    }
+                }
             })
         }])
