@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title>Bug Squasher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="app.css"/>
+</head>
+<body>
+
+<div ng-include="'navbar/navbar.tpl.html'"></div>
+
+<div ui-view class="container"></div>
+
+<!-- Vendor JS -->
+<script src="//code.jquery.com/jquery-2.0.0.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+
+<!-- App JS -->
+<script src="app.js"></script>
+<script src="api/projectData.js"></script>
+<script src="projectsList/projectsList.js"></script>
+<script src="projectsList/projectBoard/projectBoard.js"></script>
+<script src="projectsList/projectBoard/bugDetail/bugDetail.js"></script>
+</body>
+</html>

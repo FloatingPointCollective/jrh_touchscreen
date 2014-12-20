@@ -1,0 +1,10 @@
+<div class="col-xs-6">
+  <div class="list-group" ng-repeat="bug in bugs">
+    <a href="#" class="list-group-item" ui-sref=".bugDetail({bugId:bug.id})" ui-sref-active="active">
+      <h4 class="list-group-item-heading">Bug {{ bug.id }}</h4>
+    </a>
+  </div>
+</div>
+
+<div class="col-xs-6" ui-view></div>
+

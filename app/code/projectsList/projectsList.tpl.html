@@ -1,0 +1,12 @@
+<div class="row">
+
+  <ul class="nav nav-tabs" role="tablist">
+    <li ng-repeat="project in projects" ng-class="{active: $state.includes('projects', {projectId: project.id})}">
+      <a ui-sref=".board({projectId:project.id})">{{ project.name }}</a>
+    </li>
+  </ul>
+
+  <div class="row" ui-view></div>
+
+</div>
+
