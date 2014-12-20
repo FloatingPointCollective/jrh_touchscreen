@@ -7,9 +7,13 @@ angular
         $scope.activeVideoName = "";
         $scope.footerMenuIsHidden = false;
         $scope.showHomeScreen = true;
+        $scope.showTimeout = false;
         
         $scope.debug = false;
         $scope.aboutId = $stateParams.aboutId;
+        $scope.idleInterval;
+        $scope.warnTime = 60*5; //5 minutes in seconds
+        $scope.timeoutTime = $scope.warnTime+10; //10 seconds
 
         console.log($stateParams);
         //console.log($scope.mediaPlayer)
@@ -96,34 +100,54 @@ angular
             console.log('Document Ready');
 
             //Increment the idle time counter every minute.
-            var idleInterval = setInterval($scope.timerIncrement, 1000); // 1 minute
+            $scope.idleInterval = setInterval($scope.timerIncrement, 1000); // 1 minute
 
         }
 
         $scope.onMouseMove = function(){
-            $scope.idleTime = 0;
+            
+            $scope.resetTimeout();
             console.log("onMouseMove: "+$scope.idleTime);
         }
 
         $scope.onClick = function(){
 
-            $scope.idleTime = 0;
+            $scope.resetTimeout();
             console.log("onMouseMove: "+$scope.idleTime);
+        }
+
+        $scope.resetTimeout = function(){
+            $scope.idleTime = 0;
+            $scope.showTimeout = false;
         }
 
         $scope.timerIncrement = function () {
             
-            $scope.idleTime += 1;
-            console.log("time increment: "+$scope.idleTime);
-            if ($scope.idleTime >= 5) { // 20 minutes
-                $scope.timeOut();
+            //only do if we are not already home
+            if($state.current.name != 'home'){
+
+                $scope.idleTime += 1;
+                console.log("time increment: "+$scope.idleTime);
+                if ($scope.idleTime == $scope.warnTime) { // 5 minutes
+                    $scope.timeoutWarning();
+                }
+                else if ($scope.idleTime == $scope.timeoutTime) { // 10 more seconds
+                    $scope.timeout();
+                }
             }
         }
 
-        $scope.timeOut = function(){
+        $scope.timeoutWarning = function(){
             //show timout warning message...
-            console.log("timeout");
+            $scope.showTimeout = true;
+            $scope.$apply();
+           
+        }
+
+        $scope.timeout = function(){
             $scope.idleTime = 0;
+            $scope.showTimeout = false;
             $state.go('home');
+            $scope.$apply();
         }
 }]);
