@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
 
-    <body ng-app="jrhApp" ng-keyup="onKeyUp($event)" ng-controller="uiCtrl" class="showCursor-{{showMouse}}">
+    <body ng-app="jrhApp" ng-keyup="onKeyUp($event)" ng-controller="uiCtrl" class="showCursor-{{showMouse}}" ng-mousemove="onMouseMove()" ng-click="onClick()" ng-init="init()">
         <div id="wrapper">
             <div ui-view="main"></div>
         </div> 

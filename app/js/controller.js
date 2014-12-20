@@ -15,6 +15,8 @@ angular
         //console.log($scope.mediaPlayer)
         window.$scope = $scope;
 
+        //TIMEOUT
+        $scope.idleTime = 0;
 
         // $scope.messages = MessagesService.get();
         // $scope.status = TestWebSocket.status();
@@ -88,4 +90,40 @@ angular
                 $state.go('home');
             }
         });
+
+        //TIMEOUT
+        $scope.init = function(){
+            console.log('Document Ready');
+
+            //Increment the idle time counter every minute.
+            var idleInterval = setInterval($scope.timerIncrement, 1000); // 1 minute
+
+        }
+
+        $scope.onMouseMove = function(){
+            $scope.idleTime = 0;
+            console.log("onMouseMove: "+$scope.idleTime);
+        }
+
+        $scope.onClick = function(){
+
+            $scope.idleTime = 0;
+            console.log("onMouseMove: "+$scope.idleTime);
+        }
+
+        $scope.timerIncrement = function () {
+            
+            $scope.idleTime += 1;
+            console.log("time increment: "+$scope.idleTime);
+            if ($scope.idleTime >= 5) { // 20 minutes
+                $scope.timeOut();
+            }
+        }
+
+        $scope.timeOut = function(){
+            //show timout warning message...
+            console.log("timeout");
+            $scope.idleTime = 0;
+            $state.go('home');
+        }
 }]);
