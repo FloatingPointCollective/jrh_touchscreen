@@ -23,7 +23,7 @@ angular
 
     function setCurrentIssue(issue) {
         console.log(issue.id);
-        WebSocket.send(issue.id);
+        WebSocket.send(issue.id); //send issue to LED Control machine
         //$scope.currentIssue = issue;
 //        $state.go('quote', {issue: issue.title});
     }

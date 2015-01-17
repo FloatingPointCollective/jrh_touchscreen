@@ -1,39 +1,36 @@
 angular
     .module('jrhApp')
-    .controller('videoController', ['$scope', '$stateParams', '$state', 'WebSocket', function($scope, $stateParams, $state, WebSocket) {
+    .controller('videoController', ['$scope', '$rootScope', '$stateParams', '$state',  function($scope, $rootScope, $stateParams, $state) {
         $scope.videoPlaying = false;
 
         $scope.videoPlaylist = [
             {src: 'video/jimmy_story.mp4', type: 'video/mp4'}
         ];
 
-        // $scope.onKeyUp = function ($event) {
-        //     //toggle Volume on 'v' or 'V'
-        //     if($event.keyCode === 86 || $event.keyCode === 118){
-        //         $scope.videoPlaylist.toggleMute();
-        //         console.log('volume = ' + $scope.videoPlaylist.volume);
-        //     }
-        // };
-
-        // $scope.keyPress = function(keyCode){
-        //     console.log(keyCode); 
-        // }
-
-        // $scope.keypressCallback = function($event) {
-        //     console.log('keypress');
-        //     alert('Voila!');
-        //     $event.preventDefault();
-        // };
+        // receive control events while video is loaded
+        $rootScope.$on('mute', function(event, data) {
+            console.log('received muteEvent: '+data);
+            $scope.player.setVolume(!data);
+        });
 
         window.$vscope = $scope;
         console.log('HERE', $scope.player);
 
+        
         setTimeout(function(){
+            $scope.player.seek(0); //will this help the issue of the video not loading again if played for the second time?
             $scope.player.play();
+
+            console.log("$rootScope.muted: "+$rootScope.muted);
+
+            // when video is loaded, set volume property to muted global variable
+            $scope.player.setVolume(!$rootScope.muted);
+
             $scope.player.on('ended', function(){
                 console.log('ended');
                 $state.go('home');
                 $scope.showFooterMenu();
             })
-        },0);
+        },10);
+
 }]);

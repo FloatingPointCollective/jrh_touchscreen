@@ -1,7 +1,7 @@
 angular
     .module('jrhApp')
 
-    .controller('uiCtrl', ['$scope', '$stateParams', '$state', 'WebSocket', function($scope, $stateParams, $state, WebSocket) {
+    .controller('uiCtrl', ['$scope', '$rootScope', '$stateParams', '$state', 'WebSocket',  function($scope, $rootScope, $stateParams, $state, WebSocket) {
         $scope.showMouse = true;
         $scope.videoPlaying = false;
         $scope.activeVideoName = "";
@@ -15,10 +15,11 @@ angular
         //console.log($scope.mediaPlayer)
         window.$scope = $scope;
 
+        $rootScope.muted;
 
         // $scope.messages = MessagesService.get();
         // $scope.status = TestWebSocket.status();
-        var wsUri = "ws://127.0.0.1:9092";
+        // var wsUri = "ws://127.0.0.1:9092";
 
         $scope.topLevelPages = [
             {title:"Watch Jimmy's Story"},
@@ -63,6 +64,10 @@ angular
             $state.go('home');
         }
 
+        //$scope.status = TestWebSocket.status();
+
+        $scope.init = function(){
+
         WebSocket.onopen(function() {
             console.log('connection open');
             WebSocket.send('Hello World');
@@ -73,13 +78,22 @@ angular
         });
 
         WebSocket.onmessage(function(event) {
-            console.log('message: ', event.data);
+            console.log("got message: "+event.data);
             if(event.data === 'mute') {
-                console.log('mute video');
-                //TODO: figure out how to mute video
+
+                console.log("go mute message");
+                $rootScope.muted = true; //set muted global variable to true
+                console.log("$rootScope.muted: "+$rootScope.muted);
+                $rootScope.$broadcast('mute', true); //broadcast muted global variable as true
+
             } else if (event.data === 'unmute') {
+
+                $rootScope.muted = false; //set muted global variable to false
+                console.log("$rootScope.muted: "+$rootScope.muted);
+                $rootScope.$broadcast('mute', false); //broadcast muted global variable as false
+                
                 console.log('unmute video');
-                //TODO: figure out how to unmute video
+
             } else if (event.data === 'off') {
                 console.log('turn off');
                 $state.go('black');
@@ -88,4 +102,7 @@ angular
                 $state.go('home');
             }
         });
+
+} 
+
 }]);

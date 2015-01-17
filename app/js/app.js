@@ -1,7 +1,6 @@
 angular
     .module('jrhApp', [
         'ui.router',
-        // 'ui.keypress',
         'mediaPlayer',
         'angular-websocket'
     ])
@@ -12,7 +11,6 @@ angular
         window.$root = $rootScope;
         $state.transitionTo('home');
     }])
-
     
     .config(['$stateProvider', '$urlRouterProvider', 'WebSocketProvider', function ($stateProvider, $urlRouterProvider, WebSocketProvider) {
         // $urlRouterProvider.otherwise('/'); //if this is turned on the synopsis routing breaks
@@ -114,4 +112,6 @@ angular
                     }
                 }
             })
-        }])
+        }]);
+
+
