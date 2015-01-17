@@ -4,7 +4,7 @@ angular
         $scope.videoPlaying = false;
 
         $scope.videoPlaylist = [
-            {src: 'video/jimmy_story.mp4', type: 'video/mp4'}
+            {src: 'video/jimmy_story.ogg', type: 'video/ogg'}
         ];
 
         // receive control events while video is loaded
