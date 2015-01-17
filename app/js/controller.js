@@ -130,7 +130,7 @@ angular
             console.log("got message: "+event.data);
             if(event.data === 'mute') {
 
-                console.log("go mute message");
+                console.log("got mute message");
                 $rootScope.muted = true; //set muted global variable to true
                 console.log("$rootScope.muted: "+$rootScope.muted);
                 $rootScope.$broadcast('mute', true); //broadcast muted global variable as true
@@ -152,19 +152,17 @@ angular
             }
         });
 
-            //Increment the idle time counter every minute.
-            $scope.idleInterval = setInterval($scope.timerIncrement, 1000); // 1 minute
+            //Increment the idle time counter.
+            $scope.idleInterval = setInterval($scope.timerIncrement, 1000); // 1 second
 
         }
 
         $scope.onMouseMove = function(){
-            
             $scope.resetTimeout();
             console.log("onMouseMove: "+$scope.idleTime);
         }
 
         $scope.onClick = function(){
-
             $scope.resetTimeout();
             console.log("onMouseMove: "+$scope.idleTime);
         }
@@ -175,12 +173,11 @@ angular
         }
 
         $scope.timerIncrement = function () {
-            
             //only do if we are not already home
             if($state.current.name != 'home'){
 
                 $scope.idleTime += 1;
-                console.log("time increment: "+$scope.idleTime);
+               // console.log("time increment: "+$scope.idleTime);
                 if ($scope.idleTime == $scope.warnTime) { // 5 minutes
                     $scope.timeoutWarning();
                 }
@@ -194,7 +191,6 @@ angular
             //show timout warning message...
             $scope.showTimeout = true;
             $scope.$apply();
-           
         }
 
         $scope.timeout = function(){
