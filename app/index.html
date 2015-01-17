@@ -8,8 +8,17 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
 
-    <body ng-app="jrhApp" ng-keyup="onKeyUp($event)" ng-controller="uiCtrl" class="showCursor-{{showMouse}}" ng-init="init()">
+    <body ng-app="jrhApp" ng-keyup="onKeyUp($event)" ng-controller="uiCtrl" class="showCursor-{{showMouse}}" ng-mousemove="onMouseMove()" ng-click="onClick()" ng-init="init()">
+
         <div id="wrapper">
+            <div id="timeoutWarning" ng-show="showTimeout">
+                
+                    <span>
+                        Touch anywhere to continue.
+                        <br>Will return to the home screen in 10 seconds.
+                    </span>
+                
+            </div>
             <div ui-view="main"></div>
         </div> 
 
