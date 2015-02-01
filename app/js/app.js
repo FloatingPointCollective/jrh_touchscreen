@@ -17,7 +17,7 @@ angular
 
         WebSocketProvider
             .prefix('')
-            .uri('ws://192.168.0.4:9092/'); //swap for different server address/port
+            .uri('ws://192.168.0.1:9092/'); //swap for different server address/port
 
         $stateProvider
             .state('home', {
