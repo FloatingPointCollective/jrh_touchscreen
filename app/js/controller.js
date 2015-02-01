@@ -27,7 +27,7 @@ angular
 
         // $scope.messages = MessagesService.get();
         // $scope.status = TestWebSocket.status();
-         var wsUri = "ws://192.168.0.1:9092";
+         var wsUri = "ws://127.0.0.1:9092";
 
         $scope.topLevelPages = [
             {title:"Watch Jimmy's Story"},
@@ -69,6 +69,7 @@ angular
         }
 
         $scope.goHome = function(){
+            WebSocket.send('0');
             $state.go('home');
         }
 
@@ -122,8 +123,7 @@ angular
                 });
 
             }, 1000); 
-            //insert callback to reconnect
-            //start connection timer
+           
         });
 
         WebSocket.onmessage(function(event) {
@@ -196,7 +196,7 @@ angular
         $scope.timeout = function(){
             $scope.idleTime = 0;
             $scope.showTimeout = false;
-            $state.go('home');
+            $scope.goHome();
             $scope.$apply();
         }
 }]);
