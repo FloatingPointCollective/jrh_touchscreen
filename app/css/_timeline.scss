@@ -1,0 +1,26 @@
+#timeline{
+	.images{
+		clear:both;
+		.image{
+			float:left;
+		}
+	}
+	#events{
+		clear:both;
+
+		.text{
+			height: 60px;
+		}
+		#dates{
+			height: 60px;
+			font-family: 'Futura';
+			font-size: 28px;
+			line-height: 60px;
+
+			.date{
+				width: 300px;
+				float:left;
+			}
+		}
+	}
+}

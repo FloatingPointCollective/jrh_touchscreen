@@ -1,5 +1,8 @@
 <div id="timeline">
     <div class="images">
+    	<div class="image" ng-repeat="image in topImages">
+    		<img src="img/timeline/small/{{image.id}}.jpg" alt="">
+    	</div>
     </div>
     
     <div id="events">
@@ -8,8 +11,10 @@
     	
     	</div>
     	
-    	<div class="dates">
-    	
+    	<div id="dates">
+    		<div class="date" ng-repeat="event in events">
+    			{{event.year}}
+    		</div>
     	</div>
 
     	<div class="text">
@@ -19,5 +24,8 @@
     </div>
 
     <div class="images">
+    	<div class="image" ng-repeat="image in bottomImages">
+    		<img src="img/timeline/small/{{image.id}}.jpg" alt="">
+    	</div>
     </div>
 </div>

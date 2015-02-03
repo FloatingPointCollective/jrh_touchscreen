@@ -336,3 +336,20 @@ footer {
     opacity: .5;
     line-height: 114px;
     padding: 0px 45px; }
+
+#timeline .images {
+  clear: both; }
+  #timeline .images .image {
+    float: left; }
+#timeline #events {
+  clear: both; }
+  #timeline #events .text {
+    height: 60px; }
+  #timeline #events #dates {
+    height: 60px;
+    font-family: 'Futura';
+    font-size: 28px;
+    line-height: 60px; }
+    #timeline #events #dates .date {
+      width: 300px;
+      float: left; }
