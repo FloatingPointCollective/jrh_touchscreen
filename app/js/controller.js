@@ -31,8 +31,8 @@ angular
 
         $scope.topLevelPages = [
             {title:"Watch Jimmy's Story"},
-            {title:"What Do You Stand For?"}
-            // {title:"Timeline"}
+            {title:"What Do You Stand For?"},
+            {title:"Interactive Timeline"}
         ];
 
         $scope.aboutPages = [
@@ -57,6 +57,9 @@ angular
 
             } else if(index === 1) {
                 $state.go('issues');
+            }
+            else if(index === 2) {
+                $state.go('timeline');
             }
         }
 
@@ -177,7 +180,6 @@ angular
             if($state.current.name != 'home'){
 
                 $scope.idleTime += 1;
-               // console.log("time increment: "+$scope.idleTime);
                 if ($scope.idleTime == $scope.warnTime) { // 5 minutes
                     $scope.timeoutWarning();
                 }

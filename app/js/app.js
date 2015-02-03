@@ -99,6 +99,19 @@ angular
                     }
                 }
             })
+            .state('timeline', {
+                url:'timeline',
+                views: {
+                    'main': {
+                        templateUrl:'partials/timeline.html',
+                        controller: 'timelineController'
+                    },
+                     'footer': {
+                        templateUrl: 'templates/footer_secondary.html',
+                        controller: 'uiCtrl'
+                    }
+                }
+            })
             .state('black', {
                 url:'/',
                 views: {
