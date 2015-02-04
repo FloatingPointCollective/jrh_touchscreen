@@ -30,7 +30,7 @@ angular
             },
              {   
                 id:3,
-                quote:'Work was a condition of survival',
+                quote:'“Work was a condition of survival”',
                 description:'Herman worked all of his life, and to him, “Work was a condition of survival.” San Francisco mayor Art Agnos, a close friend and neighbor to Herman, said “it was from his early life, growing up in the Depression and being fiercely independent, that he developed his empathy for others.”'
             },
             {   

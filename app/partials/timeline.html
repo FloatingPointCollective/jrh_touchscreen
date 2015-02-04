@@ -10,8 +10,10 @@
     
     <div id="events">
     	
-    	<div class="text">
-    	
+    	<div class="text top" >
+    		<div class="event" ng-repeat="event in events" ng-if="$index%2==1">
+    			{{event.text}}
+    		</div>
     	</div>
     	
     	<div id="dates">
@@ -20,8 +22,10 @@
     		</div>
     	</div>
 
-    	<div class="text">
-    	
+    	<div class="text bottom">
+    		<div class="event" ng-repeat="event in events" ng-if="$index%2==0">
+    			{{event.text}}
+    		</div>
     	</div>
 
     </div>
