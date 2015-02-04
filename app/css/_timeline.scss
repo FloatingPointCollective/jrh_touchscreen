@@ -1,25 +1,48 @@
 #timeline{
+	display: inline-block;
+	overflow: auto;
+	white-space: nowrap;
 	.images{
 		clear:both;
 		.image{
-			float:left;
+			display: inline-block;
+			border:none;
+			img{
+				border-right: 1px solid white;
+			}
+		}
+		.quote{
+			background-color: #b9b9b9;
+			width: 430px;
+			height: 400px;
+			font-family: 'Futura';
+			font-size: 36px;
+			text-transform: uppercase;
+			text-align: center;
+			display: table-cell;
+			vertical-align: middle;
+			border-right: 1px solid white;
+			white-space: normal;
 		}
 	}
 	#events{
 		clear:both;
-
+		width: 100%;
 		.text{
 			height: 60px;
+			background-color: rgba(0,0,0,.5);
 		}
 		#dates{
 			height: 60px;
 			font-family: 'Futura';
 			font-size: 28px;
-			line-height: 60px;
-
+			line-height: 70px;
+			background-color: rgba(255,255,255,.5);
+			text-align: center;
 			.date{
 				width: 300px;
 				float:left;
+
 			}
 		}
 	}

@@ -1,7 +1,10 @@
-<div id="timeline">
+<div id="timeline" draggable="true">
     <div class="images">
-    	<div class="image" ng-repeat="image in topImages">
-    		<img src="img/timeline/small/{{image.id}}.jpg" alt="">
+    	<div class="image" ng-repeat="image in topImages" ng-switch on="image.quote">
+    		<img src="img/timeline/small/{{image.id}}.jpg" ng-switch-when="">
+    		<div class="quote" ng-switch-default>
+    			{{image.quote}}
+    		</div>
     	</div>
     </div>
     
@@ -24,8 +27,13 @@
     </div>
 
     <div class="images">
-    	<div class="image" ng-repeat="image in bottomImages">
-    		<img src="img/timeline/small/{{image.id}}.jpg" alt="">
+    	<div class="image" ng-repeat="image in bottomImages" ng-switch on="image.quote">
+
+    		<img src="img/timeline/small/{{image.id}}.jpg" ng-switch-when="">
+
+    		<div class="quote" ng-switch-default>
+    			{{image.quote}}
+    		</div>
     	</div>
     </div>
 </div>

@@ -47,6 +47,8 @@ body {
 #wrapper {
   width: 100%;
   height: 100%; }
+  #wrapper #main-view {
+    overflow: hidden; }
 
 #timeoutWarning {
   z-index: 10;
@@ -337,19 +339,42 @@ footer {
     line-height: 114px;
     padding: 0px 45px; }
 
-#timeline .images {
-  clear: both; }
-  #timeline .images .image {
-    float: left; }
-#timeline #events {
-  clear: both; }
-  #timeline #events .text {
-    height: 60px; }
-  #timeline #events #dates {
-    height: 60px;
-    font-family: 'Futura';
-    font-size: 28px;
-    line-height: 60px; }
-    #timeline #events #dates .date {
-      width: 300px;
-      float: left; }
+#timeline {
+  display: inline-block;
+  overflow: auto;
+  white-space: nowrap; }
+  #timeline .images {
+    clear: both; }
+    #timeline .images .image {
+      display: inline-block;
+      border: none; }
+      #timeline .images .image img {
+        border-right: 1px solid white; }
+    #timeline .images .quote {
+      background-color: #b9b9b9;
+      width: 430px;
+      height: 400px;
+      font-family: 'Futura';
+      font-size: 36px;
+      text-transform: uppercase;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      border-right: 1px solid white;
+      white-space: normal; }
+  #timeline #events {
+    clear: both;
+    width: 100%; }
+    #timeline #events .text {
+      height: 60px;
+      background-color: rgba(0, 0, 0, 0.5); }
+    #timeline #events #dates {
+      height: 60px;
+      font-family: 'Futura';
+      font-size: 28px;
+      line-height: 70px;
+      background-color: rgba(255, 255, 255, 0.5);
+      text-align: center; }
+      #timeline #events #dates .date {
+        width: 300px;
+        float: left; }

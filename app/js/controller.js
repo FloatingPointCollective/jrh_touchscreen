@@ -13,7 +13,7 @@ angular
         $scope.aboutId = $stateParams.aboutId;
         $scope.idleInterval;
         $scope.warnTime = 60*5; //5 minutes in seconds
-        $scope.timeoutTime = $scope.warnTime+10; //10 seconds
+        $scope.timeoutTime = $scope.warnTime+10; //+10 seconds
 
         console.log($stateParams);
         //console.log($scope.mediaPlayer)
@@ -72,8 +72,8 @@ angular
         }
 
         $scope.goHome = function(){
-            WebSocket.send('0');
             $state.go('home');
+            WebSocket.send('0');
         }
 
         //$scope.status = TestWebSocket.status();
