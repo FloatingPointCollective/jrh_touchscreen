@@ -1,3 +1,21 @@
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+/* start commented backslash hack \*/
+* html .clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
 html {
   width: 100%;
   height: 100%; }
@@ -46,9 +64,9 @@ body {
 
 #wrapper {
   width: 100%;
-  height: 100%; }
-  #wrapper #main-view {
-    overflow: hidden; }
+  height: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden; }
 
 #timeoutWarning {
   z-index: 10;
@@ -340,14 +358,15 @@ footer {
     padding: 0px 45px; }
 
 #timeline {
-  display: inline-block;
-  overflow: auto;
-  white-space: nowrap; }
+  white-space: nowrap;
+  display: inline-block; }
   #timeline .images {
-    clear: both; }
+    clear: both;
+    height: 400px; }
     #timeline .images .image {
       display: inline-block;
-      border: none; }
+      border: none;
+      height: 400px; }
       #timeline .images .image img {
         border-right: 1px solid white; }
     #timeline .images .quote {
@@ -364,29 +383,42 @@ footer {
       white-space: normal; }
   #timeline #events {
     clear: both;
-    width: 100%;
     font-family: 'Futura';
-    text-align: center; }
-    #timeline #events .base-event, #timeline #events .text .event, #timeline #events #dates .date {
-      width: 400px;
-      float: left; }
+    text-align: center;
+    display: inline-block;
+    float: left; }
     #timeline #events .text {
       height: 60px;
-      background-color: rgba(0, 0, 0, 0.5);
-      line-height: 60px; }
+      background-color: rgba(0, 0, 0, 0.7);
+      display: inline-block;
+      clear: both;
+      float: left;
+      width: 100%;
+      white-space: nowrap;
+      overflow: auto; }
       #timeline #events .text .event {
         font-size: 24px;
         color: #b9b9b9;
-        width: 800px; }
+        width: 800px;
+        padding-top: 21px;
+        display: inline-block; }
     #timeline #events .top {
       padding-left: 200px; }
     #timeline #events .bottom {
       margin-left: -200px; }
     #timeline #events #dates {
+      display: inline-block;
+      clear: both;
+      float: left;
+      width: 100%;
+      white-space: nowrap;
+      overflow: auto;
       height: 60px;
       font-size: 28px;
       background-color: rgba(255, 255, 255, 0.5); }
       #timeline #events #dates .date {
-        padding-top: 17px; }
+        width: 400px;
+        padding-top: 17px;
+        display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */

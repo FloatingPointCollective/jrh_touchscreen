@@ -19,6 +19,7 @@ angular
                 year:'1939',
                 text:'Herman calls his first strike while working at Mrs. Wagner’s Pies in Newark, NJ.'
             },
+            
 
         ];
         
