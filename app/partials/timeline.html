@@ -1,10 +1,13 @@
 <div id="timeline" draggable="true">
     <div class="images">
-    	<div class="image" ng-repeat="image in topImages" ng-switch on="image.quote">
-    		<img src="img/timeline/small/{{image.id}}.jpg" ng-switch-when="">
+    	<div class="image" ng-repeat="image in images" ng-switch on="image.quote" ng-if="image.pos=='top'">
+
+    		<img src="img/timeline/small/{{$index+1}}.jpg" ng-switch-when="">
+    		
     		<div class="quote" ng-switch-default>
     			{{image.quote}}
     		</div>
+
     	</div>
     </div>
     <div id="events">
@@ -29,13 +32,14 @@
     </div>
 
     <div class="images">
-    	<div class="image" ng-repeat="image in bottomImages" ng-switch on="image.quote">
+    	<div class="image" ng-repeat="image in images" ng-switch on="image.quote" ng-if="image.pos=='bottom'">
 
-    		<img src="img/timeline/small/{{image.id}}.jpg" ng-switch-when="">
+    		<img src="img/timeline/small/{{$index+1}}.jpg" ng-switch-when="">
 
     		<div class="quote" ng-switch-default>
     			{{image.quote}}
     		</div>
+
     	</div>
     </div>
 </div>
