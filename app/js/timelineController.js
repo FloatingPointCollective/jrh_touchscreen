@@ -25,7 +25,7 @@ angular
             },
             {   
                 year:'1945',
-                text:'West Coast waterfront strike'
+                text:'After the WWII, Jimmy finds employment as a steward on ships'
             },
             {   
                 year:'1946',

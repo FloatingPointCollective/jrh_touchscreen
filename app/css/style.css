@@ -369,7 +369,7 @@ footer {
       border: none;
       height: 400px; }
       #timeline .images .image img {
-        border-right: 1px solid white; }
+        border-right: 1px solid #b9b9b9; }
     #timeline .images .quote {
       padding: 0px 40px 0px 40px;
       background-color: rgba(185, 185, 185, 0.3);
@@ -381,7 +381,7 @@ footer {
       text-align: center;
       display: table-cell;
       vertical-align: middle;
-      border-right: 1px solid white;
+      border-right: 1px solid #b9b9b9;
       white-space: normal; }
   #timeline #events {
     clear: both;
