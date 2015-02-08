@@ -11,18 +11,21 @@
     	</div>
     </div>
     <div id="events">
+    	<!--EVENT TEXT TOP-->
     	<div class="text top" >
     		<div class="event" ng-repeat="event in events" ng-if="$index%2==1">
     			{{event.text}}
     		</div>
     	</div>
 
+    	<!--YEARS-->
     	<div id="dates">
-    		<div class="date" ng-repeat="event in events">
+    		<div class="date-{{$index%2 ? 'bottom':'top'}}" ng-repeat="event in events">
     			{{event.year}}
     		</div>
     	</div>
 
+    	<!--EVENT TEXT BOTTOM-->
     	<div class="text bottom">
     		<div class="event" ng-repeat="event in events" ng-if="$index%2==0">
     			{{event.text}}

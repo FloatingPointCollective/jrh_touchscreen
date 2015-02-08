@@ -371,8 +371,8 @@ footer {
       #timeline .images .image img {
         border-right: 1px solid white; }
     #timeline .images .quote {
-      padding: 0px 30px 0px 30px;
-      background-color: rgba(185, 185, 185, 0.2);
+      padding: 0px 40px 0px 40px;
+      background-color: rgba(185, 185, 185, 0.3);
       width: 520px;
       height: 400px;
       font-family: 'Futura';
@@ -402,7 +402,8 @@ footer {
         color: #b9b9b9;
         width: 800px;
         padding-top: 21px;
-        display: inline-block; }
+        display: inline-block;
+        position: relative; }
     #timeline #events .top {
       padding-left: 400px; }
     #timeline #events .bottom {
@@ -417,9 +418,18 @@ footer {
       height: 60px;
       font-size: 28px;
       background-color: rgba(255, 255, 255, 0.5); }
-      #timeline #events #dates .date {
+      #timeline #events #dates .date, #timeline #events #dates .date-top, #timeline #events #dates .date-bottom {
+        line-height: 70px;
+        height: 100%;
         width: 400px;
-        padding-top: 17px;
-        display: inline-block; }
+        padding-top: 0px;
+        display: inline-block;
+        background-repeat: no-repeat; }
+      #timeline #events #dates .date-top {
+        background-image: url("../img/timeline/up_arrow.png");
+        background-position: bottom; }
+      #timeline #events #dates .date-bottom {
+        background-image: url("../img/timeline/down_arrow.png");
+        background-position: top; }
 
 /*# sourceMappingURL=style.css.map */
