@@ -162,12 +162,10 @@ angular
 
         $scope.onMouseMove = function(){
             $scope.resetTimeout();
-            console.log("onMouseMove: "+$scope.idleTime);
         }
 
         $scope.onClick = function(){
             $scope.resetTimeout();
-            console.log("onMouseMove: "+$scope.idleTime);
         }
 
         $scope.resetTimeout = function(){

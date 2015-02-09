@@ -2,6 +2,16 @@ angular
     .module('jrhApp')
     .controller('timelineController', ['$scope', '$rootScope', '$stateParams', '$state',  function($scope, $rootScope, $stateParams, $state) {
 
+        $scope.currentImage = 0;
+        $scope.currentImage = $stateParams.image;
+
+
+        function setCurrentImage(id) {
+            console.log("set current image");
+           $scope.currentImage = id;
+           $state.go('timeline_detail');
+        }
+
         $scope.events = [
             {   
                 year:'1924',
@@ -193,7 +203,7 @@ angular
             {   
                 id:10, pos:'bottom',
                 quote:'', 
-                description:'After the war, Herman worked as a steward on the Matson Lurline luxury ocean liner on cruises between San Francisco and Honolulu. In 1946, Herman led a walkout of the Marine Cooks and Stewards when the Lurline was docked in Honolulu in solidarity with an ILWU sugar workers strike foreconomic gains and strengthened union recognition The Lurline sat in port for six months, and the sugar strike was ultimately successful.  Harvey—what was the reason fo rth esugar strike—better wages?'
+                description:'After the war, Herman worked as a steward on the Matson Lurline luxury ocean liner on cruises between San Francisco and Honolulu. In 1946, Herman led a walkout of the Marine Cooks and Stewards when the Lurline was docked in Honolulu in solidarity with an ILWU sugar workers strike foreconomic gains and strengthened union recognition The Lurline sat in port for six months, and the sugar strike was ultimately successful.'
             },
             {   
                 id:11, pos:'top',

@@ -1,23 +1,23 @@
 <!-- Template for Timeline Detail and maybe can also be used for issue synopsis detal -->
 <div id="wdysf_synopses">
-    <div class="wdysf_synopsis" ng-repeat="issue in issuePages" ng-show="issue.id === issueId">
+
+    <div class="wdysf_synopsis">
         <div class="visuals">
-            <div class="photo" style="background:url(img/{{issue.imageID}}.jpg);"></div>
-            <div class="caption">{{issue.caption}}</div>
+            <div class="photo" style="background:url(img/timeline/large/{{currentImage}}.jpg);"></div>
+            <div class="caption">{{images[currentImage].caption}}</div>
         </div>
-    <div class="sidebar">
-        <div class="intro">
-            <h1>Standing up for</h1>
-            <h2>{{issue.title}}</h2>
-        </div>
-        <div class="description">
-            <div>{{issue.description}}</div>
-            <div id="backButton" ui-sref="issues" ng-click="clearCurrentIssue()">
-                <div>
-                    <img src="img/arrow_left.png" />
-                    <p>Back</p>
+
+        <div class="sidebar">
+            <div class="description">
+                <div>{{images[currentImage].description}}</div>
+                <div id="backButton" ui-sref="timeline">
+                    <div>
+                        <img src="img/arrow_left.png" />
+                        <p>Back</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
 </div>

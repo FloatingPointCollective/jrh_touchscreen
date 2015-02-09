@@ -112,6 +112,19 @@ angular
                     }
                 }
             })
+            .state('timeline_detail', {
+                url:'timeline/detail/:image',
+                views: {
+                    'main': {
+                        templateUrl: 'partials/section_detail.html',
+                        controller: 'timelineController'
+                    },
+                    'footer': {
+                        templateUrl: 'templates/footer_secondary.html',
+                        controller: 'uiCtrl'
+                    }
+                }
+            })
             .state('black', {
                 url:'/',
                 views: {
