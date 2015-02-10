@@ -11,16 +11,15 @@ angular
         $scope.scrollStart = 0;
         $scope.detailID = $stateParams.detailID;
 
-
+        //display detail subsection
         $scope.clickOnDetail =function(id) {
-            console.log("clickOnDetail: "+id);
-           // $scope.detailID = id;
-            //console.log("$scope.detailID: "+$scope.detailID);
+            //console.log("clickOnDetail: "+id);
             if(($scope.xStart - $scope.xEnd)==0){
                 $state.go('timeline_detail',{detailID:id});
             }
         }
 
+        //drag to scroll functionality
         $scope.onMouseMove = function ($event) {
             if($scope.dragging){
                 console.log("mousemove in timeline ");
@@ -45,6 +44,7 @@ angular
             $scope.xEnd = $event.x;
         }
 
+        //DATA
         $scope.events = [
             {   
                 year:'1924',

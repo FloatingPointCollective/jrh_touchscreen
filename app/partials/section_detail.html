@@ -1,9 +1,14 @@
 <!-- Template for Timeline Detail and maybe can also be used for issue synopsis detail -->
 <div id="section-detail">
-
+        <div id="push-down" ng-if="images[detailID].quote!=''"></div>
         <div class="visuals">
             <div class="photo">
-                <img src="img/timeline/large/{{detailID+1}}.jpg">
+                <!-- display image IF there is no quote -->
+                <img src="img/timeline/large/{{detailID+1}}.jpg" ng-if="images[detailID].quote==''">
+                <!-- ELSE display quote -->
+                <div id="quote" ng-if="images[detailID].quote!=''">
+                    {{images[detailID].quote}}
+                </div>
             </div>
             <div class="caption">{{images[detailID].caption}}</div>
         </div>

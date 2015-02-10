@@ -265,62 +265,6 @@ video {
       border: 1px solid rgba(255, 255, 255, 0.8);
       background-color: rgba(40, 40, 40, 0.8); }
 
-#section-detail {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding-top: 0px;
-  height: 1080px;
-  margin: 0 auto; }
-  #section-detail .visuals {
-    display: inline-block;
-    text-align: center;
-    width: 1320px; }
-    #section-detail .visuals .photo {
-      margin-top: 50px;
-      display: inline-block;
-      margin-left: auto;
-      margin-right: auto; }
-      #section-detail .visuals .photo img {
-        box-shadow: 0px 0px 100px rgba(255, 255, 255, 0.2); }
-    #section-detail .visuals .caption {
-      position: relative;
-      color: white;
-      display: block;
-      text-align: right;
-      margin-top: 10px; }
-  #section-detail .sidebar {
-    float: right;
-    width: 600px;
-    color: white;
-    margin-top: 50px; }
-    #section-detail .sidebar .intro {
-      margin-bottom: 10px; }
-      #section-detail .sidebar .intro h1 {
-        text-transform: uppercase;
-        font-size: 24px; }
-      #section-detail .sidebar .intro h2 {
-        text-transform: uppercase;
-        font-size: 38px; }
-    #section-detail .sidebar .description {
-      margin-top: 0px;
-      font-size: 1.5em;
-      line-height: 40px;
-      width: 500px; }
-      #section-detail .sidebar .description #backButton {
-        font-size: 34px;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.8);
-        width: 180px;
-        height: 35px;
-        margin: 50px 0px;
-        padding: 20px 0px 20px 0px;
-        border: 1px solid rgba(255, 255, 255, 0.8);
-        background-color: rgba(40, 40, 40, 0.8); }
-        #section-detail .sidebar .description #backButton img {
-          padding: 0px 20px;
-          float: left; }
-        #section-detail .sidebar .description #backButton p {
-          width: 200px; }
-
 footer {
   z-index: 1;
   width: 100%;
@@ -433,5 +377,72 @@ footer {
       #timeline #events #dates .date-bottom {
         background-image: url("../img/timeline/down_arrow.png");
         background-position: top; }
+
+#section-detail {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 0px;
+  height: 1080px;
+  margin: 0 auto; }
+  #section-detail #push-down {
+    width: 100%;
+    height: 200px; }
+  #section-detail .visuals {
+    display: inline-block;
+    text-align: center;
+    width: 1320px; }
+    #section-detail .visuals .photo {
+      margin-top: 50px;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto; }
+      #section-detail .visuals .photo img {
+        box-shadow: 0px 0px 100px rgba(255, 255, 255, 0.2); }
+    #section-detail .visuals #quote {
+      color: white;
+      font-size: 120px;
+      text-transform: uppercase;
+      width: 1100px;
+      display: table-cell;
+      vertical-align: middle;
+      text-shadow: 0em 0em 0.6em rgba(255, 255, 255, 0.5); }
+    #section-detail .visuals .caption {
+      position: relative;
+      color: white;
+      display: block;
+      text-align: right;
+      margin-top: 10px; }
+  #section-detail .sidebar {
+    float: right;
+    width: 600px;
+    color: white;
+    margin-top: 50px; }
+    #section-detail .sidebar .intro {
+      margin-bottom: 10px; }
+      #section-detail .sidebar .intro h1 {
+        text-transform: uppercase;
+        font-size: 24px; }
+      #section-detail .sidebar .intro h2 {
+        text-transform: uppercase;
+        font-size: 38px; }
+    #section-detail .sidebar .description {
+      margin-top: 0px;
+      font-size: 1.5em;
+      line-height: 40px;
+      width: 500px; }
+      #section-detail .sidebar .description #backButton {
+        font-size: 34px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.8);
+        width: 180px;
+        height: 35px;
+        margin: 50px 0px;
+        padding: 20px 0px 20px 0px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        background-color: rgba(40, 40, 40, 0.8); }
+        #section-detail .sidebar .description #backButton img {
+          padding: 0px 20px;
+          float: left; }
+        #section-detail .sidebar .description #backButton p {
+          width: 200px; }
 
 /*# sourceMappingURL=style.css.map */
