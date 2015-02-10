@@ -1,6 +1,6 @@
-<div id="timeline" ng-mousemove="onMouseMove($event)" ng-mousedown="startDrag($event)" ng-mouseup="stopDrag()">
+<div id="timeline" ng-mousemove="onMouseMove($event)" ng-mousedown="startDrag($event)" ng-mouseup="stopDrag($event)">
     <div class="images">
-    	<div class="image" ng-repeat="image in images" ng-switch on="image.quote" ng-if="image.pos=='top'" ui-sref="timeline_detail({image:image.id})">
+    	<div class="image" ng-repeat="image in images" ng-switch on="image.quote" ng-if="image.pos=='top'" ng-click="clickOnDetail($index)">
 
     		<img src="img/timeline/small/{{$index+1}}.jpg" ng-switch-when="" >
     		
@@ -35,7 +35,7 @@
     </div>
 
     <div class="images">
-    	<div class="image" ng-repeat="image in images" ng-switch on="image.quote" ng-if="image.pos=='bottom'" ui-sref="timeline_detail({image:image.id})">
+    	<div class="image" ng-repeat="image in images" ng-switch on="image.quote" ng-if="image.pos=='bottom'" ng-click="clickOnDetail($index)">
 
     		<img src="img/timeline/small/{{$index+1}}.jpg" ng-switch-when="">
 

@@ -1,16 +1,16 @@
-<!-- Template for Timeline Detail and maybe can also be used for issue synopsis detal -->
+<!-- Template for Timeline Detail and maybe can also be used for issue synopsis detail -->
 <div id="section-detail">
 
         <div class="visuals">
             <div class="photo">
-                <img src="img/timeline/large/{{currentImage}}.jpg">
+                <img src="img/timeline/large/{{detailID+1}}.jpg">
             </div>
-            <div class="caption">{{images[currentImage].caption}}</div>
+            <div class="caption">{{images[detailID].caption}}</div>
         </div>
 
         <div class="sidebar">
             <div class="description">
-                <div>{{images[currentImage].description}}</div>
+                <div>{{images[detailID].description}}</div>
                 <div id="backButton" ui-sref="timeline">
                     <div>
                         <img src="img/arrow_left.png" />
@@ -19,5 +19,5 @@
                 </div>
             </div>
         </div>
-        
+
 </div>

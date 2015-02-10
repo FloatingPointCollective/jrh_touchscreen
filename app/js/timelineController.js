@@ -2,20 +2,24 @@ angular
     .module('jrhApp')
     .controller('timelineController', ['$scope', '$rootScope', '$stateParams', '$state',  function($scope, $rootScope, $stateParams, $state) {
 
-        $scope.currentImage = 0;
-        $scope.currentImage = $stateParams.image;
+        $scope.detailID = 0;
         $scope.dragging = false;
         $scope.xStart = 0;
+        $scope.xEnd = 0;
         $scope.mainView;
         $scope.scrollVel = 0;
         $scope.scrollStart = 0;
+        $scope.detailID = $stateParams.detailID;
 
 
-       /* function setCurrentImage(id) {
-            console.log("set current image");
-           $scope.currentImage = id;
-           $state.go('timeline_detail');
-        }*/
+        $scope.clickOnDetail =function(id) {
+            console.log("clickOnDetail: "+id);
+           // $scope.detailID = id;
+            //console.log("$scope.detailID: "+$scope.detailID);
+            if(($scope.xStart - $scope.xEnd)==0){
+                $state.go('timeline_detail',{detailID:id});
+            }
+        }
 
         $scope.onMouseMove = function ($event) {
             if($scope.dragging){
@@ -25,7 +29,6 @@ angular
                 scrollto = ($scope.scrollStart - $event.x);
                 console.log("scrollto: "+scrollto);
                 $scope.mainView.scrollLeft = scrollto;
-
                 $scope.scrollVel = $scope.xStart-$event.x;
             }
         }
@@ -39,6 +42,7 @@ angular
 
         $scope.stopDrag = function ($event) {
             $scope.dragging = false; 
+            $scope.xEnd = $event.x;
         }
 
         $scope.events = [

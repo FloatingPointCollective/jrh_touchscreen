@@ -80,6 +80,8 @@ angular
 
         $scope.init = function(){
 
+            window.ondragstart = function() { return false; } 
+
         WebSocket.onopen(function() {
             console.log('connection open');
             WebSocket.send('Hello World');

@@ -113,7 +113,7 @@ angular
                 }
             })
             .state('timeline_detail', {
-                url:'timeline/detail/:image',
+                url:'timeline/detail/:detailID',
                 views: {
                     'main': {
                         templateUrl: 'partials/section_detail.html',
