@@ -4,12 +4,41 @@ angular
 
         $scope.currentImage = 0;
         $scope.currentImage = $stateParams.image;
+        $scope.dragging = false;
+        $scope.xStart = 0;
+        $scope.mainView;
+        $scope.scrollVel = 0;
+        $scope.scrollStart = 0;
 
 
-        function setCurrentImage(id) {
+       /* function setCurrentImage(id) {
             console.log("set current image");
            $scope.currentImage = id;
            $state.go('timeline_detail');
+        }*/
+
+        $scope.onMouseMove = function ($event) {
+            if($scope.dragging){
+                console.log("mousemove in timeline ");
+                console.log("$scope.xStart: "+$scope.xStart);
+                console.log("$event.x: "+$event.x);
+                scrollto = ($scope.scrollStart - $event.x);
+                console.log("scrollto: "+scrollto);
+                $scope.mainView.scrollLeft = scrollto;
+
+                $scope.scrollVel = $scope.xStart-$event.x;
+            }
+        }
+
+        $scope.startDrag = function ($event) {
+            $scope.dragging = true;
+            $scope.mainView = document.getElementById("main-view");
+            $scope.scrollStart = $event.x+$scope.mainView.scrollLeft;
+            $scope.xStart = $event.x;
+        }
+
+        $scope.stopDrag = function ($event) {
+            $scope.dragging = false; 
         }
 
         $scope.events = [

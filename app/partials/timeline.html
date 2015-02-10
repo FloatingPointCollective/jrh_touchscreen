@@ -1,4 +1,4 @@
-<div id="timeline" draggable="true">
+<div id="timeline" ng-mousemove="onMouseMove($event)" ng-mousedown="startDrag($event)" ng-mouseup="stopDrag()">
     <div class="images">
     	<div class="image" ng-repeat="image in images" ng-switch on="image.quote" ng-if="image.pos=='top'" ui-sref="timeline_detail({image:image.id})">
 
