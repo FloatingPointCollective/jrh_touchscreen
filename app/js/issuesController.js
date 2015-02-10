@@ -40,7 +40,7 @@ angular
             quote:'"The ultimate corruption is seen in the vast numbers of unemployment, the denial of a secure and dignified retirement, the denial of childcare to working mothers."', 
             description:'Herman devoted his life to improving the situation of working people everywhere. His labor activism began when he joined the Marine Cooks and Stewards Union, which advocated to increase the wages for “low-level” jobs, such as cooking and cleaning, on luxury ocean liners. After settling in San Francisco in 1947, he spent the rest of his life fighting for fair wages and  benefits for his fellow ILWU constituents, as well as for members of other unions and working people worldwide.', 
             imageID:'laborRights', 
-            caption:'Caption about Labor Rights'
+            caption:''
         },
         {   
             id: 2,
@@ -56,7 +56,7 @@ angular
             quote:'"How do you explain the American dream to kids without school lunches, to teenagers with nothing better to do than hang out, or to workers and farmers whose homes and farms have been foreclosed, to people without medical care who are physically hurting, and to some - too many - who are without food?"', 
             description:'Herman dreamed of a world where the working class got a fair chance and spent his career advocating for stable jobs for underprivileged citizens. He criticized President Reagan’s “trickle-down” economic policy and his military spending, arguing that they would increase inflation, imbalance the federal budget, and make the rich richer and the poor poorer. He pushed the union to strategize and unify to create a coherent economic program that supported a bigger job market and higher wages. Just as Herman advocated for the rights of union members, like better wages and health care benefits, he also fought for job creation so that everyone who wanted a job could have one. He led the union during a time of transition in the United States, from a manufacturing to a service-based economy, and tried to accommodate modernization and mechanization while maintaining job placement for ILWU members. He sympathized with those who wanted to work but couldn’t, and fought to find a balance with the shipping companies to maintain longshore jobs along the coast.', 
             imageID:'econjustice', 
-            caption:'Caption about Economic Justice'
+            caption:''
         },
         {   
             id: 4,
@@ -80,7 +80,7 @@ angular
             quote:'"[We have] the solemn obligation of […] looking at the world around us, where there are things happening that we disagree with […] and [mobilizing] to extend a hand of friendship and brotherhood to those people engaged in struggle for democracy and decency."', 
             description:'Just as Herman fought for the rights of union members and working people, he also helped shaped the policies of the ILWU to reflect a larger worldview, supporting the rights of marginalized people all over the world. Herman traveled to Japan, Canada, Australia and other countries with active ports to help international unions organize. He also lent support of the union to help shape international policy, such as protesting the apartheid government in South Africa, and boycotting Salvadoran coffee in protest against the brutal death squads of the government in El Salvador.', 
             imageID:'intlsolidarity', 
-            caption:'Caption about International Solidarity'
+            caption:''
         }
     ];
 

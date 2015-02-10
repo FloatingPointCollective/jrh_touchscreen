@@ -1,9 +1,12 @@
 <!-- WDYSF QUOTE-->
-<div id="wdysf_synopses">
+<div id="section-detail">
     <div class="wdysf_synopsis" ng-repeat="issue in issuePages" ng-show="issue.id === issueId">
         <div class="visuals">
-            <div class="photo" style="background:url(img/{{issue.imageID}}.jpg);"></div>
-            <div class="caption">{{issue.caption}}</div>
+            <div class="photo">
+                <img src="img/{{issue.imageID}}.jpg">
+                <div class="caption">{{issue.caption}}</div>
+
+            </div>
         </div>
     <div class="sidebar">
         <div class="intro">
