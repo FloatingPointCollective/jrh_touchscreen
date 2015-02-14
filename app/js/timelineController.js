@@ -48,7 +48,7 @@ angular
         $scope.events = [
             {   
                 year:'1924',
-                text:'Herman is born in New Jersey on August 21st.'
+                text:'Jimmy is born in New Jersey on August 21st.'
             },
             {   
                 year:'1934',
@@ -56,11 +56,11 @@ angular
             },
             {   
                 year:'1935',
-                text:'Herman leaves formal schooling after the 5th grade, and works.'
+                text:'Leaves formal schooling after the 5th grade, and works at a delivery boy'
             },
             {   
                 year:'1939',
-                text:'Herman calls his first strike while working at Mrs. Wagner’s Pies in Newark, NJ.'
+                text:'Calls his first strike while working at Mrs. Wagner’s Pies in Newark, NJ.'
             },
             {   
                 year:'1939',
@@ -76,7 +76,7 @@ angular
             },
             {   
                 year:'1947',
-                text:'Herman moves to San Francisco'
+                text:'Jimmy moves to San Francisco'
             },
             {   
                 year:'1948',
