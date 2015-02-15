@@ -11,6 +11,8 @@
     	</div>
     </div>
     <div id="events">
+        
+
     	<!--EVENT TEXT TOP-->
     	<div class="text top" >
     		<div class="event" ng-repeat="event in events" ng-if="$index%2==1">
@@ -31,6 +33,9 @@
     			{{event.text}}
     		</div>
     	</div>
+
+        <div id="arrow-left" ng-click="scrollLeft()"><div class="arrow"></div></div>
+        <div id="arrow-right" ng-click="scrollRight()"><div class="arrow"></div></div>
 
     </div>
 

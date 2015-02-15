@@ -20,6 +20,7 @@ angular
             }
         }
 
+        //SCROLLING
         //drag to scroll functionality
         $scope.onMouseMove = function ($event) {
             if($scope.dragging){
@@ -40,6 +41,7 @@ angular
             $scope.mainView = document.getElementById("main-view");
             $scope.scrollStart = $event.x+$scope.mainView.scrollLeft;
             $scope.xStart = $event.x;
+            clearInterval($scope.scrollInterval);
         }
 
         $scope.stopDrag = function ($event) {
@@ -47,6 +49,17 @@ angular
             $scope.xEnd = $event.x;
             //save scroll position in a cookie
             //document.cookie="timelinescroll="+$scope.mainView.scrollLeft;
+        }
+
+        $scope.scrollAmount = 1000;
+        $scope.scrollLeft = function(){
+            $rootScope.timelineScroll -= $scope.scrollAmount;
+            $scope.startScrollToTarget($rootScope.timelineScroll);
+        }
+
+        $scope.scrollRight = function(){
+            $rootScope.timelineScroll += $scope.scrollAmount;
+            $scope.startScrollToTarget($rootScope.timelineScroll);
         }
 
         $scope.backToTimeline = function(){
@@ -94,13 +107,13 @@ angular
                 text:'Becomes member of The National Union of Marine Cooks and Stewards'
             },
             {   
+                year:'1952',
+                text:'Elected chairman of Local 6 Legislative Congress'
+            },
+            {   
                 year:'1953',
                 text:'Joins the ILWU warehouse workers local in San Francisco',
                 description:'Falls victim to the McCarthy-era Coast Guard screening program and is forced to leave the Merchant Marine; he joins the ILWU warehouse workers local in San Francisco'
-            },
-            {   
-                year:'1952',
-                text:'Elected chairman of Local 6 Legislative Congress'
             },
             {   
                 year:'1956',
@@ -323,20 +336,29 @@ angular
 
         ];
 
+        $scope.startScrollToTarget = function(targetScroll){
+            $scope.targetScrollTo = targetScroll;
+            $scope.scrollInterval = setInterval($scope.scrollToPosition,5);
+        }
+
         $scope.scrollToPosition = function(){
-            $scope.mainView.scrollLeft += ($rootScope.timelineScroll-$scope.mainView.scrollLeft)/100;
-            if( Math.abs($scope.mainView.scrollLeft - $rootScope.timelineScroll) < .1){
+            $scope.mainView.scrollLeft += ($scope.targetScrollTo-$scope.mainView.scrollLeft)/20;
+            if( Math.abs($scope.mainView.scrollLeft - $scope.targetScrollTo) < .1){
                 clearInterval($scope.scrollInterval);
             }
         }
 
         //INIT
         $scope.init = function(){
+            if(!$rootScope.timelineScroll){
+                $rootScope.timelineScroll = 1;
+            }
+
             //update scroll on page load
             $scope.mainView = document.getElementById("main-view");
-            $rootScope.timelineScroll += 200;
+           // $rootScope.timelineScroll += 100;
            // $scope.mainView.scrollLeft = $rootScope.timelineScroll;
-           $scope.scrollInterval = setInterval($scope.scrollToPosition,5);
+           $scope.startScrollToTarget($rootScope.timelineScroll);
 
             console.log("start scroll at: "+$rootScope.timelineScroll);
             $scope.show = true;

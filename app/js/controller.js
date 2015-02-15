@@ -76,7 +76,7 @@ angular
         $scope.goHome = function(){
             $state.go('home');
             WebSocket.send('0');
-            $rootScope.timelineScroll = null;
+            $rootScope.timelineScroll = 0;
         }
 
         //$scope.status = TestWebSocket.status();

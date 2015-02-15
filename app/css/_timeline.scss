@@ -38,8 +38,35 @@
 		text-align: center;
 		display: inline-block;
 		float: left;
+		position: relative;
 
 		$eventWidth: 400px;
+
+		#arrow-left{
+			position: fixed;
+			height: 180px;
+			padding: 0px 28px 0px 20px;
+			background-color: rgba(20,20,20,1);
+			opacity: 1;
+			.arrow{
+				margin-top: 40px;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 50px 25px 50px 0;
+				border-color: transparent #ffffff transparent transparent;
+			}
+		}
+
+		#arrow-right{
+			@extend #arrow-left;
+			padding: 0px 20px 0px 28px;
+			right: 0px;
+			.arrow{
+				border-width: 50px 0px 50px 25px;
+				border-color: transparent transparent transparent #ffffff;
+			}
+		}
 
 		.text{
 			height: 60px;
