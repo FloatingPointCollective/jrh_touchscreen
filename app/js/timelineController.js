@@ -51,13 +51,9 @@ angular
         }
 
         $scope.scrollAmount = 1000;
-        $scope.scrollLeft = function(){
-            $rootScope.timelineScroll -= $scope.scrollAmount;
-            $scope.startScrollToTarget($rootScope.timelineScroll);
-        }
-
-        $scope.scrollRight = function(){
-            $rootScope.timelineScroll += $scope.scrollAmount;
+        $scope.scroll = function(dir){
+            $rootScope.timelineScroll = $scope.mainView.scrollLeft;
+            $rootScope.timelineScroll += $scope.scrollAmount*dir;
             $scope.startScrollToTarget($rootScope.timelineScroll);
         }
 
@@ -337,11 +333,13 @@ angular
 
         $scope.startScrollToTarget = function(targetScroll){
             $scope.targetScrollTo = targetScroll;
+            clearInterval($scope.scrollInterval);
             $scope.scrollInterval = setInterval($scope.scrollToPosition,5);
         }
 
         $scope.scrollToPosition = function(){
             $scope.mainView.scrollLeft += ($scope.targetScrollTo-$scope.mainView.scrollLeft)/20;
+          //  $rootScope.timelineScroll =  $scope.mainView.scrollLeft;
             if( Math.abs($scope.mainView.scrollLeft - $scope.targetScrollTo) < .1){
                 clearInterval($scope.scrollInterval);
             }
