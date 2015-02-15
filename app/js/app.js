@@ -74,7 +74,7 @@ angular
                 }
             })
             .state('synopsis', {
-                url:'issues/synopsis/:issue',
+                url:'/issues/synopsis/:issue',
                 views: {
                     'main': {
                         templateUrl: 'partials/issues_pages/issues.synopsis.html',
@@ -87,7 +87,7 @@ angular
                 }
             })
             .state('video', {
-                url:'jimmy-story',
+                url:'/jimmy-story',
                 views: {
                     'main': {
                         templateUrl:'partials/video_pages/video.html',
@@ -100,7 +100,7 @@ angular
                 }
             })
             .state('timeline', {
-                url:'timeline',
+                url:'/timeline',
                 views: {
                     'main': {
                         templateUrl:'partials/timeline.html',
@@ -113,7 +113,7 @@ angular
                 }
             })
             .state('timeline_detail', {
-                url:'timeline/detail/:detailID',
+                url:'/timeline/detail/:detailID',
                 views: {
                     'main': {
                         templateUrl: 'partials/section_detail.html',
@@ -126,7 +126,7 @@ angular
                 }
             })
             .state('black', {
-                url:'/',
+                url:'/black',
                 views: {
                     'main': {
                         templateUrl: 'templates/off.html',

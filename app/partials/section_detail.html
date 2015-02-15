@@ -4,19 +4,20 @@
         <div class="visuals">
             <div class="photo">
                 <!-- display image IF there is no quote -->
-                <img src="img/timeline/large/{{detailID+1}}.jpg" ng-if="images[detailID].quote==''">
+                <img src="img/timeline/large/{{images[detailID].id}}.jpg" ng-if="images[detailID].quote==''">
                 <!-- ELSE display quote -->
                 <div id="quote" ng-if="images[detailID].quote!=''">
                     {{images[detailID].quote}}
                 </div>
-            </div>
             <div class="caption">{{images[detailID].caption}}</div>
+            </div>
+            
         </div>
 
         <div class="sidebar">
             <div class="description">
                 <div>{{images[detailID].description}}</div>
-                <div id="backButton" ui-sref="timeline">
+                <div id="backButton" ui-sref="timeline" ng-click="backToTimeline">
                     <div>
                         <img src="img/arrow_left.png" />
                         <p>Back</p>

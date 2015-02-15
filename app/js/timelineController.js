@@ -13,7 +13,7 @@ angular
 
         //display detail subsection
         $scope.clickOnDetail =function(id) {
-            //console.log("clickOnDetail: "+id);
+            //only if there is no scroll
             if(($scope.xStart - $scope.xEnd)==0){
                 $state.go('timeline_detail',{detailID:id});
             }
@@ -42,6 +42,10 @@ angular
         $scope.stopDrag = function ($event) {
             $scope.dragging = false; 
             $scope.xEnd = $event.x;
+        }
+
+        $scope.backToTimeline = function(){
+
         }
 
         //DATA
@@ -102,7 +106,7 @@ angular
             {   
                 year:'1961',
                 text:'Elected President of Local 34',
-                description:'Herman advanced quickly in the ranks of the ILWU. As he said himself, “I never took a backseat when it came to formulating an opinion, nor was I bashful about expressing it.” (This World, 1991 date?)'
+                description:'Jimmy advanced quickly in the ranks of the ILWU. As he said himself, “I never took a backseat when it came to formulating an opinion, nor was I bashful about expressing it.” (This World, 1991 date?)'
             },
             {   
                 year:'1965',
@@ -129,9 +133,9 @@ angular
                 text:'Elected ILWU President',
                 description:''
             },
-           /* {   
+            /*{   
                 year:'1978',
-                text:'ILWU longshoremen refuse to handle bomb parts packed for the CIA-backed military junta in Chile',
+                text:'ILWU longshoremen refuse to handle bomb parts headed to the Chilean military junta',
                 description:''
             },
             {   
@@ -256,7 +260,7 @@ angular
             {   
                 id:14, pos:'bottom',
                 quote:'',
-                description:'After leading a strike of the Marine Cooks and Stewards aboard the Lurline ocean liner he was forbidden from working aboard ships, and found employment in the San Francisco Port warehouses.The job action is in 1946, and Jimmy is screened in 1953.'
+                description:'After leading a strike of the Marine Cooks and Stewards aboard the Lurline ocean liner he was forbidden from working aboard ships, and found employment in the San Francisco Port warehouses.'
             },
             {   
                 id:15, pos:'top',
@@ -266,7 +270,8 @@ angular
              {   
                 id:16, pos:'top',
                 quote:'',
-                description:'Herman was an ally of the United Farm Workers’ (UFW) efforts to organize and continued to support that union throughout his career. In this photo, Herman speaks with UFW leader Cesar Chavez in 1974.Photo credit: Bob Fitch Photography Archive, Department of Special Collections, Stanford University'
+                description:'Jimmy was an ally of the United Farm Workers’ (UFW) efforts to organize and continued to support that union throughout his career. In this photo, Herman speaks with UFW leader Cesar Chavez in 1974.',
+                caption: 'Photo credit: Bob Fitch Photography Archive, Department of Special Collections, Stanford University'
             },
             {   
                 id:17, pos:'bottom',
@@ -285,6 +290,11 @@ angular
             {   
                 id:20, pos:'top', quote:'“Get a job, join a union”',
                 description:'Herman grew up in a time when “Get a job, join a union” was the motto for most people in America. But his road to leadership, he said, “emerged from the working life of the union. It’s not something you plan for like a doctor or a lawyer, but is accidental. You don’t prepare, you simply find yourself in a situation that is unbelievably democratic, where everyone has license to advocate any point of view. You learn to survive amid extraordinary dissent, and you learn to be careful in your judgment of the license you have.” (This World, 1991)'
+            },
+            {   
+                id:'20a', pos:'top', quote:'',
+                description:'Jimmy helps incorporate the Inlandboatmen’s Union (IBU), a Pacific Coast union that originated in San Francisco in 1918 whose membership includes ferry, tug and barge, and seafood workers, into the ILWU’s maritime division.'
+
             },
             {   
                 id:21, pos:'bottom',
