@@ -1,3 +1,18 @@
+@font-face {
+  font-family: Futura;
+  src: url("fonts/Futura.ttf");
+  src: local("Futura"), url("fonts/Futura.ttf") format("truetype"); }
+@font-face {
+  font-family: FuturaLT;
+  src: local("Futura LT Light"), url("fonts/FuturLight.ttf") format("truetype"); }
+@font-face {
+  font-family: FuturaBold;
+  src: local("Futura LT Pro"), url("fonts/FuturaLTPro-Bold.otf") format("opentype"); }
+@font-face {
+  font-family: "FuturaItalic";
+  src: local("Futura"), url("fonts/FuturBooObl.ttf") format("truetype");
+  /*  font-style: oblique;*/
+  /*   src: url('fonts/FuturBooObl.ttf') format('truetype');*/ }
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -36,14 +51,6 @@ html {
   -ms-user-select: none;
   user-select: none; }
 
-@font-face {
-  font-family: Futura;
-  src: url("fonts/Futura.ttf");
-  src: local("Futura"), url("fonts/Futura.ttf") format("truetype"); }
-@font-face {
-  font-family: Futura LT Light;
-  src: url("fonts/FuturLight.ttf");
-  src: local("Futura LT Light"), url("fonts/FuturLight.ttf") format("truetype"); }
 body {
   background: url(../img/bg_water.jpg) no-repeat center center fixed;
   background-color: black;
@@ -80,6 +87,7 @@ body {
   color: white;
   text-align: center;
   font-size: 30px;
+  box-shadow: 0px 0px 50px #000;
   display: flex;
   justify-content: center;
   /* align horizontal */
@@ -87,12 +95,14 @@ body {
   /* align vertical */ }
 
 header h1 {
+  font-family: FuturaBold;
+  color: #141414;
   margin-top: 55px;
   margin-left: 180px;
   font-size: 61px;
   margin-bottom: 0; }
 header h2 {
-  font-family: Futura;
+  font-family: FuturaLT;
   font-size: 77px;
   text-align: right;
   margin-right: 210px;
@@ -184,18 +194,38 @@ video {
   height: 100%;
   position: relative;
   padding-top: 50px; }
+  #wdysf h2 {
+    font-family: FuturaLT;
+    margin-bottom: 20px;
+    margin-right: 309px;
+    font-size: 96px;
+    color: #141414; }
+    #wdysf h2 strong {
+      font-family: "FuturaItalic"; }
+  #wdysf .description {
+    text-align: right; }
+    #wdysf .description p {
+      text-align: left;
+      font-size: 28px;
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 950px;
+      right: 0px;
+      padding: 30px;
+      padding-right: 100px;
+      color: #141414;
+      display: inline-block; }
   #wdysf #wdysf_main {
     width: 100%;
     height: 995px;
     position: relative;
-    padding-top: 140px; }
+    padding-top: 80px; }
     #wdysf #wdysf_main #wdysfButton1, #wdysf #wdysf_main #wdysfButton2, #wdysf #wdysf_main #wdysfButton3, #wdysf #wdysf_main #wdysfButton4, #wdysf #wdysf_main #wdysfButton5, #wdysf #wdysf_main #wdysfButton6 {
       background: url(../img/wdysf_laborrights_alt.jpg);
       width: 580px;
       height: 255px;
       position: relative;
       margin: 0px 5px 5px 0px;
-      box-shadow: 0px 0px 50px #888888;
+      box-shadow: 0px 0px 50px #000;
       float: left; }
       #wdysf #wdysf_main #wdysfButton1 span, #wdysf #wdysf_main #wdysfButton2 span, #wdysf #wdysf_main #wdysfButton3 span, #wdysf #wdysf_main #wdysfButton4 span, #wdysf #wdysf_main #wdysfButton5 span, #wdysf #wdysf_main #wdysfButton6 span {
         position: absolute;

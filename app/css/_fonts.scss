@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Futura;
+    src: url('fonts/Futura.ttf');
+    src: local('Futura'), url('fonts/Futura.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: FuturaLT;
+    src: local('Futura LT Light'), url('fonts/FuturLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: FuturaBold;
+    src: local('Futura LT Pro'), url('fonts/FuturaLTPro-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "FuturaItalic";
+    src: local('Futura'), url('fonts/FuturBooObl.ttf') format('truetype');
+  /*  font-style: oblique;*/
+ /*   src: url('fonts/FuturBooObl.ttf') format('truetype');*/
+}

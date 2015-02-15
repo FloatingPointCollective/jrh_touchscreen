@@ -14,8 +14,10 @@ angular
         $scope.debug = false;
         $scope.aboutId = $stateParams.aboutId;
         $scope.idleInterval;
-        $scope.warnTime = 60*5; //5 minutes in seconds
-        $scope.timeoutTime = $scope.warnTime+10; //+10 seconds
+        $scope.warnTime = 10;//60*5; //5 minutes in seconds
+        $scope.countDown = 10;
+        $scope.timeoutTime = $scope.warnTime+$scope.countDown; //+10 seconds
+
 
         console.log($stateParams);
         //console.log($scope.mediaPlayer)
@@ -176,6 +178,7 @@ angular
         $scope.resetTimeout = function(){
             $scope.idleTime = 0;
             $scope.showTimeout = false;
+            $scope.countDown = 10;
         }
 
         $scope.timerIncrement = function () {
@@ -189,6 +192,11 @@ angular
                 else if ($scope.idleTime == $scope.timeoutTime) { // 10 more seconds
                     $scope.timeout();
                 }
+                else if($scope.idleTime > $scope.warnTime){
+                    $scope.countDown -= 1;
+                    $scope.$apply();
+                }
+                
             }
         }
 
@@ -202,6 +210,7 @@ angular
             $scope.idleTime = 0;
             $scope.showTimeout = false;
             $scope.goHome();
+            $scope.countDown = 10;
             $scope.$apply();
         }
 }]);

@@ -1,4 +1,5 @@
 @import '_colors';
+@import '_fonts';
 
 .clearfix:after {
      visibility: hidden;
@@ -36,18 +37,6 @@ html{
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-}
-
-@font-face {
-    font-family: Futura;
-    src: url('fonts/Futura.ttf');
-    src: local('Futura'), url('fonts/Futura.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: Futura LT Light;
-    src: url('fonts/FuturLight.ttf');
-    src: local('Futura LT Light'), url('fonts/FuturLight.ttf') format('truetype');
 }
 
 body{
@@ -94,21 +83,24 @@ body{
     text-align: center;
     font-size: 30px;
 
+    box-shadow: 0px 0px 50px #000;
+
     display: flex;
-justify-content: center; /* align horizontal */
-align-items: center; /* align vertical */
-	   
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */   
 }
 
 header{
 	h1{
+		font-family: FuturaBold;
+		color: $dark-grey;
 		margin-top: 55px;
 		margin-left: 180px;
 		font-size: 61px;
 		margin-bottom: 0;
 	}
 	h2{
-		font-family: Futura;
+		font-family: FuturaLT;
 		font-size: 77px;
 		text-align: right;
 		margin-right: 210px;
@@ -232,11 +224,37 @@ video{
 	position: relative;
 	padding-top: 50px;
 
+	h2{
+		font-family: FuturaLT;
+		margin-bottom: 20px;
+		margin-right: 309px;
+		font-size: 96px;
+		color: $dark-grey;
+		strong{
+			font-family: "FuturaItalic";
+		}
+	}
+
+	.description{
+		text-align: right;
+		p{
+			text-align: left;
+			font-size: 28px;
+			background-color: rgba(255,255,255,.5);
+			width:950px;
+			right: 0px;
+			padding: 30px;
+			padding-right: 100px;
+			color: $dark-grey;
+			display: inline-block;
+		}
+	}
+
 	#wdysf_main {
 		width: 100%;
 		height: 995px;
 		position: relative;
-		padding-top: 140px;
+		padding-top: 80px;
 
 		#wdysfButton1 {
 			background: url(../img/wdysf_laborrights_alt.jpg);
@@ -244,7 +262,7 @@ video{
 			height: 255px;
 			position: relative;
 			margin: 0px 5px 5px 0px;
-			box-shadow: 0px 0px 50px #888888;
+			box-shadow: 0px 0px 50px #000;
 			float:left;
 			span{
 				position: absolute;
