@@ -47,8 +47,7 @@ angular
         $scope.stopDrag = function ($event) {
             $scope.dragging = false; 
             $scope.xEnd = $event.x;
-            //save scroll position in a cookie
-            //document.cookie="timelinescroll="+$scope.mainView.scrollLeft;
+            //keep scrolling based on speed, slow to a stop
         }
 
         $scope.scrollAmount = 1000;
