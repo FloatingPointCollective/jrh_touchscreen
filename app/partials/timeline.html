@@ -1,4 +1,4 @@
-<div id="timeline" ng-mousemove="onMouseMove($event)" ng-mousedown="startDrag($event)" ng-mouseup="stopDrag($event)">
+<div id="timeline" ng-mousemove="onMouseMove($event)" ng-mousedown="startDrag($event)" ng-mouseup="stopDrag($event)" ng-show="show">
     <div class="images">
     	<div class="image" ng-repeat="image in images" ng-switch on="image.quote" ng-if="image.pos=='top'" ng-click="clickOnDetail($index)">
 

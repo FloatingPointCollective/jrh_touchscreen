@@ -10,6 +10,7 @@ angular
         $scope.scrollVel = 0;
         $scope.scrollStart = 0;
         $scope.detailID = $stateParams.detailID;
+        $scope.show = true;
 
         //display detail subsection
         $scope.clickOnDetail =function(id) {
@@ -29,6 +30,8 @@ angular
                 console.log("scrollto: "+scrollto);
                 $scope.mainView.scrollLeft = scrollto;
                 $scope.scrollVel = $scope.xStart-$event.x;
+
+                $rootScope.timelineScroll = scrollto;
             }
         }
 
@@ -42,10 +45,14 @@ angular
         $scope.stopDrag = function ($event) {
             $scope.dragging = false; 
             $scope.xEnd = $event.x;
+            //save scroll position in a cookie
+            //document.cookie="timelinescroll="+$scope.mainView.scrollLeft;
         }
 
         $scope.backToTimeline = function(){
-
+            console.log("backToTimeline");
+            //store scroll value
+            
         }
 
         //DATA
@@ -315,5 +322,30 @@ angular
             }
 
         ];
+
+        $scope.scrollToPosition = function(){
+            $scope.mainView.scrollLeft += ($rootScope.timelineScroll-$scope.mainView.scrollLeft)/100;
+            if( Math.abs($scope.mainView.scrollLeft - $rootScope.timelineScroll) < .1){
+                clearInterval($scope.scrollInterval);
+            }
+        }
+
+        //INIT
+        $scope.init = function(){
+            //update scroll on page load
+            $scope.mainView = document.getElementById("main-view");
+            $rootScope.timelineScroll += 200;
+           // $scope.mainView.scrollLeft = $rootScope.timelineScroll;
+           $scope.scrollInterval = setInterval($scope.scrollToPosition,5);
+
+            console.log("start scroll at: "+$rootScope.timelineScroll);
+            $scope.show = true;
+            //$scope.$apply();
+            clearInterval($scope.initInterval);
+
+        }
+        //$scope.$evalAsync($scope.init );
+
+        $scope.initInterval = setInterval($scope.init, 10);
 
 }]);

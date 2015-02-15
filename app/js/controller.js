@@ -2,6 +2,8 @@ angular
     .module('jrhApp')
 
     .controller('uiCtrl', ['$scope', '$rootScope', '$stateParams', '$state', 'WebSocket',  function($scope, $rootScope, $stateParams, $state, WebSocket) {
+        //define global vars
+
         $scope.showMouse = true;
         $scope.videoPlaying = false;
         $scope.activeVideoName = "";
@@ -74,6 +76,7 @@ angular
         $scope.goHome = function(){
             $state.go('home');
             WebSocket.send('0');
+            $rootScope.timelineScroll = null;
         }
 
         //$scope.status = TestWebSocket.status();
