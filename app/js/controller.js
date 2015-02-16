@@ -131,9 +131,13 @@ angular
                     } else if (event.data === 'off') {
                         console.log('turn off');
                         $state.go('black');
+                        $scope.on = false;
                     } else if (event.data === 'on') {
-                        console.log('turn on');
-                        $state.go('home');
+                        if(!$scope.on){
+                            console.log('turn on');
+                            $state.go('home');
+                            $scope.on = true;
+                        }
                     }
                 });
 
