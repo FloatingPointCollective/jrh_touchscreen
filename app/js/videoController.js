@@ -4,7 +4,7 @@ angular
         $scope.videoPlaying = false;
 
         $scope.videoPlaylist = [
-            {src: 'video/jimmy_story.ogg', type: 'video/ogg'}
+            {src: 'video/jimmy_story.mp4', type: 'video/mp4'}
         ];
 
         // receive control events while video is loaded
@@ -17,8 +17,10 @@ angular
         console.log('HERE', $scope.player);
 
         
-        setTimeout(function(){
-            $scope.player.seek(0); //will this help the issue of the video not loading again if played for the second time?
+        $scope.interval = setTimeout(function(){
+
+            $scope.player = document.getElementById("jimmy-video");
+           // $scope.player.seek(0); //will this help the issue of the video not loading again if played for the second time?
             $scope.player.play();
 
             console.log("$rootScope.muted: "+$rootScope.muted);
@@ -31,6 +33,14 @@ angular
                 $state.go('home');
                 $scope.showFooterMenu();
             })
+
+            clearInterval($scope.interval);
+
         },10);
+
+        $scope.$on("$destroy", function() {
+            console.log("destroy called on scope");
+            $scope.player.src = "";
+        });
 
 }]);
