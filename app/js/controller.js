@@ -14,7 +14,7 @@ angular
         $scope.debug = false;
         $scope.aboutId = $stateParams.aboutId;
         $scope.idleInterval;
-        $scope.warnTime = 10;//60*5; //5 minutes in seconds
+        $scope.warnTime = 60*5; //5 minutes in seconds
         $scope.countDown = 10;
         $scope.timeoutTime = $scope.warnTime+$scope.countDown; //+10 seconds
 

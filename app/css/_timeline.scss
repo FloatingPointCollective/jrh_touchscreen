@@ -42,19 +42,23 @@
 
 		$eventWidth: 400px;
 
+		$arrowColor: $dark-grey;
+		$arrowWidth: 30px;
+
 		#arrow-left{
 			position: fixed;
 			height: 180px;
 			padding: 0px 28px 0px 20px;
-			background-color: rgba(20,20,20,1);
-			opacity: 1;
+			background-color: $off-white;
+			opacity: .96;
+			box-shadow: 0px 0px 40px 10px rgba(0,0,0,.8);
 			.arrow{
 				margin-top: 40px;
 				width: 0;
 				height: 0;
 				border-style: solid;
-				border-width: 50px 25px 50px 0;
-				border-color: transparent #ffffff transparent transparent;
+				border-width: 50px $arrowWidth 50px 0;
+				border-color: transparent $arrowColor transparent transparent;
 			}
 		}
 
@@ -63,8 +67,8 @@
 			padding: 0px 20px 0px 28px;
 			right: 0px;
 			.arrow{
-				border-width: 50px 0px 50px 25px;
-				border-color: transparent transparent transparent #ffffff;
+				border-width: 50px 0px 50px $arrowWidth;
+				border-color: transparent transparent transparent $arrowColor;
 			}
 		}
 

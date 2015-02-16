@@ -370,21 +370,22 @@ footer {
       position: fixed;
       height: 180px;
       padding: 0px 28px 0px 20px;
-      background-color: #141414;
-      opacity: 1; }
+      background-color: #dadada;
+      opacity: .96;
+      box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.8); }
       #timeline #events #arrow-left .arrow, #timeline #events #arrow-right .arrow {
         margin-top: 40px;
         width: 0;
         height: 0;
         border-style: solid;
-        border-width: 50px 25px 50px 0;
-        border-color: transparent #ffffff transparent transparent; }
+        border-width: 50px 30px 50px 0;
+        border-color: transparent #141414 transparent transparent; }
     #timeline #events #arrow-right {
       padding: 0px 20px 0px 28px;
       right: 0px; }
       #timeline #events #arrow-right .arrow {
-        border-width: 50px 0px 50px 25px;
-        border-color: transparent transparent transparent #ffffff; }
+        border-width: 50px 0px 50px 30px;
+        border-color: transparent transparent transparent #141414; }
     #timeline #events .text {
       height: 60px;
       background-color: rgba(0, 0, 0, 0.7);
