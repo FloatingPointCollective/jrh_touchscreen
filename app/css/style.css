@@ -367,12 +367,17 @@ footer {
     float: left;
     position: relative; }
     #timeline #events #arrow-left, #timeline #events #arrow-right {
+      transition: all 0.1s ease;
       position: fixed;
       height: 180px;
       padding: 0px 28px 0px 20px;
       background-color: #dadada;
       opacity: .96;
       box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.8); }
+      #timeline #events #arrow-left:active, #timeline #events #arrow-right:active {
+        box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.8);
+        opacity: 1;
+        background-color: #e6e6e6; }
       #timeline #events #arrow-left .arrow, #timeline #events #arrow-right .arrow {
         margin-top: 40px;
         width: 0;
