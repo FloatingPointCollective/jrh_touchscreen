@@ -1,7 +1,6 @@
 angular
     .module('jrhApp', [
         'ui.router',
-        'mediaPlayer',
         'angular-websocket'
     ])
 

@@ -83,11 +83,68 @@ angular
 
         //$scope.status = TestWebSocket.status();
 
+        $scope.connectToServer = function(){
+            clearInterval($scope.connectTimer);
+            $scope.connectTimer = setInterval($scope.attemptConnection, 10);
+        }
+
+
+        $scope.startPing = function(){
+            //ping server ever 15s
+            clearInterval($scope.connectTimer);
+            $scope.connectTimer = setInterval($scope.attemptConnection, 15000);
+        }
+
+        $scope.attemptConnection = function(){
+                WebSocket.new(wsUri);
+
+                //ON OPEN
+                WebSocket.onopen(function() {
+                    console.log('connection open');
+                    WebSocket.send('Hello World');
+                    //clear the connection timer
+                    clearInterval($scope.connectTimer);
+                    $scope.startPing();
+                });
+
+                //ON CLOSE
+                WebSocket.onclose($scope.connectToServer);
+
+                //ON MESSAGE
+                WebSocket.onmessage(function(event) {
+                    console.log("got message: "+event.data);
+                    if(event.data === 'mute') {
+
+                        console.log("go mute message");
+                        $rootScope.muted = true; //set muted global variable to true
+                        console.log("$rootScope.muted: "+$rootScope.muted);
+                        $rootScope.$broadcast('mute', true); //broadcast muted global variable as true
+
+                    } else if (event.data === 'unmute') {
+
+                        $rootScope.muted = false; //set muted global variable to false
+                        console.log("$rootScope.muted: "+$rootScope.muted);
+                        $rootScope.$broadcast('mute', false); //broadcast muted global variable as false
+                        
+                        console.log('unmute video');
+
+                    } else if (event.data === 'off') {
+                        console.log('turn off');
+                        $state.go('black');
+                    } else if (event.data === 'on') {
+                        console.log('turn on');
+                        $state.go('home');
+                    }
+                });
+
+        }
+
         $scope.init = function(){
 
             window.ondragstart = function() { return false; } 
+            $scope.connectToServer();
 
-        WebSocket.onopen(function() {
+       /* WebSocket.onopen(function() {
             console.log('connection open');
             WebSocket.send('Hello World');
             //clear the connection timer
@@ -160,7 +217,7 @@ angular
                 console.log('turn on');
                 $state.go('home');
             }
-        });
+        });*/
 
             //Increment the idle time counter.
             $scope.idleInterval = setInterval($scope.timerIncrement, 1000); // 1 second
