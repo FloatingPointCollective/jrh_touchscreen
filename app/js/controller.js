@@ -85,7 +85,7 @@ angular
 
         $scope.connectToServer = function(){
             clearInterval($scope.connectTimer);
-            $scope.connectTimer = setInterval($scope.attemptConnection, 10);
+            $scope.connectTimer = setInterval($scope.attemptConnection, 1000);
         }
 
 

@@ -75,7 +75,7 @@ angular
             },
             {   
                 year:'1935',
-                text:'Leaves formal schooling after the 5th grade, and works at a delivery boy'
+                text:'Leaves formal schooling after the 5th grade, and works as a delivery boy'
             },
             {   
                 year:'1939',

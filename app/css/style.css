@@ -127,10 +127,10 @@ header .message {
   text-align: center; }
 
 .sectionButton {
-  width: 486px;
-  height: 686px;
+  width: 485px;
+  height: 680px;
   position: relative;
-  margin: 20px 10px;
+  margin: 20px 30px;
   box-shadow: 0px 0px 50px #888888;
   display: inline-block; }
   .sectionButton span {
@@ -150,7 +150,7 @@ header .message {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(to bottom left, transparent 0%, black 100%); }
+    background-image: linear-gradient(to bottom left, transparent 60%, black 90%); }
 
 video {
   z-index: -1;
