@@ -40,9 +40,9 @@ angular
         ];
 
         $scope.aboutPages = [
-            {label:'About the ILWU', id:'ilwu'},
-            {label:'About the SF Port Commission', id:'port'},
-            {label:'Credits', id:'credits'},
+            {label:'About the ILWU', id:'ilwu', displayHeading:true, hasImage:true},
+            {label:'About the SF Port Commission', id:'port', displayHeading:false, hasImage:true},
+            {label:'Credits', id:'credits', displayHeading:false, hasImage:false}
         ];
 
         $scope.onKeyUp = function ($event) {

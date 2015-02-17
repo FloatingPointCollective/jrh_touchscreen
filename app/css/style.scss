@@ -172,6 +172,19 @@ video{
 	width: 1920px;
 	height: 1080px;
 	color: white;
+	font-size: 20px;
+
+	h1 {
+		text-transform: uppercase;
+		font-size: 40px;
+	}
+
+	h2{
+		font-family: FuturaBold;
+		font-size: 20px;
+		padding-top: 10px;
+		text-transform: uppercase;
+	}
 
 	.aboutPage{
 		padding: 50px;
@@ -180,6 +193,11 @@ video{
 
 	.credits {
 		line-height: 200%;
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
+		height: 970px;
+		width: 1920px;
 	}
 
 	.about-left-column {
@@ -200,22 +218,14 @@ video{
 
 	p {
 		padding: 20px 0px;
-		font-size: 1.5em;
 	}
 
 	ul {
 		padding: 5px 0px;
-		font-size: 1.3em;
 	}
 
-	h1 {
-		text-transform: uppercase;
-		font-size: 2.2em;
-	}
+	
 
-	h2 {
-		padding-top: 10px;
-	}
 }
 
 #wdysf {
