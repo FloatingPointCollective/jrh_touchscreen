@@ -350,11 +350,21 @@ footer {
     clear: both;
     height: 400px; }
     #timeline .images .image {
+      position: relative;
+      transition: box-shadow 0.1s ease;
+      box-shadow: 0px 0px 0px 0px transparent, inset 0px 0px 40px 10px rgba(255, 255, 255, 0.8);
+      z-index: 1;
       display: inline-block;
       border: none;
-      height: 400px; }
+      height: 400px;
+      /*box-shadow: inset 0px 0px 40px 10px rgba(255,255,255,.8);*/ }
+      #timeline .images .image:active {
+        box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.8), inset 0px 0px 40px 10px rgba(255, 255, 255, 0.8);
+        z-index: 666; }
       #timeline .images .image img {
-        border-right: 1px solid #b9b9b9; }
+        position: relative;
+        border-right: 1px solid #b9b9b9;
+        z-index: -2; }
     #timeline .images .quote {
       padding: 0px 40px 0px 40px;
       background-color: rgba(185, 185, 185, 0.3);
@@ -374,7 +384,8 @@ footer {
     text-align: center;
     display: inline-block;
     float: left;
-    position: relative; }
+    position: relative;
+    box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 0.8); }
     #timeline #events #arrow-left, #timeline #events #arrow-right {
       transition: box-shadow 0.1s ease;
       transition: opacity 0.1s ease;

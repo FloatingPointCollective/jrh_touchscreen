@@ -12,11 +12,18 @@
 		clear:both;
 		height: 400px;
 		.image{
+			
+			position: relative;
+			@include shadowDown();
 			display: inline-block;
 			border:none;
 			height: 400px;
+			/*box-shadow: inset 0px 0px 40px 10px rgba(255,255,255,.8);*/
+
 			img{
+				position: relative;
 				border-right: 1px solid $light-grey;
+				z-index: -2;
 			}
 		}
 		.quote{
@@ -41,6 +48,7 @@
 		display: inline-block;
 		float: left;
 		position: relative;
+		box-shadow: inset 0px 0px 40px 10px rgba(0,0,0,.8);
 
 		$eventWidth: 400px;
 
