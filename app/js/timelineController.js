@@ -32,11 +32,12 @@ angular
                 scrollto = ($scope.scrollStart - $event.x);
                 console.log("scrollto: "+scrollto);
                 $scope.mainView.scrollLeft = scrollto;
-                $scope.scrollVel = $scope.xStart-$event.x;
+                $scope.scrollVel = ($scope.lastX-$event.x)*2;
 
                 $rootScope.timelineScroll = scrollto;
 
                 $scope.update();
+                $scope.lastX = $event.x
             }
         }
 
@@ -51,7 +52,22 @@ angular
         $scope.stopDrag = function ($event) {
             $scope.dragging = false; 
             $scope.xEnd = $event.x;
+
             //keep scrolling based on speed, slow to a stop
+            $scope.scrollToStopInterval = setInterval($scope.scrollToStop, 50);
+        }
+
+        $scope.scrollToStop = function(){
+            $scope.mainView.scrollLeft += $scope.scrollVel;
+            $scope.scrollVel = $scope.scrollVel*.5;
+
+            console.log("$scope.scrollVel: "+$scope.scrollVel);
+
+            if( Math.abs($scope.scrollVel) <= 1){
+                clearInterval($scope.scrollToStopInterval);
+            }
+            
+            $scope.update();
         }
 
         $scope.scrollAmount = 800;
