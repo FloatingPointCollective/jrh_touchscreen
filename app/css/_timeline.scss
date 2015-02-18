@@ -6,6 +6,8 @@
 #timeline{
 	white-space: nowrap;
 	display: inline-block;
+	overflow: hidden;
+	width: 6940px;
 	.images{
 		clear:both;
 		height: 400px;
@@ -46,7 +48,9 @@
 		$arrowWidth: 30px;
 
 		#arrow-left{
-			transition: all 0.1s ease;
+			transition: box-shadow 0.1s ease;
+			transition: opacity 0.1s ease;
+			transition: opacity 0.1s ease;
 			position: fixed;
 			height: 180px;
 			padding: 0px 28px 0px 20px;
@@ -102,6 +106,7 @@
 
 		.bottom{
 			margin-left: 0;
+			padding-right: $eventWidth;
 		}
 		#dates{
 			display: inline-block;

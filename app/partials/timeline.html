@@ -10,8 +10,7 @@
 
     	</div>
     </div>
-    <div id="events">
-        
+    <div id="events" style="margin-left:{{eventsX}}px">
 
     	<!--EVENT TEXT TOP-->
     	<div class="text top" >
@@ -34,7 +33,7 @@
     		</div>
     	</div>
 
-        <div id="arrow-left" ng-click="scroll(-1)" ng-show="showLeftArrow"><div class="arrow"></div></div>
+        <div id="arrow-left" style="margin-left:{{-eventsX}}px" ng-click="scroll(-1)" ng-show="showLeftArrow"><div class="arrow"></div></div>
         <div id="arrow-right" ng-click="scroll(1)"ng-show="showRightArrow"><div class="arrow"></div></div>
 
     </div>

@@ -343,7 +343,9 @@ footer {
 
 #timeline {
   white-space: nowrap;
-  display: inline-block; }
+  display: inline-block;
+  overflow: hidden;
+  width: 6940px; }
   #timeline .images {
     clear: both;
     height: 400px; }
@@ -374,7 +376,9 @@ footer {
     float: left;
     position: relative; }
     #timeline #events #arrow-left, #timeline #events #arrow-right {
-      transition: all 0.1s ease;
+      transition: box-shadow 0.1s ease;
+      transition: opacity 0.1s ease;
+      transition: opacity 0.1s ease;
       position: fixed;
       height: 180px;
       padding: 0px 28px 0px 20px;
@@ -416,7 +420,8 @@ footer {
     #timeline #events .top {
       padding-left: 400px; }
     #timeline #events .bottom {
-      margin-left: 0; }
+      margin-left: 0;
+      padding-right: 400px; }
     #timeline #events #dates {
       display: inline-block;
       clear: both;

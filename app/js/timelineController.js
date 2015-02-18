@@ -12,6 +12,7 @@ angular
         $scope.detailID = $stateParams.detailID;
         $scope.show = true;
         $scope.showLeftArrow = false;
+        $scope.showRightArrow = true;
 
         //display detail subsection
         $scope.clickOnDetail =function(id) {
@@ -53,7 +54,7 @@ angular
             //keep scrolling based on speed, slow to a stop
         }
 
-        $scope.scrollAmount = 1000;
+        $scope.scrollAmount = 800;
         $scope.scroll = function(dir){
             $rootScope.timelineScroll = $scope.mainView.scrollLeft;
             $rootScope.timelineScroll += $scope.scrollAmount*dir;
@@ -65,7 +66,11 @@ angular
         }
 
         $scope.update = function(){
-            console.log("$rootScope.timelineScroll: "+$rootScope.timelineScroll);
+          //  console.log("$rootScope.timelineScroll: "+$rootScope.timelineScroll);
+            $scope.eventsX = -$scope.mainView.scrollLeft/1.1;
+            $scope.$apply();
+           // $scope.eventsX = -$rootScope.timelineScroll/1.1;
+            //console.log("$scope.eventsX: "+$scope.eventsX);
             //LEFT ARROW
             if($rootScope.timelineScroll <= 5){
                 $scope.showLeftArrow = false;
@@ -76,7 +81,7 @@ angular
 
             //RIGHT ARROW
             timelineRightEdge = $scope.mainView.scrollWidth-window.innerWidth;
-            console.log("timeline right edge: "+timelineRightEdge);
+           // console.log("timeline right edge: "+timelineRightEdge);
             if($rootScope.timelineScroll >= timelineRightEdge){
                 $scope.showRightArrow = false;
             }
@@ -360,12 +365,13 @@ angular
         }
 
         $scope.scrollToPosition = function(){
-            $scope.mainView.scrollLeft += ($scope.targetScrollTo-$scope.mainView.scrollLeft)/20;
+            $scope.mainView.scrollLeft += ($scope.targetScrollTo-$scope.mainView.scrollLeft)/50;
             scrollDif = Math.abs($scope.mainView.scrollLeft - $scope.targetScrollTo);
-            console.log("scrollDif: "+scrollDif);
+           // console.log("scrollDif: "+scrollDif);
             if( Math.abs($scope.mainView.scrollLeft - $scope.targetScrollTo) <= 1){
                 clearInterval($scope.scrollInterval);
             }
+            
             $scope.update();
         }
 
