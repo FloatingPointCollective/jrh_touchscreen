@@ -4,28 +4,15 @@ angular
 
     $scope.showMouse = true;
     $scope.showHomeScreen = false;
-    // $scope.showIssues= true;
-    // $scope.activeAboutPage = null;
-    // $scope.debug = false;
     $scope.issueId = $stateParams.issue;
     $scope.setCurrentIssue = setCurrentIssue;
     $scope.clearCurrentIssue = clearCurrentIssue;
 
     console.log($stateParams);
 
-    // $scope.getIssue = function(id) {
-    //     return $scope.issuePages.filter(function(issue) {
-    //         return issue.id == id;
-    //     })[0];
-    // }
-
-    // $scope.issue = $scope.getIssue($stateParams.issueId);
-
     function setCurrentIssue(issue) {
         console.log(issue.id);
         WebSocket.send(issue.id); //send issue to LED Control machine
-        //$scope.currentIssue = issue;
-//        $state.go('quote', {issue: issue.title});
     }
 
     function clearCurrentIssue() {
@@ -38,9 +25,9 @@ angular
             id: 1,
             title:'Labor Rights', 
             quote:'"The ultimate corruption is seen in the vast numbers of unemployment, the denial of a secure and dignified retirement, the denial of childcare to working mothers."', 
-            description:'Herman devoted his life to improving the situation of working people everywhere. His labor activism began when he joined the Marine Cooks and Stewards Union, which advocated to increase the wages for “low-level” jobs, such as cooking and cleaning, on luxury ocean liners. After settling in San Francisco in 1947, he spent the rest of his life fighting for fair wages and  benefits for his fellow ILWU constituents, as well as for members of other unions and working people worldwide.', 
+            description:'Jimmy Herman devoted his life to improving the situation of working people everywhere. His labor activism began when he joined the The National Union of Marine Cooks and Stewards, which advocated to increase the wages for “unskilled” jobs, such as cooking and cleaning, on luxury ocean liners. After settling in San Francisco in 1947, he spent the rest of his life fighting for fair wages and benefits for his fellow ILWU constituents, as well as for members of other unions and working people worldwide.', 
             imageID:'laborRights', 
-            caption:''
+            caption:'Mayor George Moscone, Cesar Chavez and James R. Herman protest against Proposition 22, 1968.'
         },
         {   
             id: 2,

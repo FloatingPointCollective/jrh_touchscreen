@@ -11,6 +11,7 @@ angular
         $scope.scrollStart = 0;
         $scope.detailID = $stateParams.detailID;
         $scope.show = true;
+        $scope.showLeftArrow = false;
 
         //display detail subsection
         $scope.clickOnDetail =function(id) {
@@ -33,6 +34,8 @@ angular
                 $scope.scrollVel = $scope.xStart-$event.x;
 
                 $rootScope.timelineScroll = scrollto;
+
+                $scope.update();
             }
         }
 
@@ -58,9 +61,28 @@ angular
         }
 
         $scope.backToTimeline = function(){
-            console.log("backToTimeline");
-            //store scroll value
-            
+            console.log("backToTimeline");            
+        }
+
+        $scope.update = function(){
+            console.log("$rootScope.timelineScroll: "+$rootScope.timelineScroll);
+            //LEFT ARROW
+            if($rootScope.timelineScroll <= 5){
+                $scope.showLeftArrow = false;
+            }
+            else{
+                $scope.showLeftArrow = true;
+            }
+
+            //RIGHT ARROW
+            timelineRightEdge = $scope.mainView.scrollWidth-window.innerWidth;
+            console.log("timeline right edge: "+timelineRightEdge);
+            if($rootScope.timelineScroll >= timelineRightEdge){
+                $scope.showRightArrow = false;
+            }
+            else{
+                $scope.showRightArrow = true;
+            }
         }
 
         //DATA
@@ -339,10 +361,12 @@ angular
 
         $scope.scrollToPosition = function(){
             $scope.mainView.scrollLeft += ($scope.targetScrollTo-$scope.mainView.scrollLeft)/20;
-          //  $rootScope.timelineScroll =  $scope.mainView.scrollLeft;
-            if( Math.abs($scope.mainView.scrollLeft - $scope.targetScrollTo) < .1){
+            scrollDif = Math.abs($scope.mainView.scrollLeft - $scope.targetScrollTo);
+            console.log("scrollDif: "+scrollDif);
+            if( Math.abs($scope.mainView.scrollLeft - $scope.targetScrollTo) <= 1){
                 clearInterval($scope.scrollInterval);
             }
+            $scope.update();
         }
 
         //INIT
