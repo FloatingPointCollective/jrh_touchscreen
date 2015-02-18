@@ -32,7 +32,7 @@ angular
                 scrollto = ($scope.scrollStart - $event.x);
                 console.log("scrollto: "+scrollto);
                 $scope.mainView.scrollLeft = scrollto;
-                $scope.scrollVel = ($scope.lastX-$event.x)*2;
+                $scope.scrollVel = ($scope.lastX-$event.x);
 
                 $rootScope.timelineScroll = scrollto;
 
@@ -46,6 +46,7 @@ angular
             $scope.mainView = document.getElementById("main-view");
             $scope.scrollStart = $event.x+$scope.mainView.scrollLeft;
             $scope.xStart = $event.x;
+            clearInterval($scope.scrollToStopInterval);
             clearInterval($scope.scrollInterval);
         }
 
@@ -54,20 +55,25 @@ angular
             $scope.xEnd = $event.x;
 
             //keep scrolling based on speed, slow to a stop
-            $scope.scrollToStopInterval = setInterval($scope.scrollToStop, 50);
+            if(Math.abs($scope.scrollVel)>1){
+                $scope.scrollToStopInterval = setInterval($scope.scrollToStop, 30);
+            }
         }
 
         $scope.scrollToStop = function(){
             $scope.mainView.scrollLeft += $scope.scrollVel;
-            $scope.scrollVel = $scope.scrollVel*.5;
+            $scope.scrollVel = $scope.scrollVel*.9;
 
             console.log("$scope.scrollVel: "+$scope.scrollVel);
 
             if( Math.abs($scope.scrollVel) <= 1){
                 clearInterval($scope.scrollToStopInterval);
             }
+
+            $rootScope.timelineScroll = $scope.mainView.scrollLeft;
             
             $scope.update();
+            $scope.$apply();
         }
 
         $scope.scrollAmount = 800;
@@ -84,11 +90,11 @@ angular
         $scope.update = function(){
           //  console.log("$rootScope.timelineScroll: "+$rootScope.timelineScroll);
             $scope.eventsX = -$scope.mainView.scrollLeft/1.1;
-            $scope.$apply();
+            
            // $scope.eventsX = -$rootScope.timelineScroll/1.1;
             //console.log("$scope.eventsX: "+$scope.eventsX);
             //LEFT ARROW
-            if($rootScope.timelineScroll <= 5){
+            if($scope.mainView.scrollLeft <= 5){
                 $scope.showLeftArrow = false;
             }
             else{
@@ -98,7 +104,7 @@ angular
             //RIGHT ARROW
             timelineRightEdge = $scope.mainView.scrollWidth-window.innerWidth;
            // console.log("timeline right edge: "+timelineRightEdge);
-            if($rootScope.timelineScroll >= timelineRightEdge){
+            if($scope.mainView.scrollLeft >= timelineRightEdge){
                 $scope.showRightArrow = false;
             }
             else{
@@ -388,7 +394,9 @@ angular
                 clearInterval($scope.scrollInterval);
             }
             
+
             $scope.update();
+            $scope.$apply();
         }
 
         //INIT
