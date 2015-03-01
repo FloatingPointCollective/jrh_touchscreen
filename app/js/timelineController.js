@@ -121,7 +121,7 @@ angular
             },
             {   
                 year:'1934',
-                text:'West Coast waterfront strike',
+                text:'Big strike hits Pacific Coast',
                 imageID:4
             },
             {   
@@ -245,12 +245,12 @@ angular
             {   
                 id:3, pos:'top',
                 quote:'“Work was a condition of survival”',
-                description:'Herman worked all of his life, and to him, “Work was a condition of survival.” San Francisco mayor Art Agnos, a close friend and neighbor to Herman, said “it was from his early life, growing up in the Depression and being fiercely independent, that he developed his empathy for others.”'
+                sources: ['This World, December 15, 1991','San Francisco Examiner, March 22, 1998']
             },
             {   
                 id:4,
                 quote:'', pos:'bottom',
-                description:'The 1934 Pacific Coast Maritime Strike stalled shipping at ports thoroughout the western United States. Longshoremen struck in May to protest unfair hiring practices and to call for better working conditions.  In July, two San Francisco strike supporters were shot and killed by police, and many more were injured in the event which became known as “Bloody Thursday.” Following their deaths, labor unions galvanized to shut down the city of San Francisco in a general strike that rocked the nation. In the arbitration that followed, the union was awarded most of its demands, including a union-controlled hiring hall and a labor contract that extended to all ports along the coast.'
+                caption: 'Photo: San Francisco Public Library'
             },
             {   
                 id:5, pos:'top',
@@ -260,7 +260,7 @@ angular
             {   
                 id:6, pos:'bottom',
                 quote:'“A great deal of wisdom resided in those ships”',
-                description:'Herman was a voracious reader all his life, and prided himself on his self-taught education. He used his time in the Merchant Marine to read everything he could. Karl Marx was especially influential. He reminisced later that “[Sailing was a lonely life] but it provided the opportunity to read an extraordinary amount about history, the classics, the great events in time. And you learned just by listening. A great deal of wisdom resided in those ships.”'
+                sources: ['This World, December 15, 1991']
             },
             {   
                 id:7, pos:'bottom',

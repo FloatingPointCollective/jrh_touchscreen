@@ -461,14 +461,16 @@ footer {
       overflow: auto;
       height: 60px;
       font-size: 28px;
-      background-color: rgba(255, 255, 255, 0.5); }
+      background-color: rgba(255, 255, 255, 0.5);
+      padding-left: 200px; }
       #timeline #events #dates .date, #timeline #events #dates .date-top, #timeline #events #dates .date-bottom {
         line-height: 70px;
         height: 100%;
         width: 400px;
         padding-top: 0px;
         display: inline-block;
-        background-repeat: no-repeat; }
+        background-repeat: no-repeat;
+        float: left; }
       #timeline #events #dates .date-top {
         background-image: url("../img/timeline/up_arrow.png");
         background-position: bottom; }
@@ -529,14 +531,16 @@ footer {
       width: 500px; }
       #section-detail .sidebar .description #sources {
         margin-top: 40px;
-        font-size: 10px; }
+        font-size: 10px;
+        color: #b9b9b9; }
         #section-detail .sidebar .description #sources h1 {
           text-transform: uppercase;
           margin: 0px;
           padding: 0px;
-          line-height: 0px; }
+          line-height: 25px; }
         #section-detail .sidebar .description #sources .source {
-          font-style: italic; }
+          font-style: italic;
+          line-height: 20px; }
       #section-detail .sidebar .description #backButton {
         font-size: 34px;
         text-transform: uppercase;

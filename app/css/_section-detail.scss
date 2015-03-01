@@ -70,14 +70,16 @@
 				#sources{
 					margin-top: 40px;
 					font-size: 10px;
+					color: $light-grey;
 					h1{
 						text-transform: uppercase;
 						margin: 0px;
 						padding: 0px;
-						line-height: 0px;
+						line-height: 25px;
 					}
 					.source{
 						font-style: italic;
+						line-height: 20px;
 					}
 				}
 
