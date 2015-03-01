@@ -16,7 +16,16 @@
 
         <div class="sidebar">
             <div class="description">
-                <div>{{images[detailID].description}}</div>
+                <div>
+                    <ng-include src="'partials/timeline/'+images[detailID].id+'.html'"></ng-include>
+                </div>
+                <!-- sources -->
+                <div id="sources" ng-if="images[detailID].sources">
+                    <h1>Sources</h1>
+                    <div class="source" ng-repeat="source in images[detailID].sources">
+                        {{source}}
+                    </div>
+                </div>
                 <div id="backButton" ui-sref="timeline" ng-click="backToTimeline()">
                     <div>
                         <img src="img/arrow_left.png" />

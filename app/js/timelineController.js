@@ -116,48 +116,34 @@ angular
         $scope.events = [
             {   
                 year:'1924',
-                text:'Jimmy is born in New Jersey on August 21st.'
+                text:'Jimmy is born in New Jersey',
+                imageID:1
             },
             {   
                 year:'1934',
-                text:'West Coast waterfront strike'
-            },
-            {   
-                year:'1935',
-                text:'Leaves formal schooling after the 5th grade, and works as a delivery boy'
+                text:'West Coast waterfront strike',
+                imageID:4
             },
             {   
                 year:'1939',
-                text:'Calls his first strike while working at Mrs. Wagner’s Pies in Newark, NJ.'
-            },
-            {   
-                year:'1939',
-                text:'Joins Merchant Marine at 15, lying about his age to enlist'
+                text:'Young Jimmy calls a strike',
+                imageID:2
             },
             {   
                 year:'1945',
-                text:'After the WWII, Jimmy finds employment as a steward on ships'
+                text:'After WWII, Jimmy finds employment as a steward on ships',
+                imageID:11
             },
             {   
                 year:'1946',
-                text:'ILWU sugar strike in Hawaii'
-            },
-            {   
-                year:'1947',
-                text:'Jimmy moves to San Francisco'
-            },
-            {   
-                year:'1948',
-                text:'Becomes member of The National Union of Marine Cooks and Stewards'
-            },
-            {   
-                year:'1952',
-                text:'Elected chairman of Local 6 Legislative Congress'
+                text:'ILWU sugar strike in Hawaii',
+                imageID:10
             },
             {   
                 year:'1953',
                 text:'Joins the ILWU warehouse workers local in San Francisco',
-                description:'Falls victim to the McCarthy-era Coast Guard screening program and is forced to leave the Merchant Marine; he joins the ILWU warehouse workers local in San Francisco'
+                description:'Falls victim to the McCarthy-era Coast Guard screening program and is forced to leave the Merchant Marine; he joins the ILWU warehouse workers local in San Francisco',
+                imageID:10
             },
             {   
                 year:'1956',
@@ -197,19 +183,9 @@ angular
                 text:'Elected ILWU President',
                 description:''
             },
-            /*{   
-                year:'1978',
-                text:'ILWU longshoremen refuse to handle bomb parts headed to the Chilean military junta',
-                description:''
-            },
             {   
                 year:'1980',
-                text:'ILWU longshore workers boycott military cargo bound for El Salvador in protest of government-sanctioned death squads',
-                description:''
-            },*/
-            {   
-                year:'1980',
-                text:'The IBU becomes the ILWU’s maritme division',
+                text:'The IBU becomes the ILWU’s maritime division',
                 description:'Herman helps bring the Inlandboatmen’s Union (IBU), a Pacific Coast union that originated in San Francisco in 1918 whose membership includes ferry, tug and barge, and seafood workers.  The IBU becomes the ILWU’s maritme division'
             },
             {   
@@ -260,11 +236,11 @@ angular
         $scope.images = [
             {   
                 id:1, pos:'top', quote:'',
-                description:'Herman was born in Newark, New Jersey on August 21, 1924. His father, Milton Sr., was a school janitor. His mother, Laurine, was a housewife who passed away when Herman was twelve years old. He was the middle of two brothers, Milton Jr. and Rodman. From left: Herman, Rodman, their father, and Milton Jr.'
+                caption: 'From left: Jimmy, Rodman, Milton Sr., and Milton Jr.'
             },
             {   
                 id:2, pos:'bottom', quote:'',
-                description:'At age 15 Jimmy called his first strike while working at Mrs. Wagner’s Pies in Newark, NJ. It lasted just half a day, but it resulted in a raise of 2 cents an hour on the $5 a day the 250 workers in the plant had been earning.'
+                sources: ['This World, December 15, 1991']
             },
             {   
                 id:3, pos:'top',

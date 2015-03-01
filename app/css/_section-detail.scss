@@ -67,6 +67,20 @@
 				line-height: 40px;
 				width: 500px;
 
+				#sources{
+					margin-top: 40px;
+					font-size: 10px;
+					h1{
+						text-transform: uppercase;
+						margin: 0px;
+						padding: 0px;
+						line-height: 0px;
+					}
+					.source{
+						font-style: italic;
+					}
+				}
+
 				#backButton {
 					font-size: 34px;
 					text-transform: uppercase;
