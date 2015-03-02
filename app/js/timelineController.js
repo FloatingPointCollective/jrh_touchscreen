@@ -131,12 +131,12 @@ angular
             },
             {   
                 year:'1945',
-                text:'After WWII, Jimmy finds employment as a steward on ships',
+                text:'Jimmy joins the union',
                 imageID:11
             },
             {   
                 year:'1946',
-                text:'ILWU sugar strike in Hawaii',
+                text:'Jimmy backs major Hawaiian sugar strike',
                 imageID:10
             },
             {   
@@ -264,13 +264,12 @@ angular
             },
             {   
                 id:7, pos:'bottom',
-                quote:'',
-                description:'Herman (right) and friends during the World War II.'
+                quote:''
             },
              {   
                 id:8, pos:'bottom',
                 quote:'“The great fever of patriotism”',
-                description:'His zeal for unionism merged with what he described as ‘the great fever of patriotism’ during World War II. Both offered ‘great clarity of vision’ -- unionism, because it led ‘to joining with fellow workers to bargain and, if necessary, to struggle collectively in order to get any kind of a decent shake;’ and patriotism, because the war provided ‘such a sense of unity, such national commitment that there was no confusion at all.’”'
+                sources: ['This World, December 15, 1991']
             },
             {   
                 id:9, pos:'top',
@@ -279,13 +278,12 @@ angular
             },
             {   
                 id:10, pos:'bottom',
-                quote:'', 
-                description:'After the war, Herman worked as a steward on the Matson Lurline luxury ocean liner on cruises between San Francisco and Honolulu. In 1946, Herman led a walkout of the Marine Cooks and Stewards when the Lurline was docked in Honolulu in solidarity with an ILWU sugar workers strike foreconomic gains and strengthened union recognition The Lurline sat in port for six months, and the sugar strike was ultimately successful.'
+                quote:''
             },
             {   
                 id:11, pos:'top',
                 quote:'',
-                description:'Herman joined the Marine Cooks and Stewards Union, which welcomed a diverse membership, since many crew members cooking and cleaning on the cruise ships were African-American or other ethnic minorities. Some were gay.'
+                sources: ['This World, December 15, 1991']
             },
             {   
                 id:12,
@@ -295,7 +293,7 @@ angular
             {   
                 id:13, pos:'top',
                 quote:'',
-                description:'The San Francisco Port around the time when Herman worked in the waterfront warehouses.'
+                caption:'Photo: San Francisco Maritime National Historical Park'
             },
             {   
                 id:14, pos:'bottom',
