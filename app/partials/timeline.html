@@ -14,21 +14,21 @@
 
     	<!--EVENT TEXT TOP-->
     	<div class="text top" >
-    		<div class="event" ng-repeat="event in events" ng-if="$index%2==1">
+    		<div class="event" ng-repeat="event in events" ng-if="$index%2==1" ng-click="clickOnDetailById(event.imageID)">
     			{{event.text}}
     		</div>
     	</div>
 
     	<!--YEARS-->
     	<div id="dates">
-    		<div class="date-{{$index%2 ? 'bottom':'top'}}" ng-repeat="event in events">
+    		<div class="date-{{$index%2 ? 'bottom':'top'}}" ng-repeat="event in events" ng-click="clickOnDetailById(event.imageID)">
     			{{event.year}}
     		</div>
     	</div>
 
     	<!--EVENT TEXT BOTTOM-->
     	<div class="text bottom">
-    		<div class="event" ng-repeat="event in events" ng-if="$index%2==0">
+    		<div class="event" ng-repeat="event in events" ng-if="$index%2==0" ng-click="clickOnDetailById(event.imageID)">
     			{{event.text}}
     		</div>
     	</div>

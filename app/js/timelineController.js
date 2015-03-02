@@ -22,6 +22,19 @@ angular
             }
         }
 
+        $scope.clickOnDetailById =function(id) {
+            //only if there is no scroll
+            if(($scope.xStart - $scope.xEnd)==0){
+                //find the image by id
+                for (var i = $scope.images.length - 1; i >= 0; i--) {
+                    if($scope.images[i].id == id){
+                        $state.go('timeline_detail',{detailID:i});
+                        break;
+                    }
+                };
+            }
+        }
+
         //SCROLLING
         //drag to scroll functionality
         $scope.onMouseMove = function ($event) {
@@ -141,9 +154,8 @@ angular
             },
             {   
                 year:'1953',
-                text:'Joins the ILWU warehouse workers local in San Francisco',
-                description:'Falls victim to the McCarthy-era Coast Guard screening program and is forced to leave the Merchant Marine; he joins the ILWU warehouse workers local in San Francisco',
-                imageID:10
+                text:'Coast Guard screening hits Jimmy.',
+                imageID:13
             },
             {   
                 year:'1956',
