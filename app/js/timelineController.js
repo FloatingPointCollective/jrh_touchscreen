@@ -102,7 +102,7 @@ angular
 
         $scope.update = function(){
           //  console.log("$rootScope.timelineScroll: "+$rootScope.timelineScroll);
-            $scope.eventsX = -$scope.mainView.scrollLeft/1.1;
+            $scope.eventsX = -$scope.mainView.scrollLeft*.4;
             
            // $scope.eventsX = -$rootScope.timelineScroll/1.1;
             //console.log("$scope.eventsX: "+$scope.eventsX);
@@ -172,40 +172,35 @@ angular
                 imageID:16
             },
             {   
-                year:'1969',
-                text:'Elected to the ILWU International Executive Board',
-                description:''
-            },
-            {   
-                year:'1970',
-                text:'Elected Vice President of the ILWU Northern California District Council',
-                description:'Elected Vice President of the ILWU Northern California District Council; Elected secretary of the Longshore Negotiating Committee'
-            },
-            {   
                 year:'1973',
-                text:'Honored as “Labor Man of the Year” by Alameda County Central Labor Council',
-                description:''
+                text:'Jimmy honored as Labor Man of the Year',
+                imageID:20
             },
             {   
                 year:'1977',
-                text:'Elected ILWU President',
-                description:''
+                text:'Jimmy succeeds Harry Bridges as ILWU President',
+                imageID:19
+            },
+            {   
+                year:'1978',
+                text:'ILWU boycotts Chilean junta',
+                imageID:23
             },
             {   
                 year:'1980',
-                text:'The IBU becomes the ILWU’s maritime division',
-                description:'Herman helps bring the Inlandboatmen’s Union (IBU), a Pacific Coast union that originated in San Francisco in 1918 whose membership includes ferry, tug and barge, and seafood workers.  The IBU becomes the ILWU’s maritme division'
+                text:'The Inlandboatmen’s Union joins the ILWU.',
+                imageID:'20a'
             },
             {   
                 year:'1982',
-                text:'Appointed to the San Francisco Port Commission',
-                description:''
+                text:'Jimmy appointed City Port Commissioner',
+                imageID:21
             },
 
             {   
                 year:'1984',
-                text:'ILWU boycotts South African cargo in anti-apartheid solidarity.',
-                description:'ILWU longshoremen engage in a week-long boycott of South African cargo in anti-apartheid solidarity'
+                text:'ILWU Longshoremen protest South African apartheid',
+                imageID:22
             },
             {   
                 year:'1989',
@@ -330,31 +325,27 @@ angular
                 caption:'ILWU Archives, photo by George Kruse'
             },
             {   
-                id:19, pos:'bottom',
-                quote:'',
-                description:'In 1977, Herman succeeded Harry Bridges as ILWU President. Bridges was a leader of the 1934 maritime strike and had been President of the ILWU since its founding. “Jimmy’s mastery of the economics of the maritime industry and his command of parliamentary procedure made him the only human being who could successfully fill Bridges’ shoes.” (Dave Jenkins, interviewed in This World, 1991)'
+                id:19, pos:'bottom', quote:'', caption:"Photo: ILWU Archives",
+                sources: ['This World, 1991']
             },
             {   
                 id:20, pos:'top', quote:'“Get a job, join a union”',
-                description:'Herman grew up in a time when “Get a job, join a union” was the motto for most people in America. But his road to leadership, he said, “emerged from the working life of the union. It’s not something you plan for like a doctor or a lawyer, but is accidental. You don’t prepare, you simply find yourself in a situation that is unbelievably democratic, where everyone has license to advocate any point of view. You learn to survive amid extraordinary dissent, and you learn to be careful in your judgment of the license you have.” (This World, 1991)'
+                sources: ['This World, December 15, 1991']
             },
             {   
                 id:'20a', pos:'top', quote:'',
-                description:'Jimmy helps incorporate the Inlandboatmen’s Union (IBU), a Pacific Coast union that originated in San Francisco in 1918 whose membership includes ferry, tug and barge, and seafood workers, into the ILWU’s maritime division.'
-
+                caption:'Jimmy visits in Inlandboatmen’s picket of the Washington State Ferries, 1980.  Photo: Seattle Times'
             },
             {   
                 id:21, pos:'bottom',
                 quote:'',
-                description:'Herman on the waterfront with former San Francisco mayor and longtime friend Art Agnos. Herman served on the Port Commission under four mayoral administrations.'
+                caption:'ILWU Archives, photo by George Kruse'
             },
             {   
-                id:22, pos:'top', quote:'',
-                description:'On April 11, 1985, Herman was arrested during a nonviolent sit-in at the South Africa Airways offices to protest that country’s apartheid government.'
+                id:22, pos:'top', quote:'', caption:'ILWU Archives'
             },
             {   
-                id:23, pos:'bottom', quote:'',
-                description:'Herman helped lead efforts to boycott coffee imported from El Salvador in protest of that country’s death squads and the United States’ tacit support of the Salvadoran government.'
+                id:23, pos:'bottom', quote:''
             },
             {   
                 id:24, pos:'bottom', quote:'“Elevating their knowledge and their faith in themselves”',
