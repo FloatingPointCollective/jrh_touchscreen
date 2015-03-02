@@ -39,11 +39,11 @@ angular
         //drag to scroll functionality
         $scope.onMouseMove = function ($event) {
             if($scope.dragging){
-                console.log("mousemove in timeline ");
-                console.log("$scope.xStart: "+$scope.xStart);
-                console.log("$event.x: "+$event.x);
+               // console.log("mousemove in timeline ");
+               // console.log("$scope.xStart: "+$scope.xStart);
+               // console.log("$event.x: "+$event.x);
                 scrollto = ($scope.scrollStart - $event.x);
-                console.log("scrollto: "+scrollto);
+                //console.log("scrollto: "+scrollto);
                 $scope.mainView.scrollLeft = scrollto;
                 $scope.scrollVel = ($scope.lastX-$event.x);
 
@@ -159,21 +159,17 @@ angular
             },
             {   
                 year:'1956',
-                text:'Transfers to Local 34 (Ships Clerks) in 1956'
-            },
-            {   
-                year:'1960',
-                text:'Elected Vice President of Local 34'
+                text:'Jimmy joins ILWU shipclerks’ Local 34'
             },
             {   
                 year:'1961',
-                text:'Elected President of Local 34',
-                description:'Jimmy advanced quickly in the ranks of the ILWU. As he said himself, “I never took a backseat when it came to formulating an opinion, nor was I bashful about expressing it.” (This World, 1991 date?)'
+                text:'Jimmy elected new ILWU Local 34 President',
+                imageID:'14a'
             },
             {   
                 year:'1965',
-                text:'Supports UFW Delano Grape Boycott alongside Cesar Chavez',
-                description:''
+                text:'Jimmy rallies support for Cesar Chavez and farmworkers',
+                imageID:16
             },
             {   
                 year:'1969',
@@ -309,28 +305,29 @@ angular
             },
             {   
                 id:14, pos:'bottom',
-                quote:'',
-                description:'After leading a strike of the Marine Cooks and Stewards aboard the Lurline ocean liner he was forbidden from working aboard ships, and found employment in the San Francisco Port warehouses.'
+                quote:''
             },
             {   
+                id:'14a', pos:'top',
+                quote:'“I never took a backseat”',
+                sources: ['This World, December 15, 1991']
+            },
+           /* {   
                 id:15, pos:'top',
                 quote:'',
                 description:'Herman joined the ILWU Local 6 in 1953, and quickly put his organizing skills to use in San Francisco warehouses.'
-            },
+            },*/
              {   
-                id:16, pos:'top',
-                quote:'',
-                description:'Jimmy was an ally of the United Farm Workers’ (UFW) efforts to organize and continued to support that union throughout his career. In this photo, Herman speaks with UFW leader Cesar Chavez in 1974.',
-                caption: 'Photo credit: Bob Fitch Photography Archive, Department of Special Collections, Stanford University'
+                id:16, pos:'top', quote:'',
+                caption: 'Photo: Bob Fitch Photography Archive, Department of Special Collections, Stanford University'
             },
             {   
-                id:17, pos:'bottom',
-                quote:'',
-                description:'Herman, Joan Baez and Cesar Chavez sing during a memorial service for UFW member Juan de la Cruz, who was shot and killed by scabs on a UFW picket line in 1973. Photo credit: Bob Fitch Photography Archive, Department of Special Collections, Stanford University'
+                id:17, pos:'bottom', quote:'',
+                caption:'ILWU Archives'
             },
             {   
                 id:18, pos:'top', quote:'',
-                description:'Herman marching in support of the United Farm Workers with Catholic priest Eugene J. Boyle, UFW President Cesar Chavez, and California State Senator George Moscone in 1972.'
+                caption:'ILWU Archives, photo by George Kruse'
             },
             {   
                 id:19, pos:'bottom',
