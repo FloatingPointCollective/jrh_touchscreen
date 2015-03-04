@@ -448,7 +448,8 @@ footer {
         display: inline-block;
         position: relative; }
     #timeline #events .top {
-      padding-left: 400px; }
+      padding-left: 400px;
+      padding-right: 800px; }
     #timeline #events .bottom {
       margin-left: 0;
       padding-right: 400px; }

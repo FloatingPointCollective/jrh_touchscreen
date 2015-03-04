@@ -102,7 +102,7 @@ angular
 
         $scope.update = function(){
           //  console.log("$rootScope.timelineScroll: "+$rootScope.timelineScroll);
-            $scope.eventsX = -$scope.mainView.scrollLeft*.4;
+            $scope.eventsX = -$scope.mainView.scrollLeft*.2;
             
            // $scope.eventsX = -$rootScope.timelineScroll/1.1;
             //console.log("$scope.eventsX: "+$scope.eventsX);
@@ -202,22 +202,25 @@ angular
                 text:'ILWU Longshoremen protest South African apartheid',
                 imageID:22
             },
-            {   
+            /*{   
                 year:'1989',
                 text:'ILWU Salvadoran coffee boycott.',
                 description:''
+            },*/
+            {   
+                year:'1990',
+                text:'???Something About Delancy Street???',
+                imageID:24
             },
             {   
                 year:'1991',
-                text:'Herman retires from the ILWU',
-                description:''
+                text:'Jimmy retires as ILWU President'
             },
             {   
                 year:'1994',
-                text:'Awarded Maritime Order of Merit and Rank of Commander',
-                description:'The Port of San Francisco awards Herman the Maritime Order of Merit and Rank of Commander'
+                text:'Jimmy awarded Maritime Order of Merit'
             },
-            {   
+            /*{   
                 year:'1996',
                 text:'Appointed chairman of Bay Dredging Action Coalition',
                 description:'Herman appointed chairman of Bay Dredging Action Coalition which successfully advocated to dredge deeper into the Bay to allow heavier cargo to enter the Port of Oakland'
@@ -226,11 +229,11 @@ angular
                 year:'1997',
                 text:'Moves to Delancey Street Foundation during final months of his life',
                 description:''
-            },
+            },*/
             {   
                 year:'1998',
-                text:'Passes away at age 74, surrounded by friends',
-                description:''
+                text:'Jimmy dies at 73',
+                imageID:25
             },
 
 
@@ -348,8 +351,11 @@ angular
                 id:23, pos:'bottom', quote:''
             },
             {   
-                id:24, pos:'bottom', quote:'“Elevating their knowledge and their faith in themselves”',
-                description:'Herman became closely involved with the Delancey Street Foundation after his retirement.. “Two or three times a week he stops by to have coffee with the residents, sitting with them, talking, getting them interested in issues outside themselves, literally elevating their knowledge and their faith in themselves.” - Mimi Silbert, Delancey Street Founder and CEO'
+                id:24, pos:'bottom', quote:'“Elevating their knowledge and their faith in themselves”'
+            }
+            ,
+            {   
+                id:25, pos:'top', quote:''
             }
 
         ];
