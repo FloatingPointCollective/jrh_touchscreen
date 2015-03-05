@@ -387,7 +387,7 @@ footer {
     #timeline .images .quote {
       padding: 0px 40px 0px 40px;
       background-color: rgba(185, 185, 185, 0.3);
-      width: 520px;
+      width: 500px;
       height: 400px;
       font-family: 'Futura';
       font-size: 44px;
@@ -443,16 +443,16 @@ footer {
       #timeline #events .text .event {
         font-size: 24px;
         color: #b9b9b9;
-        width: 800px;
+        width: 700px;
         padding-top: 21px;
         display: inline-block;
         position: relative; }
     #timeline #events .top {
-      padding-left: 400px;
-      padding-right: 800px; }
+      padding-left: 0;
+      padding-right: 700px; }
     #timeline #events .bottom {
-      margin-left: 0;
-      padding-right: 400px; }
+      padding-left: 350px;
+      padding-right: 350px; }
     #timeline #events #dates {
       display: inline-block;
       clear: both;
@@ -463,11 +463,11 @@ footer {
       height: 60px;
       font-size: 28px;
       background-color: rgba(255, 255, 255, 0.5);
-      padding-left: 200px; }
+      padding-left: 175px; }
       #timeline #events #dates .date, #timeline #events #dates .date-top, #timeline #events #dates .date-bottom {
         line-height: 70px;
         height: 100%;
-        width: 400px;
+        width: 350px;
         padding-top: 0px;
         display: inline-block;
         background-repeat: no-repeat;

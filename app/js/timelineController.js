@@ -245,13 +245,14 @@ angular
                 caption: 'From left: Jimmy, Rodman, Milton Sr., and Milton Jr.'
             },
             {   
-                id:2, pos:'bottom', quote:'',
-                sources: ['This World, December 15, 1991']
+                id:3, pos:'bottom',
+                quote:'“Work was a condition of survival”', width:"400",
+                sources: ['This World, December 15, 1991','San Francisco Examiner, March 22, 1998']
             },
             {   
-                id:3, pos:'top',
-                quote:'“Work was a condition of survival”',
-                sources: ['This World, December 15, 1991','San Francisco Examiner, March 22, 1998']
+                id:2, pos:'top', quote:'',
+                sources: ['This World, December 15, 1991'],
+                note:"Pie Pan"
             },
             {   
                 id:4,
@@ -260,13 +261,53 @@ angular
             },
             {   
                 id:5, pos:'top',
-                quote:'',
-                description:'Herman left home at the age of 15 to join the Merchant Marine, lying about his age in order to enlist. His first stop was on a freighter headed for the U.S. invasion of North Africa in 1942.'
+                quote:'', note:"Sailor Jimmy"
             },
             {   
+                id:10, pos:'top',
+                quote:'', note:"Lurlile Ship"
+            },
+            {   
+                id:11, pos:'bottom',
+                quote:'',
+                sources: ['This World, December 15, 1991'],
+                note:"kitchen"
+            },
+            {   
+                id:13, pos:'bottom',
+                quote:'',
+                caption:'Photo: San Francisco Maritime National Historical Park',
+                note:"SF Port Photo"
+            },
+            {   
+                id:12,
+                quote:'', pos:'bottom',
+                description:'Herman after moving to San Francisco.'
+            },
+            {   
+                id:'14a', pos:'bottom',
+                quote:'“I never took a backseat”', width:"400",
+                sources: ['This World, December 15, 1991']
+            },
+            {   
+                id:20, pos:'bottom', quote:'“Get a job, join a union”', width:"400",
+                sources: ['This World, December 15, 1991']
+            },
+            {   
+                id:23, pos:'bottom', quote:'', note:"Junta boycott"
+            },
+            {   
+                id:18, pos:'bottom', quote:'',
+                caption:'ILWU Archives, photo by George Kruse',
+                note:"with Agnos"
+            },
+             {   
                 id:6, pos:'bottom',
                 quote:'“A great deal of wisdom resided in those ships”',
                 sources: ['This World, December 15, 1991']
+            },
+            {   
+                id:24, pos:'bottom', quote:'“Elevating their knowledge and their faith in themselves”'
             },
             {   
                 id:7, pos:'bottom',
@@ -282,78 +323,53 @@ angular
                 quote:'',
                 description:'Herman (third from left) was an avid poker player all his life.'
             },
-            {   
-                id:10, pos:'bottom',
-                quote:''
+             {   
+                id:16, pos:'top', quote:'',
+                caption: 'Photo: Bob Fitch Photography Archive, Department of Special Collections, Stanford University',
+                note:"with Chavez"
+            },
+             {   
+                id:19, pos:'top', quote:'', caption:"Photo: ILWU Archives",
+                sources: ['This World, 1991'], note:"with Harry Bridges"
+            },
+              {   
+                id:'20a', pos:'top', quote:'',
+                caption:'Jimmy visits in Inlandboatmen’s picket of the Washington State Ferries, 1980.  Photo: Seattle Times'
             },
             {   
-                id:11, pos:'top',
-                quote:'',
-                sources: ['This World, December 15, 1991']
+                id:22, pos:'top', quote:'', caption:'ILWU Archives',
+                note:"anti-aparthied arrest"
             },
             {   
-                id:12,
-                quote:'', pos:'top',
-                description:'Herman after moving to San Francisco.'
+                id:"24a", pos:'top', quote:'', caption:'',
+                note:"Jimmy portrait at Local 34, Jimmy retires"
             },
-            {   
-                id:13, pos:'top',
-                quote:'',
-                caption:'Photo: San Francisco Maritime National Historical Park'
-            },
+            
+
             {   
                 id:14, pos:'bottom',
                 quote:''
-            },
-            {   
-                id:'14a', pos:'top',
-                quote:'“I never took a backseat”',
-                sources: ['This World, December 15, 1991']
             },
            /* {   
                 id:15, pos:'top',
                 quote:'',
                 description:'Herman joined the ILWU Local 6 in 1953, and quickly put his organizing skills to use in San Francisco warehouses.'
             },*/
-             {   
-                id:16, pos:'top', quote:'',
-                caption: 'Photo: Bob Fitch Photography Archive, Department of Special Collections, Stanford University'
-            },
+            
             {   
                 id:17, pos:'bottom', quote:'',
                 caption:'ILWU Archives'
             },
-            {   
-                id:18, pos:'top', quote:'',
-                caption:'ILWU Archives, photo by George Kruse'
-            },
-            {   
-                id:19, pos:'bottom', quote:'', caption:"Photo: ILWU Archives",
-                sources: ['This World, 1991']
-            },
-            {   
-                id:20, pos:'top', quote:'“Get a job, join a union”',
-                sources: ['This World, December 15, 1991']
-            },
-            {   
-                id:'20a', pos:'top', quote:'',
-                caption:'Jimmy visits in Inlandboatmen’s picket of the Washington State Ferries, 1980.  Photo: Seattle Times'
-            },
+
+           
+            
+          
             {   
                 id:21, pos:'bottom',
                 quote:'',
                 caption:'ILWU Archives, photo by George Kruse'
             },
-            {   
-                id:22, pos:'top', quote:'', caption:'ILWU Archives'
-            },
-            {   
-                id:23, pos:'bottom', quote:''
-            },
-            {   
-                id:24, pos:'bottom', quote:'“Elevating their knowledge and their faith in themselves”'
-            }
-            ,
+            
             {   
                 id:25, pos:'top', quote:''
             }

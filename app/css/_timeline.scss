@@ -29,7 +29,7 @@
 		.quote{
 			padding: 0px 40px 0px 40px;
 			background-color: rgba(185,185,185,.3);
-			width: 520px;
+			width: 500px;
 			height: 400px;
 			font-family: 'Futura';
 			font-size: 44px;
@@ -50,7 +50,7 @@
 		position: relative;
 		box-shadow: inset 0px 0px 40px 10px rgba(0,0,0,.8);
 
-		$eventWidth: 400px;
+		$eventWidth: 350px;
 
 		$arrowColor: $dark-grey;
 		$arrowWidth: 30px;
@@ -109,12 +109,12 @@
 			}
 		}
 		.top{
-			padding-left: $eventWidth;
+			padding-left: 0;
 			padding-right: $eventWidth*2;
 		}
 
 		.bottom{
-			margin-left: 0;
+			padding-left: $eventWidth;
 			padding-right: $eventWidth;
 		}
 		#dates{
