@@ -7,7 +7,7 @@
 	white-space: nowrap;
 	display: inline-block;
 	overflow: hidden;
-	width: 6940px;
+	width: 5600px;
 	.images{
 		clear:both;
 		height: 400px;
@@ -115,7 +115,7 @@
 
 		.bottom{
 			padding-left: $eventWidth;
-			padding-right: $eventWidth;
+			padding-right: $eventWidth*2;
 		}
 		#dates{
 			display: inline-block;

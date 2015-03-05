@@ -365,7 +365,7 @@ footer {
   white-space: nowrap;
   display: inline-block;
   overflow: hidden;
-  width: 6940px; }
+  width: 5600px; }
   #timeline .images {
     clear: both;
     height: 400px; }
@@ -452,7 +452,7 @@ footer {
       padding-right: 700px; }
     #timeline #events .bottom {
       padding-left: 350px;
-      padding-right: 350px; }
+      padding-right: 700px; }
     #timeline #events #dates {
       display: inline-block;
       clear: both;

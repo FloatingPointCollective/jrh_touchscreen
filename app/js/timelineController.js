@@ -102,7 +102,7 @@ angular
 
         $scope.update = function(){
           //  console.log("$rootScope.timelineScroll: "+$rootScope.timelineScroll);
-            $scope.eventsX = -$scope.mainView.scrollLeft*.2;
+            $scope.eventsX = -$scope.mainView.scrollLeft*.32;
             
            // $scope.eventsX = -$rootScope.timelineScroll/1.1;
             //console.log("$scope.eventsX: "+$scope.eventsX);
@@ -116,8 +116,9 @@ angular
 
             //RIGHT ARROW
             timelineRightEdge = $scope.mainView.scrollWidth-window.innerWidth;
-           // console.log("timeline right edge: "+timelineRightEdge);
-            if($scope.mainView.scrollLeft >= timelineRightEdge){
+            console.log("timeline right edge: "+timelineRightEdge);
+            console.log("$scope.mainView.scrollLeft: "+$scope.mainView.scrollLeft);
+            if($scope.mainView.scrollLeft >= timelineRightEdge-5){
                 $scope.showRightArrow = false;
             }
             else{
@@ -154,7 +155,7 @@ angular
             },
             {   
                 year:'1953',
-                text:'Coast Guard screening hits Jimmy.',
+                text:'Coast Guard screening hits Jimmy',
                 imageID:13
             },
             {   
@@ -214,7 +215,8 @@ angular
             },
             {   
                 year:'1991',
-                text:'Jimmy retires as ILWU President'
+                text:'Jimmy retires as ILWU President',
+                imageID:'24a'
             },
             {   
                 year:'1994',
@@ -263,6 +265,12 @@ angular
                 id:5, pos:'top',
                 quote:'', note:"Sailor Jimmy"
             },
+           /* {   
+                id:6, pos:'top',
+                quote:'“A great deal of wisdom resided in those ships”',
+                sources: ['This World, December 15, 1991'],
+                width:'300'
+            },*/
             {   
                 id:10, pos:'top',
                 quote:'', note:"Lurlile Ship"
@@ -289,6 +297,11 @@ angular
                 quote:'“I never took a backseat”', width:"400",
                 sources: ['This World, December 15, 1991']
             },
+            /*{   
+                id:18, pos:'bottom', quote:'',
+                caption:'ILWU Archives, photo by George Kruse',
+                note:"UFW"
+            },*/
             {   
                 id:20, pos:'bottom', quote:'“Get a job, join a union”', width:"400",
                 sources: ['This World, December 15, 1991']
@@ -297,36 +310,36 @@ angular
                 id:23, pos:'bottom', quote:'', note:"Junta boycott"
             },
             {   
-                id:18, pos:'bottom', quote:'',
+                id:21, pos:'bottom',
+                quote:'',
                 caption:'ILWU Archives, photo by George Kruse',
-                note:"with Agnos"
+                note:"with agnos"
             },
-             {   
-                id:6, pos:'bottom',
-                quote:'“A great deal of wisdom resided in those ships”',
-                sources: ['This World, December 15, 1991']
-            },
+
+             
             {   
-                id:24, pos:'bottom', quote:'“Elevating their knowledge and their faith in themselves”'
+                id:24, pos:'bottom', quote:'“Elevating their knowledge and their faith in themselves”',
+                width:1150
             },
-            {   
+           /* {   
                 id:7, pos:'bottom',
-                quote:''
+                quote:'', note:"with friends"
             },
+
+            
              {   
                 id:8, pos:'bottom',
                 quote:'“The great fever of patriotism”',
                 sources: ['This World, December 15, 1991']
-            },
+            },*/
             {   
                 id:9, pos:'top',
                 quote:'',
-                description:'Herman (third from left) was an avid poker player all his life.'
+                note:'Herman (third from left) was an avid poker player all his life.'
             },
              {   
                 id:16, pos:'top', quote:'',
-                caption: 'Photo: Bob Fitch Photography Archive, Department of Special Collections, Stanford University',
-                note:"with Chavez"
+                caption: 'Photo: Bob Fitch Photography Archive, Department of Special Collections, Stanford University'
             },
              {   
                 id:19, pos:'top', quote:'', caption:"Photo: ILWU Archives",
@@ -346,32 +359,23 @@ angular
             },
             
 
-            {   
+           /* {   
                 id:14, pos:'bottom',
                 quote:''
-            },
+            },*/
            /* {   
                 id:15, pos:'top',
                 quote:'',
                 description:'Herman joined the ILWU Local 6 in 1953, and quickly put his organizing skills to use in San Francisco warehouses.'
             },*/
             
-            {   
+            /*{   
                 id:17, pos:'bottom', quote:'',
                 caption:'ILWU Archives'
             },
-
-           
-            
-          
+            */
             {   
-                id:21, pos:'bottom',
-                quote:'',
-                caption:'ILWU Archives, photo by George Kruse'
-            },
-            
-            {   
-                id:25, pos:'top', quote:''
+                id:25, pos:'top', quote:'', note:"death"
             }
 
         ];
