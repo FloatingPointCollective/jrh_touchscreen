@@ -186,6 +186,7 @@ video{
 	h1 {
 		text-transform: uppercase;
 		font-size: 40px;
+		margin-bottom: 10px;
 	}
 
 	h2{
@@ -197,16 +198,19 @@ video{
 
 	.aboutPage{
 		padding: 50px;
-/*		width: 960px;*/
 	}
 
-	.credits {
+	.centered {
 		line-height: 200%;
 		text-align: center;
 		display: table-cell;
 		vertical-align: middle;
 		height: 970px;
 		width: 1920px;
+	}
+
+	.credits{
+		line-height: 35px;
 	}
 
 	.about-left-column {
@@ -223,14 +227,24 @@ video{
 		/*background: url(../img/ilwu_logo.png) no-repeat;*/
 		width: 362px;
 		height: 362px;
+		margin-bottom: 20px;
 	}
 
 	p {
-		padding: 20px 0px;
+		padding: 10px 0px;
+	}
+
+	.source{
+		color: $light-grey;
+		font-size: 15px;
 	}
 
 	ul {
 		padding: 5px 0px;
+	}
+
+	br{
+
 	}
 
 	

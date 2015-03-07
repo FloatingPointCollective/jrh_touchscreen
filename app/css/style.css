@@ -177,22 +177,24 @@ video {
   font-size: 20px; }
   #aboutPages h1 {
     text-transform: uppercase;
-    font-size: 40px; }
+    font-size: 40px;
+    margin-bottom: 10px; }
   #aboutPages h2 {
     font-family: FuturaBold;
     font-size: 20px;
     padding-top: 10px;
     text-transform: uppercase; }
   #aboutPages .aboutPage {
-    padding: 50px;
-    /*		width: 960px;*/ }
-  #aboutPages .credits {
+    padding: 50px; }
+  #aboutPages .centered {
     line-height: 200%;
     text-align: center;
     display: table-cell;
     vertical-align: middle;
     height: 970px;
     width: 1920px; }
+  #aboutPages .credits {
+    line-height: 35px; }
   #aboutPages .about-left-column {
     float: left;
     width: 45%; }
@@ -202,9 +204,13 @@ video {
   #aboutPages .logo {
     /*background: url(../img/ilwu_logo.png) no-repeat;*/
     width: 362px;
-    height: 362px; }
+    height: 362px;
+    margin-bottom: 20px; }
   #aboutPages p {
-    padding: 20px 0px; }
+    padding: 10px 0px; }
+  #aboutPages .source {
+    color: #b9b9b9;
+    font-size: 15px; }
   #aboutPages ul {
     padding: 5px 0px; }
 
