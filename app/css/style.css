@@ -194,7 +194,11 @@ video {
     height: 970px;
     width: 1920px; }
   #aboutPages .credits {
-    line-height: 35px; }
+    line-height: 35px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 150px; }
   #aboutPages .about-left-column {
     float: left;
     width: 45%; }
@@ -344,12 +348,13 @@ footer {
       font-size: 24px;
       opacity: .8; }
   footer h1 {
-    font-family: 'Futura LT Light', Futura, sans-serif;
+    font-family: FuturaBold;
     text-transform: uppercase;
-    padding: 35px;
+    padding: 35px 0px 0px 50px;
     opacity: .8;
     display: inline-block;
-    float: left; }
+    float: left;
+    color: #b9b9b9; }
   footer .homeBtn {
     float: right;
     height: 100%;

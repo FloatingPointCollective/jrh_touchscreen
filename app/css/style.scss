@@ -211,6 +211,10 @@ video{
 
 	.credits{
 		line-height: 35px;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding-bottom: 150px;
 	}
 
 	.about-left-column {
@@ -424,12 +428,13 @@ footer{
 	}
 
 	h1{
-		font-family: 'Futura LT Light', Futura, sans-serif;
+		font-family: FuturaBold;
 		text-transform: uppercase;
-		padding: 35px;
+		padding: 35px 0px 0px 50px;
 		opacity: .8;
 		display: inline-block;
 		float: left;
+		color: $light-grey;
 	}
 
 	.homeBtn{
