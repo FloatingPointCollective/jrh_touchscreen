@@ -160,7 +160,8 @@ angular
             },
             {   
                 year:'1956',
-                text:'Jimmy joins ILWU shipclerks’ Local 34'
+                text:'Jimmy joins ILWU shipclerks’ Local 34',
+                imageID:15
             },
             {   
                 year:'1961',
@@ -179,7 +180,7 @@ angular
             },
             {   
                 year:'1977',
-                text:'Jimmy succeeds Harry Bridges as ILWU President',
+                text:'Jimmy succeeds Harry Bridges as ILWU International President',
                 imageID:19
             },
             {   
@@ -244,7 +245,7 @@ angular
         $scope.images = [
             {   
                 id:1, pos:'top', quote:'',
-                caption: 'From left: Jimmy, Rodman, Milton Sr., and Milton Jr.'
+                caption: 'From left: Jimmy, Rodman, Milton Sr., and Milton Jr. Photo courtesy Art Agnos.'
             },
             {   
                 id:3, pos:'bottom',
@@ -259,7 +260,7 @@ angular
             {   
                 id:4,
                 quote:'', pos:'bottom',
-                caption: 'Photo: San Francisco Public Library'
+                caption: 'Longshoremen confront police in San Francisco, 1934.  Photo: San Francisco Public Library'
             },
             {   
                 id:5, pos:'top',
@@ -284,7 +285,7 @@ angular
             {   
                 id:13, pos:'bottom',
                 quote:'',
-                caption:'Photo: San Francisco Maritime National Historical Park',
+                caption:'San Francisco Waterfront ca 1945. Photo: San Francisco Maritime National Historical Park',
                 note:"SF Port Photo"
             },
             {   
@@ -326,16 +327,19 @@ angular
                 quote:'', note:"with friends"
             },
 
-            
              {   
                 id:8, pos:'bottom',
                 quote:'“The great fever of patriotism”',
                 sources: ['This World, December 15, 1991']
             },*/
-            {   
+            /*{   
                 id:9, pos:'top',
                 quote:'',
                 note:'Herman (third from left) was an avid poker player all his life.'
+            },*/
+            {   
+                id:15, pos:'top',
+                quote:'', caption:'An ILWU Shipclerk on the job. Source: ILWU Archives.'
             },
              {   
                 id:16, pos:'top', quote:'',
@@ -343,11 +347,12 @@ angular
             },
              {   
                 id:19, pos:'top', quote:'', caption:"Photo: ILWU Archives",
-                sources: ['This World, 1991'], note:"with Harry Bridges"
+                sources: ['This World, 1991'],
+                note:"with Harry Bridges"
             },
               {   
                 id:'20a', pos:'top', quote:'',
-                caption:'Jimmy visits in Inlandboatmen’s picket of the Washington State Ferries, 1980.  Photo: Seattle Times'
+                caption:'Jimmy joins the Inlandboatmen’s picket line during Washington State Ferries strike, 1980.  Photo: Seattle Times'
             },
             {   
                 id:22, pos:'top', quote:'', caption:'ILWU Archives',
@@ -363,11 +368,7 @@ angular
                 id:14, pos:'bottom',
                 quote:''
             },*/
-           /* {   
-                id:15, pos:'top',
-                quote:'',
-                description:'Herman joined the ILWU Local 6 in 1953, and quickly put his organizing skills to use in San Francisco warehouses.'
-            },*/
+            
             
             /*{   
                 id:17, pos:'bottom', quote:'',
