@@ -209,19 +209,16 @@ angular
                 text:'ILWU Salvadoran coffee boycott.',
                 description:''
             },*/
-            {   
-                year:'1990',
-                text:'???Something About Delancy Street???',
-                imageID:24
-            },
+
             {   
                 year:'1991',
                 text:'Jimmy retires as ILWU President',
-                imageID:'24a'
+                imageID:24
             },
             {   
                 year:'1994',
-                text:'Jimmy awarded Maritime Order of Merit'
+                text:'Jimmy awarded Maritime Order of Merit',
+                imageID:24
             },
             /*{   
                 year:'1996',
@@ -317,11 +314,14 @@ angular
                 note:"with agnos"
             },
 
-             
+             /*
             {   
                 id:24, pos:'bottom', quote:'“Elevating their knowledge and their faith in themselves”',
                 width:1150
-            },
+            },*/
+
+
+
            /* {   
                 id:7, pos:'bottom',
                 quote:'', note:"with friends"
@@ -359,9 +359,13 @@ angular
                 note:"anti-aparthied arrest"
             },
             {   
-                id:"24a", pos:'top', quote:'', caption:'',
+                id:24, pos:'top', quote:'', caption:'',
                 note:"Jimmy portrait at Local 34, Jimmy retires"
             },
+            {   
+                id:25, pos:'bottom', quote:'',
+                note:"death, final photo"
+            }
             
 
            /* {   
@@ -375,9 +379,7 @@ angular
                 caption:'ILWU Archives'
             },
             */
-            {   
-                id:25, pos:'top', quote:'', note:"death"
-            }
+            
 
         ];
 
