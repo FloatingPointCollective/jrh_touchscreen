@@ -220,16 +220,6 @@ angular
                 text:'Jimmy awarded Maritime Order of Merit',
                 imageID:24
             },
-            /*{   
-                year:'1996',
-                text:'Appointed chairman of Bay Dredging Action Coalition',
-                description:'Herman appointed chairman of Bay Dredging Action Coalition which successfully advocated to dredge deeper into the Bay to allow heavier cargo to enter the Port of Oakland'
-            },
-            {   
-                year:'1997',
-                text:'Moves to Delancey Street Foundation during final months of his life',
-                description:''
-            },*/
             {   
                 year:'1998',
                 text:'Jimmy dies at 73',
@@ -286,7 +276,7 @@ angular
                 id:12,
                 quote:'', pos:'bottom',
                 caption:'Photo Caption: Jimmy in San Francisco, early 1950s (Art Agnos)',
-                note:'Herman after moving to San Francisco.'
+                note:'Jimmy after moving to San Francisco.'
             },
             {   
                 id:'14a', pos:'bottom',
