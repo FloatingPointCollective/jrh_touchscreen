@@ -102,7 +102,7 @@ angular
 
         $scope.update = function(){
           //  console.log("$rootScope.timelineScroll: "+$rootScope.timelineScroll);
-            $scope.eventsX = -$scope.mainView.scrollLeft*.32;
+            $scope.eventsX = -$scope.mainView.scrollLeft*.33;
             
            // $scope.eventsX = -$rootScope.timelineScroll/1.1;
             //console.log("$scope.eventsX: "+$scope.eventsX);
@@ -170,7 +170,7 @@ angular
             },
             {   
                 year:'1965',
-                text:'Jimmy rallies support for Cesar Chavez and farmworkers',
+                text:'ILWU rallies support for Cesar Chavez and farmworkers',
                 imageID:16
             },
             {   
@@ -180,7 +180,7 @@ angular
             },
             {   
                 year:'1977',
-                text:'Jimmy succeeds Harry Bridges as ILWU International President',
+                text:'ILWU Longshore workers protest apartheid',
                 imageID:19
             },
             {   
@@ -261,124 +261,83 @@ angular
             },
             {   
                 id:5, pos:'top',
-                quote:'', note:"Sailor Jimmy"
+                quote:'',
+                caption:'Young Jimmy aboard ship in the early 1940s (Art Agnos)',
+                note:"Sailor Jimmy"
             },
-           /* {   
-                id:6, pos:'top',
-                quote:'“A great deal of wisdom resided in those ships”',
-                sources: ['This World, December 15, 1991'],
-                width:'300'
-            },*/
             {   
-                id:10, pos:'top',
+                id:10, pos:'top', caption:'The Matson Lurline luxury ocean liner docked near Aloha tower in Honolulu, HI (War in the Pacific National Historical Park)',
                 quote:'', note:"Lurlile Ship"
             },
             {   
                 id:11, pos:'bottom',
                 quote:'',
                 sources: ['This World, December 15, 1991'],
+                caption:'Jimmy (in back, near fan) joins his fellow seafarers in the ship’s mess hall (Art Agnos).',
                 note:"kitchen"
             },
             {   
                 id:13, pos:'bottom',
                 quote:'',
-                caption:'San Francisco Waterfront ca 1945. Photo: San Francisco Maritime National Historical Park',
+                caption:'San Francisco Waterfront ca. 1945 (San Francisco Maritime National Historical Park).',
                 note:"SF Port Photo"
             },
             {   
                 id:12,
                 quote:'', pos:'bottom',
-                description:'Herman after moving to San Francisco.'
+                caption:'Photo Caption: Jimmy in San Francisco, early 1950s (Art Agnos)',
+                note:'Herman after moving to San Francisco.'
             },
             {   
                 id:'14a', pos:'bottom',
                 quote:'“I never took a backseat”', width:"400",
                 sources: ['This World, December 15, 1991']
             },
-            /*{   
-                id:18, pos:'bottom', quote:'',
-                caption:'ILWU Archives, photo by George Kruse',
-                note:"UFW"
-            },*/
             {   
                 id:20, pos:'bottom', quote:'“Get a job, join a union”', width:"400",
                 sources: ['This World, December 15, 1991']
             },
             {   
-                id:23, pos:'bottom', quote:'', note:"Junta boycott"
+                id:23, pos:'bottom', quote:'', note:"Junta boycott",
+                caption:'Jimmy leads demonstration in support of the El Salvador coffee boycott in San Francisco, 1989 (photo by Fred Ross, ILWU Archives)'
             },
             {   
                 id:21, pos:'bottom',
                 quote:'',
-                caption:'ILWU Archives, photo by George Kruse',
+                caption:'Art Agnos and Jimmy on the waterfront, 1976 (photo by George Kruse, ILWU Archives)',
                 note:"with agnos"
-            },
-
-             /*
-            {   
-                id:24, pos:'bottom', quote:'“Elevating their knowledge and their faith in themselves”',
-                width:1150
-            },*/
-
-
-
-           /* {   
-                id:7, pos:'bottom',
-                quote:'', note:"with friends"
-            },
-
-             {   
-                id:8, pos:'bottom',
-                quote:'“The great fever of patriotism”',
-                sources: ['This World, December 15, 1991']
-            },*/
-            /*{   
-                id:9, pos:'top',
-                quote:'',
-                note:'Herman (third from left) was an avid poker player all his life.'
-            },*/
+            },          
             {   
                 id:15, pos:'top',
-                quote:'', caption:'An ILWU Shipclerk on the job. Source: ILWU Archives.'
+                quote:'', caption:'ILWU Ship Clerk on the job (ILWU Archives)'
             },
              {   
                 id:16, pos:'top', quote:'',
-                caption: 'Photo: Bob Fitch Photography Archive, Department of Special Collections, Stanford University'
+                caption: 'Jimmy speaking with United Farm Workers leader Cesar Chavez in 1974 (Bob Fitch Photography Archive, Department of Special Collections, Stanford University)'
             },
              {   
                 id:19, pos:'top', quote:'', caption:"Photo: ILWU Archives",
                 sources: ['This World, 1991'],
                 note:"with Harry Bridges"
             },
-              {   
+
+            {   
                 id:'20a', pos:'top', quote:'',
-                caption:'Jimmy joins the Inlandboatmen’s picket line during Washington State Ferries strike, 1980.  Photo: Seattle Times'
+                caption:'Jimmy joins the Inlandboatmen’s Union picket lines during the Washington State Ferries strike, 1980 (Seattle Times).'
             },
             {   
-                id:22, pos:'top', quote:'', caption:'ILWU Archives',
+                id:22, pos:'top', quote:'', caption:'Jimmy detained, 1985 (ILWU Archives)',
                 note:"anti-aparthied arrest"
             },
             {   
-                id:24, pos:'top', quote:'', caption:'',
-                note:"Jimmy portrait at Local 34, Jimmy retires"
+                id:24, pos:'top', quote:'', caption:'Jimmy retires from the ILWU (ILWU Archives)',
+                note:"Jimmy portrait at Local 34, Jimmy retires",
+                sources:['ILWU Convention, 1991']
             },
             {   
-                id:25, pos:'bottom', quote:'',
+                id:25, pos:'bottom', quote:'', caption:'(ILWU Archives)',
                 note:"death, final photo"
             }
-            
-
-           /* {   
-                id:14, pos:'bottom',
-                quote:''
-            },*/
-            
-            
-            /*{   
-                id:17, pos:'bottom', quote:'',
-                caption:'ILWU Archives'
-            },
-            */
             
 
         ];
