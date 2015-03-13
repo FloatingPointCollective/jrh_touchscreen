@@ -57,7 +57,7 @@ angular
             id: 5,
             title:'Affordable Housing', 
             quote:'“There is no greater priority in San Francisco than the construction of housing for low and middle income working people.”', 
-            description:'Jimmy Herman firmly backed efforts to increase affordable housing in San Francisco, and did not want to see the working class driven out of the city. In 1963, under the leadership of Lou Goldblatt, the ILWU invested longshore pension funds to build St. Francis Square, an affordable housing development in the heart of the city that was owned and run by the residents. Building on the success of St. Francis Square, Jimmy continued affordable housing efforts in 1984 with the Amancio Ergina affordable housing project, which also utilized union resources to build low and moderate-income family housing in San Francisco.', 
+            description:'Jimmy did not want to see the working class driven out of town due to high housing costs.  He advocated for increased low cost housing in San Francisco while building on the International Longshore and Warehouse Union’s record of investing in affordable developments.  In 1963, the ILWU drew upon longshore pension funds to build St. Francis Square, an affordable housing development owned and run by residents in the heart of the city.  Jimmy expanded upon such efforts in 1984 with the Amancio Ergina development, which also utilized union resources to build low and moderate income family housing.', 
             imageID:'affordablehousing', 
             caption:'Amancio Ergina Groundbreaking in San Francisco’s Western Addition, 1984 (ILWU Archives)'
         },
@@ -65,7 +65,7 @@ angular
             id: 6,
             title:'International Solidarity', 
             quote:'“[We have] the solemn obligation of … looking at the world around us, where there are things happening that we disagree with … and [mobilizing] to extend a hand of friendship and brotherhood to those people engaged in struggle for democracy and decency.”', 
-            description:'Just as Jimmy Herman fought for the rights of union members and working people, he also helped shape ILWU Policies to reflect a larger worldview, supporting the rights of marginalized people all over the world. Jimmy traveled to Japan, Canada, Australia and other countries with active ports to show solidarity with international unions. He also lent the ILWU’s support to help shape international policy, such as protesting the apartheid government in South Africa, and boycotting Salvadoran coffee in protest against the Salvadoran government’s brutal death squads.', 
+            description:'The International Longshore and Warehouse Union has a storied history of working in solidarity with struggling people across the globe.  Jimmy’s predecessor, ILWU International President Harry Bridges, said, “sure as hell--that’s our job--that’s our privilege--that’s our right--that’s our duty.”  Jimmy carried on that tradition, traveling to Japan, Canada, Australia, and other countries to demonstrate ILWU solidarity. Under his leadership, the ILWU sent strong messages to countries with oppressive regimes, boycotting South African Cargo to protest apartheid, refusing to handle munitions headed to Chile to support a military junta, and refusing to unload Salvadoran coffee in response to death squads.', 
             imageID:'intlsolidarity', 
             caption:'Jimmy leads a boycott of Salvadoran coffee to protest the El Salvadoran government’s sanctioned death squads, 1989 (ILWU Archives)'
         }
