@@ -36,12 +36,13 @@ angular
         $scope.topLevelPages = [
             {title:"Watch Jimmy's Story"},
             {title:"What Do You Stand For?"},
-            {title:"Interactive Timeline"}
+            {title:"Interactive Timeline"},
+            {title:"About the ILWU"}
         ];
 
         $scope.aboutPages = [
-            {label:'About the ILWU', id:'ilwu', displayHeading:true, hasImage:true},
-            {label:'About the SF Port Commission', id:'port', displayHeading:false, hasImage:true},
+            {label:'About the ILWU', id:'ilwu', displayHeading:true, hasImage:true, hide:true},
+            {label:'About the Port of San Francisco', id:'port', displayHeading:false, hasImage:true},
             {label:'Credits', id:'credits', displayHeading:false, hasImage:false}
         ];
 
@@ -64,6 +65,9 @@ angular
             }
             else if(index === 2) {
                 $state.go('timeline');
+            }
+            else if(index === 3) {
+                $state.go('about',{aboutId:'ilwu'});
             }
         }
 

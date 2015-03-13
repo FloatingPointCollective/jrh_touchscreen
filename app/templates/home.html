@@ -9,7 +9,7 @@
     </header>
 
     <div id="topLevelButtons" ng-hide="debug">
-        <div style="background:url(img/home_{{$index+1}}.jpg);" class="sectionButton" ng-click="onTopLevelClick($index)" ng-repeat="page in topLevelPages">
+        <div style="background-image:url(img/home/home_{{$index+1}}.jpg);" class="sectionButton" ng-click="onTopLevelClick($index)" ng-repeat="page in topLevelPages">
             <span >{{page.title}}</span>
         </div>
     </div>
