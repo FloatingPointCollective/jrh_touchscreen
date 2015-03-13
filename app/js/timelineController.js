@@ -180,7 +180,7 @@ angular
             },
             {   
                 year:'1977',
-                text:'ILWU Longshore workers protest apartheid',
+                text:'Jimmy Succeeds Harry Bridges as ILWU International President',
                 imageID:19
             },
             {   
@@ -198,18 +198,11 @@ angular
                 text:'Jimmy appointed City Port Commissioner',
                 imageID:21
             },
-
             {   
                 year:'1984',
-                text:'ILWU Longshoremen protest South African apartheid',
+                text:'ILWU Longshore workers protest apartheid',
                 imageID:22
             },
-            /*{   
-                year:'1989',
-                text:'ILWU Salvadoran coffee boycott.',
-                description:''
-            },*/
-
             {   
                 year:'1991',
                 text:'Jimmy retires as ILWU President',
@@ -217,22 +210,20 @@ angular
             },
             {   
                 year:'1994',
-                text:'Jimmy awarded Maritime Order of Merit',
+                text:'Port of San Francisco Honors Jimmy',
                 imageID:24
             },
             {   
                 year:'1998',
                 text:'Jimmy dies at 73',
                 imageID:25
-            },
-
-
+            }
         ];
         
         $scope.images = [
             {   
                 id:1, pos:'top', quote:'',
-                caption: 'From left: Jimmy, Rodman, Milton Sr., and Milton Jr. Photo courtesy Art Agnos.'
+                caption: 'From left: Jimmy, Rodman, Milton Sr., and Milton Jr. (ILWU Archives)'
             },
             {   
                 id:3, pos:'bottom',
@@ -242,17 +233,18 @@ angular
             {   
                 id:2, pos:'top', quote:'',
                 sources: ['This World, December 15, 1991'],
+                caption:"ILWU Archives",
                 note:"Pie Pan"
             },
             {   
                 id:4,
                 quote:'', pos:'bottom',
-                caption: 'Longshoremen confront police in San Francisco, 1934.  Photo: San Francisco Public Library'
+                caption: 'Police and waterfront picketers clash, 1934 (ILWU Archives)'
             },
             {   
                 id:5, pos:'top',
                 quote:'',
-                caption:'Young Jimmy aboard ship in the early 1940s (Art Agnos)',
+                caption:'Young Jimmy aboard ship in the early 1940s (ILWU Archives)',
                 note:"Sailor Jimmy"
             },
             {   
@@ -263,8 +255,8 @@ angular
                 id:11, pos:'bottom',
                 quote:'',
                 sources: ['This World, December 15, 1991'],
-                caption:'Jimmy (in back, near fan) joins his fellow seafarers in the ship’s mess hall (Art Agnos).',
-                note:"kitchen"
+                caption:'Jimmy (in back, near fan) joins his fellow seafarers in the ship’s mess hall (ILWU Archives)',
+                note:"jimmy joins the union, photo in kitchen"
             },
             {   
                 id:13, pos:'bottom',
@@ -275,8 +267,8 @@ angular
             {   
                 id:12,
                 quote:'', pos:'bottom',
-                caption:'Photo Caption: Jimmy in San Francisco, early 1950s (Art Agnos)',
-                note:'Jimmy after moving to San Francisco.'
+                caption:'Photo Caption: Jimmy in San Francisco, early 1950s (ILWU Archives)',
+                note:'Photo of Jimmy with car, Jimmy after moving to San Francisco.'
             },
             {   
                 id:'14a', pos:'bottom',
@@ -289,13 +281,13 @@ angular
             },
             {   
                 id:23, pos:'bottom', quote:'', note:"Junta boycott",
-                caption:'Jimmy leads demonstration in support of the El Salvador coffee boycott in San Francisco, 1989 (photo by Fred Ross, ILWU Archives)'
+                caption:'Jimmy leads demonstration in support of the El Salvador coffee boycott in San Francisco, 1989 (photo by Fred Ross, Jr., ILWU Archives)'
             },
             {   
                 id:21, pos:'bottom',
                 quote:'',
-                caption:'Art Agnos and Jimmy on the waterfront, 1976 (photo by George Kruse, ILWU Archives)',
-                note:"with agnos"
+                caption:'Art Agnos and Jimmy on the waterfront, 1975 (photo by George Kruse, ILWU Archives)',
+                note:"Jimmy appointed City Port Commissioner, with agnos"
             },          
             {   
                 id:15, pos:'top',
@@ -305,31 +297,34 @@ angular
                 id:16, pos:'top', quote:'',
                 caption: 'Jimmy speaking with United Farm Workers leader Cesar Chavez in 1974 (Bob Fitch Photography Archive, Department of Special Collections, Stanford University)'
             },
-             {   
-                id:19, pos:'top', quote:'', caption:"Photo: ILWU Archives",
+            {   
+                id:19, pos:'top', quote:'', caption:"Jimmy accepts the gavel from International Longshore and Warehouse Union International President Harry Bridges (ILWU Archives)",
                 sources: ['This World, 1991'],
                 note:"with Harry Bridges"
             },
-
             {   
                 id:'20a', pos:'top', quote:'',
                 caption:'Jimmy joins the Inlandboatmen’s Union picket lines during the Washington State Ferries strike, 1980 (Seattle Times).'
             },
             {   
-                id:22, pos:'top', quote:'', caption:'Jimmy detained, 1985 (ILWU Archives)',
+                id:22, pos:'top', quote:'', caption:'Jimmy, holding picket sign, arrested by police, 1985 (ILWU Archives',
                 note:"anti-aparthied arrest"
             },
             {   
                 id:24, pos:'top', quote:'', caption:'Jimmy retires from the ILWU (ILWU Archives)',
-                note:"Jimmy portrait at Local 34, Jimmy retires",
-                sources:['ILWU Convention, 1991']
+                sources:['ILWU Convention, 1991'],
+                note:"Jimmy portrait at Local 34, Jimmy retires"
+
+            },
+            {   
+                id:'24a', pos:'bottom', quote:'', caption:'Exterior of Delancey Street Foundation Restaurant, San Francisco, 1974 (San Francisco Public Library)',
+                note:"DELANCEY STREET"
+
             },
             {   
                 id:25, pos:'bottom', quote:'', caption:'(ILWU Archives)',
                 note:"death, final photo"
             }
-            
-
         ];
 
         $scope.startScrollToTarget = function(targetScroll){
