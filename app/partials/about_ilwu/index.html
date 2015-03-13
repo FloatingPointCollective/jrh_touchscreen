@@ -1,0 +1,15 @@
+<div id="wdysf">
+    <header>
+        <h2>The International Longshore and Warehouse Union</h2>
+        <div class="description">         
+            <p>There is Absolute Democracy in the International Longshore and Warehouse Union’s Affairs.</p>
+        </div> 
+    </header>
+    <div id="wdysf_main">
+        <div id="wdysfButton{{$index+1}}" ng-repeat="issue in issuePages" ui-sref="quote({issue:issue.id})">
+            <span>{{issue.title}}</span>
+        </div>
+    </div>
+</div>
+
+

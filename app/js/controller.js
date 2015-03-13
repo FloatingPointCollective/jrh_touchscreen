@@ -37,7 +37,7 @@ angular
             {title:"Watch Jimmy's Story"},
             {title:"What Do You Stand For?"},
             {title:"Interactive Timeline"},
-            {title:"About the ILWU"}
+            {title:"The International Longshore and Warehouse Union"}
         ];
 
         $scope.aboutPages = [
@@ -67,7 +67,8 @@ angular
                 $state.go('timeline');
             }
             else if(index === 3) {
-                $state.go('about',{aboutId:'ilwu'});
+               // $state.go('about',{aboutId:'ilwu'});
+               $state.go('about_ilwu');
             }
         }
 

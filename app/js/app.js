@@ -124,6 +124,19 @@ angular
                     }
                 }
             })
+            .state('about_ilwu', {
+                url:'/about_ilwu',
+                views: {
+                    'main': {
+                        templateUrl: 'partials/about_ilwu/index.html',
+                        controller: 'aboutILWUController'
+                    },
+                    'footer': {
+                        templateUrl: 'templates/footer_secondary.html',
+                        controller: 'uiCtrl'
+                    }
+                }  
+            })
             .state('black', {
                 url:'/black',
                 views: {
