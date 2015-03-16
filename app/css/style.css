@@ -249,7 +249,7 @@ video {
     height: 995px;
     position: relative;
     padding-top: 80px; }
-    #wdysf #wdysf_main #wdysfButton1, #wdysf #wdysf_main #wdysfButton2, #wdysf #wdysf_main #wdysfButton3, #wdysf #wdysf_main #wdysfButton4, #wdysf #wdysf_main #wdysfButton5, #wdysf #wdysf_main #wdysfButton6 {
+    #wdysf #wdysf_main #wdysfButton1, #wdysf #wdysf_main #wdysfButton2, #wdysf #wdysf_main #wdysfButton3, #wdysf #wdysf_main #wdysfButton4, #wdysf #wdysf_main #wdysfButton5, #wdysf #wdysf_main #wdysfButton6, #wdysf #wdysf_main #ilwuButton1, #wdysf #wdysf_main #ilwuButton2, #wdysf #wdysf_main #ilwuButton3 {
       background: url(../img/wdysf_laborrights_alt.jpg);
       width: 580px;
       height: 255px;
@@ -257,7 +257,7 @@ video {
       margin: 0px 5px 5px 0px;
       box-shadow: 0px 0px 50px #000;
       float: left; }
-      #wdysf #wdysf_main #wdysfButton1 span, #wdysf #wdysf_main #wdysfButton2 span, #wdysf #wdysf_main #wdysfButton3 span, #wdysf #wdysf_main #wdysfButton4 span, #wdysf #wdysf_main #wdysfButton5 span, #wdysf #wdysf_main #wdysfButton6 span {
+      #wdysf #wdysf_main #wdysfButton1 span, #wdysf #wdysf_main #wdysfButton2 span, #wdysf #wdysf_main #wdysfButton3 span, #wdysf #wdysf_main #wdysfButton4 span, #wdysf #wdysf_main #wdysfButton5 span, #wdysf #wdysf_main #wdysfButton6 span, #wdysf #wdysf_main #ilwuButton1 span, #wdysf #wdysf_main #ilwuButton2 span, #wdysf #wdysf_main #ilwuButton3 span {
         position: absolute;
         bottom: 0;
         right: 0;
@@ -265,7 +265,7 @@ video {
         font-size: 38px;
         padding: 10px 20px;
         text-transform: uppercase; }
-      #wdysf #wdysf_main #wdysfButton1:before, #wdysf #wdysf_main #wdysfButton2:before, #wdysf #wdysf_main #wdysfButton3:before, #wdysf #wdysf_main #wdysfButton4:before, #wdysf #wdysf_main #wdysfButton5:before, #wdysf #wdysf_main #wdysfButton6:before {
+      #wdysf #wdysf_main #wdysfButton1:before, #wdysf #wdysf_main #wdysfButton2:before, #wdysf #wdysf_main #wdysfButton3:before, #wdysf #wdysf_main #wdysfButton4:before, #wdysf #wdysf_main #wdysfButton5:before, #wdysf #wdysf_main #wdysfButton6:before, #wdysf #wdysf_main #ilwuButton1:before, #wdysf #wdysf_main #ilwuButton2:before, #wdysf #wdysf_main #ilwuButton3:before {
         content: '';
         position: absolute;
         top: 0;
@@ -288,6 +288,18 @@ video {
       width: 640px; }
     #wdysf #wdysf_main #wdysfButton6 {
       background: url(../img/wdysf_intlsolidarity.jpg);
+      width: 640px;
+      margin: 0px 0px 5px 0px; }
+    #wdysf #wdysf_main #ilwuButton1 {
+      background: url(../img/ilwu_votingworkers.jpg);
+      width: 640px;
+      margin: 0px 0px 5px 0px; }
+    #wdysf #wdysf_main #ilwuButton2 {
+      background: url(../img/ilwu_womanlasher.jpg);
+      width: 640px;
+      margin: 0px 0px 5px 0px; }
+    #wdysf #wdysf_main #ilwuButton3 {
+      background: url(../img/ilwu_logo.jpg);
       width: 640px;
       margin: 0px 0px 5px 0px; }
 
@@ -600,5 +612,3 @@ footer {
           float: left; }
         #section-detail .sidebar .description #backButton p {
           width: 200px; }
-
-/*# sourceMappingURL=style.css.map */

@@ -354,6 +354,27 @@ video{
 			width: 640px;
 			margin: 0px 0px 5px 0px;
 		}
+
+		#ilwuButton1 {
+			@extend #wdysfButton1;
+			background: url(../img/ilwu_votingworkers.jpg);
+			width: 640px;
+			margin: 0px 0px 5px 0px;
+		}
+
+		#ilwuButton2 {
+			@extend #wdysfButton1;
+			background: url(../img/ilwu_womanlasher.jpg);
+			width: 640px;
+			margin: 0px 0px 5px 0px;
+		}
+
+		#ilwuButton3 {
+			@extend #wdysfButton1;
+			background: url(../img/ilwu_logo.jpg);
+			width: 640px;
+			margin: 0px 0px 5px 0px;
+		}
 	}
 }
 

@@ -6,8 +6,8 @@
         </div> 
     </header>
     <div id="wdysf_main">
-        <div id="wdysfButton{{$index+1}}" ng-repeat="issue in issuePages" ui-sref="quote({issue:issue.id})">
-            <span>{{issue.title}}</span>
+        <div id="ilwuButton{{$index+1}}" ng-repeat="ilwu in ilwuPages" ui-sref="about_ilwu_desc({ilwu:ilwu.id})" ng-click="setCurrentIlwu(ilwu)">
+            <span>{{ilwu.title}}</span>
         </div>
     </div>
 </div>

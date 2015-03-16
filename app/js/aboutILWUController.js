@@ -1,49 +1,46 @@
 angular
     .module('jrhApp')
-    .controller('aboutILWUController', ['$scope', '$stateParams', '$state', 'WebSocket', function($scope, $stateParams, $state, WebSocket) {
+    .controller('aboutILWUController', ['$scope', '$stateParams', '$state', 'WebSocket', function($scope, $stateParams, $state) {
 
    // $scope.showMouse = true;
     $scope.showHomeScreen = false;
-    $scope.issueId = $stateParams.issue;
-   // $scope.setCurrentIssue = setCurrentIssue;
-   // $scope.clearCurrentIssue = clearCurrentIssue;
+    $scope.ilwuId = $stateParams.ilwu;
+    $scope.setCurrentIlwu = setCurrentIlwu;
+    $scope.clearCurrentIlwu = clearCurrentIlwu;
 
     console.log($stateParams);
 
-  /*  function setSubsection(issue) {
-        console.log(issue.id);
-        WebSocket.send(issue.id); //send issue to LED Control machine
+    function setCurrentIlwu(ilwu) {
+        console.log(ilwu.id);
+        //WebSocket.send(issue.id); //send issue to LED Control machine
     }
 
-    function clearCurrentIssue() {
+    function clearCurrentIlwu() {
         console.log("clearing issue");
-        WebSocket.send(0);
-    }*/
+        //WebSocket.send(0);
+    }
 
-    $scope.issuePages = [
+    $scope.ilwuPages = [
         {   
             id: 1,
             title:'Union Democracy', 
-            quote:'“The ultimate corruption is seen in the vast numbers of unemployment, the denial of a secure and dignified retirement, the denial of childcare to working mothers.”', 
-            description:'Jimmy devoted his life to helping working people everywhere.  His labor activism began when he led a successful strike at age 15.  His commitment expanded when he joined the National Union of Marine Cooks and Stewards (MCS), an organization representing workers on ocean liners and other vessels.  Jimmy identified with the MCS’s inclusionary, anti-racist politics of the 1940’s. His work with the MCS drew him to the International Longshore and Warehouse Union, which he later joined a few years after settling in San Francisco in 1947.  In the ILWU, he spent decades advocating for universal workers’ rights.', 
-            imageID:'laborRights', 
-            caption:'Leroy King, ILWU Local 6; Jack Henning, California Labor Federation; Cesar Chavez, United Farm Workers; unidentified; and Jimmy Herman protest against California Proposition 22, which would have outlawed strikes and job actions by agricultural workers, 1972 (ILWU Archives).'
+            description:'A firm commitment to union democracy and membership participation has been the hallmark of the International Longshore and Warehouse Union since its beginning in the 1930s.  This is nearly unique in U.S. economic and industrial life.  In the ILWU, any member can speak at a union meeting and potentially influence overall ILWU policy. Explaining the union’s strength and its ability to command a dedicated following, Harry Bridges, the ILWU’s founding International President, said, "It was about democracy. We said that the rank and file had the right to decide, and if you gave them the facts, they’d make the right decision."', 
+            imageID:'uniondemocracy', 
+            caption:'ILWU Longshore workers voting in a union meeting (ILWU Archives)'
         },
         {   
             id: 2,
             title:'Who the ILWU Represents', 
-            quote:'"[The Delancey Street Foundation is] an organization that resurrects people, that understands human failure, that has a point of view about what should and can and must be done … It is a microcosm worthy of everybody imitating, where people of all colors and races and ethnic groups, with every description of tough backgrounds you can imagine, come together, form a family, emerge as the people they were intended to be with their lives straightened out because there is such an organization under such dedicated leadership."', 
-            description:'Jimmy believed in giving people a second chance.  In the 1970s, he discovered the Delancey Street Foundation, a San Francisco nonprofit dedicated to treating people with drug and alcohol addiction and providing them with job training and employment. Jimmy worked with the International Longshore and Warehouse Union and the Port Commission to help the Delancey Street Foundation secure waterfront property for its housing and other facilities.  Jimmy was also integral in forming the ILWU’s progressive policies toward members with drug and alcohol addiction, advocating treatment over termination.', 
-            imageID:'rehabilitation', 
-            caption:'From Delancey Street Website - Mimi Silbert, founder of Delancey Street, then San Francisco Mayor Dianne Feinstein and James R. Herman break ground at the future home of the Delancey Street Foundation in Pacific Heights.'
+            description:'The International Longshore and Warehouse Union (ILWU) was founded following a major 1934 West Coast waterfront strike and is headquartered in San Francisco.  The original core group of workers loaded and unloaded ships’ cargo by hand using strength, skill, and ingenuity. The term "longshoreman" originated in the early days. When a ship approached shore, the captain, seeking extra hands to work cargo, beckoned to those in need of jobs, yelling "men along the shore." Today, the ILWU represents over 40,000 workers who belong to 60 local unions and divisions located along the U.S. West Coast, plus Hawaii, Panama and Canada. Almost 20,000 dockworkers continue to work on the waterfront at twenty-nine West Coast ports. Other ILWU members are employed in a wide variety of other industries, including hotels and tourism, industrial and warehousing, mining, agriculture, maritime, and retail.', 
+            imageID:'representation', 
+            caption:'A longshore worker on the docks in Southern California (ILWU Archives)'
         },
         {
             id: 3,
             title:'Ten Guiding Principles', 
-            quote:'“How do you explain the American dream to kids without school lunches, to teenagers with nothing better to do than hang out, or to workers and farmers whose homes and farms have been foreclosed, to people without medical care who are physically hurting, and to some - too many - who are without food?”', 
-            description:'Jimmy dreamed of a world in which the working class got a fair chance. He criticized President Ronald Reagan’s “trickle down” economic policies and U.S. military spending for perpetuating wealth inequality.  Under his leadership, the International Longshore and Warehouse Union fought for both improved working conditions for its members and job creation for all workers.  He struggled to preserve work opportunities as the U.S. changed from a manufacturing to a service economy while negotiating to preserve longshore jobs in an increasingly mechanized waterfront.', 
-            imageID:'econjustice', 
-            caption:'Jimmy speaks at United Farm Workers Convention, 1977 (ILWU Archives)'
+            description:'The Ten Guiding Principles of the ILWU. I. A Union is built on its members. II. Labor unity is at all times the key for a successful economic advancement. III. Workers are indivisible. IV. “To help any worker in distress” must be a daily guide in the life of every trade union and its individual members. V. Any union, if it is to fulfill its appointed task, must put aside all internal differences and issues to combine for the common cause of advancing the welfare of the membership. VI. The days are long gone when a union can consider dealing with single employers. VII. Just as water flows to its lowest level, so do wages if the bulk of the workers are left unorganized. VIII. The basic aspiration and desires of the workers throughout the world are the same. IX. A new type of unionism is called for which does not confine its ambitions and demands only to wages X. Jurisdictional warfare and jurisdictional raiding must be outlawed by labor itself.', 
+            imageID:'principles', 
+            caption:''
         }
     ];
 
