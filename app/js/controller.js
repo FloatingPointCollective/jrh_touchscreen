@@ -164,7 +164,7 @@ angular
             $scope.idleInterval = setInterval($scope.timerIncrement, 1000); // 1 second
 
             //force video loop
-            var myVideo = document.getElementById('video');
+            var myVideo = document.getElementById('bgvid');
             if (typeof myVideo.loop == 'boolean') { // loop supported
                 myVideo.loop = true;
             } else { // loop property not supported
