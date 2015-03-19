@@ -14,9 +14,10 @@ angular
     .config(['$stateProvider', '$urlRouterProvider', 'WebSocketProvider', function ($stateProvider, $urlRouterProvider, WebSocketProvider) {
         // $urlRouterProvider.otherwise('/'); //if this is turned on the synopsis routing breaks
 
-        WebSocketProvider
-            .prefix('')
-            .uri('ws://127.0.0.1:9092/'); //swap for different server address/port
+       // WebSocketProvider
+         //   .prefix('')
+           // .uri('ws://76.212.19.137:9092/'); //swap for different server address/port
+            //.uri('ws://127.0.0.1:9092/'); //swap for different server address/port
 
         $stateProvider
             .state('home', {

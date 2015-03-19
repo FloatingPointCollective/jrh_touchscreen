@@ -380,8 +380,8 @@ footer {
 #homeScreen #instruction {
   text-align: center;
   width: 100%;
-  font-size: 30px;
-  margin-top: 20px;
+  font-size: 25px;
+  margin-top: 10px;
   color: #141414;
   opacity: .5; }
 #homeScreen #topLevelButtons {
@@ -391,7 +391,7 @@ footer {
   text-align: center; }
 #homeScreen .sectionButton {
   width: 450px;
-  height: 680px;
+  height: 650px;
   position: relative;
   margin: 20px 10px;
   box-shadow: 0px 0px 50px #888888;
@@ -612,5 +612,3 @@ footer {
           float: left; }
         #section-detail .sidebar .description #backButton p {
           width: 200px; }
-
-/*# sourceMappingURL=style.css.map */

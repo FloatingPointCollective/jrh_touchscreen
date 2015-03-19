@@ -31,7 +31,10 @@ angular
 
         // $scope.messages = MessagesService.get();
         // $scope.status = TestWebSocket.status();
-         var wsUri = "ws://127.0.0.1:9092";
+        // var wsUri = "ws://127.0.0.1:9092"; //local
+         var wsUri = "ws://45.19.216.114:9092"; //on site at P27
+         
+
 
         $scope.topLevelPages = [
             {title:"Watch Jimmy's Story"},
