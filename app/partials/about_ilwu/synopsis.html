@@ -1,4 +1,4 @@
-<!-- WDYSF QUOTE-->
+<!-- ABOUT ILWU DESCRIPTION-->
 <div id="section-detail">
     <div class="wdysf_synopsis" ng-repeat="ilwu in ilwuPages" ng-show="ilwu.id === ilwuId">
         <div class="visuals">
@@ -15,7 +15,10 @@
             <h2>{{ilwu.title}}</h2>
         </div>
         <div class="description">
-            <div>{{ilwu.description}}</div>
+             <!-- PARTIAL FOR DESCRIPTION TEXT -->
+            <div>
+                <ng-include src="'partials/about_ilwu/' + ilwuId + '.html'"></ng-include>
+            </div>
             <div id="backButton" ui-sref="about_ilwu">
                 <div>
                     <img src="img/arrow_left.png" />
