@@ -5,3 +5,4 @@
 *.DS_Store
 .DS_Store
 !bg_video.mp4
+!bg_video.webm
