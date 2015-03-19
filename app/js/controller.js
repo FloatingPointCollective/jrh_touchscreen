@@ -163,6 +163,18 @@ angular
             //Increment the idle time counter.
             $scope.idleInterval = setInterval($scope.timerIncrement, 1000); // 1 second
 
+            //force video loop
+            var myVideo = document.getElementById('video');
+            if (typeof myVideo.loop == 'boolean') { // loop supported
+                myVideo.loop = true;
+            } else { // loop property not supported
+                myVideo.on('ended', function () {
+                this.currentTime = 0;
+                this.play();
+                }, false);
+            }
+            myVideo.play();
+
         }
 
         $scope.onMouseMove = function(){
