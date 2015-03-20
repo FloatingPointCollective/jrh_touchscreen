@@ -33,8 +33,6 @@ angular
         // $scope.status = TestWebSocket.status();
         // var wsUri = "ws://127.0.0.1:9092"; //local
          var wsUri = "ws://45.19.216.114:9092"; //on site at P27
-         
-
 
         $scope.topLevelPages = [
             {title:"Watch Jimmy's Story"},
@@ -193,7 +191,7 @@ angular
 
         $scope.timerIncrement = function () {
             //only do if we are not already home
-            if($state.current.name != 'home' || $state.current.name != 'black'){
+            if($state.current.name != 'home' && $state.current.name != 'black'){
 
                 $scope.idleTime += 1;
                 if ($scope.idleTime == $scope.warnTime) { // 5 minutes
