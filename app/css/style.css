@@ -585,6 +585,8 @@ footer {
       font-size: 1.5em;
       line-height: 40px;
       width: 500px; }
+      #section-detail .sidebar .description ol {
+        list-style-type: upper-roman; }
       #section-detail .sidebar .description #sources {
         margin-top: 40px;
         font-size: 10px;

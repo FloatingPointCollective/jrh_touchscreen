@@ -1,18 +1,18 @@
 <!-- ABOUT ILWU DESCRIPTION-->
 <div id="section-detail">
-    <div class="wdysf_synopsis" ng-repeat="ilwu in ilwuPages" ng-show="ilwu.id === ilwuId">
+    <div>
         <div class="visuals">
 
             <div class="photo">
                 
-                <img src="img/{{ilwu.imageID}}.jpg">
-                <div class="caption">{{ilwu.caption}}</div>
+                <img src="img/{{ilwuPages[ilwuId-1].imageID}}.jpg">
+                <div class="caption">{{ilwuPages[ilwuId-1].caption}}</div>
 
             </div>
         </div>
     <div class="sidebar">
         <div class="intro">
-            <h2>{{ilwu.title}}</h2>
+            <h2>{{ilwuPages[ilwuId-1].title}}</h2>
         </div>
         <div class="description">
              <!-- PARTIAL FOR DESCRIPTION TEXT -->
