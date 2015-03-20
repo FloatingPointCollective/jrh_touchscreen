@@ -566,7 +566,8 @@ footer {
       color: white;
       display: block;
       text-align: right;
-      margin-top: 10px; }
+      margin-top: 10px;
+      font-size: 20px; }
   #section-detail .sidebar {
     float: right;
     width: 600px;
@@ -598,7 +599,8 @@ footer {
           line-height: 25px; }
         #section-detail .sidebar .description #sources .source {
           font-style: italic;
-          line-height: 20px; }
+          line-height: 20px;
+          font-size: 15px; }
       #section-detail .sidebar .description #backButton {
         font-size: 34px;
         text-transform: uppercase;
@@ -614,5 +616,3 @@ footer {
           float: left; }
         #section-detail .sidebar .description #backButton p {
           width: 200px; }
-
-/*# sourceMappingURL=style.css.map */
