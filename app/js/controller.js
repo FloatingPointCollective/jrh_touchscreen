@@ -193,7 +193,7 @@ angular
 
         $scope.timerIncrement = function () {
             //only do if we are not already home
-            if($state.current.name != 'home'){
+            if($state.current.name != 'home' || $state.current.name != 'black'){
 
                 $scope.idleTime += 1;
                 if ($scope.idleTime == $scope.warnTime) { // 5 minutes
