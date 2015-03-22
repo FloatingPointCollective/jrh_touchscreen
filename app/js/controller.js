@@ -1,10 +1,9 @@
 angular
     .module('jrhApp')
 
-    .controller('uiCtrl', ['$scope', '$rootScope', '$stateParams', '$state', 'WebSocket',  function($scope, $rootScope, $stateParams, $state, WebSocket) {
+    .controller('uiCtrl', ['$scope', '$http', '$rootScope', '$stateParams', '$state', 'WebSocket',  function($scope, $http, $rootScope, $stateParams, $state, WebSocket) {
         //define global vars
-
-        $scope.showMouse = true;
+        
         $scope.videoPlaying = false;
         $scope.activeVideoName = "";
         $scope.footerMenuIsHidden = false;
@@ -17,7 +16,6 @@ angular
         $scope.warnTime = 60*5; //5 minutes in seconds
         $scope.countDown = 10;
         $scope.timeoutTime = $scope.warnTime+$scope.countDown; //+10 seconds
-
 
         console.log($stateParams);
         //console.log($scope.mediaPlayer)
@@ -32,7 +30,9 @@ angular
         // $scope.messages = MessagesService.get();
         // $scope.status = TestWebSocket.status();
         // var wsUri = "ws://127.0.0.1:9092"; //local
-         var wsUri = "ws://45.19.216.114:9092"; //on site at P27
+        //"remoteUri": "ws://45.19.216.114:9092" //remote
+
+         
 
         $scope.topLevelPages = [
             {title:"Watch Jimmy's Story"},
@@ -106,7 +106,7 @@ angular
         }
 
         $scope.attemptConnection = function(){
-                WebSocket.new(wsUri);
+                WebSocket.new($scope.wsUri);
 
                 //ON OPEN
                 WebSocket.onopen(function() {
@@ -124,7 +124,6 @@ angular
                 WebSocket.onmessage(function(event) {
                     console.log("got message: "+event.data);
                     if(event.data === 'mute') {
-
                         console.log("go mute message");
                         $rootScope.muted = true; //set muted global variable to true
                         console.log("$rootScope.muted: "+$rootScope.muted);
@@ -156,7 +155,7 @@ angular
         $scope.init = function(){
 
             window.ondragstart = function() { return false; } 
-            $scope.connectToServer();
+            
 
             //Increment the idle time counter.
             $scope.idleInterval = setInterval($scope.timerIncrement, 1000); // 1 second
@@ -173,6 +172,32 @@ angular
             }
             $scope.myVideo.play();
 
+             //load settings data file
+            $http.get('data/settings.json')
+           .then(function(res){
+            //check status of http response
+            console.log("http load json status: "+res.status);
+            if(res.status>=400){
+                //there was some error, use the default settings
+                $scope.settings =
+                {
+                    "live": false,
+                    "remoteUri": "ws://127.0.0.1:9092"
+                };
+            }
+            else{
+                //on data loaded
+                //define settings from loaded json file
+                $scope.settings = res.data;
+            }
+
+            $scope.wsUri = $scope.settings.remoteUri;
+            $scope.showMouse = !$scope.settings.live;
+
+            //connect websocket
+            $scope.connectToServer();
+
+            });
         }
 
         $scope.onMouseMove = function(){
