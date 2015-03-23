@@ -37,7 +37,7 @@ angular
             year:"1991",
             description:'Jimmy believed in giving people a second chance.  In the 1970s, he discovered the Delancey Street Foundation, a San Francisco nonprofit dedicated to treating people with drug and alcohol addiction and providing them with job training and employment. Jimmy worked with the International Longshore and Warehouse Union and the Port Commission to help the Delancey Street Foundation secure waterfront property for its housing and other facilities.  Jimmy was also integral in forming the ILWU’s progressive policies toward members with drug and alcohol addiction, advocating treatment over termination.', 
             imageID:'rehabilitation', 
-            caption:'From Delancey Street Website - Mimi Silbert, founder of Delancey Street, then San Francisco Mayor Dianne Feinstein and James R. Herman break ground at the future home of the Delancey Street Foundation in Pacific Heights.'
+            caption:'Delancey Street (San Francisco Public Library)'
         },
         {
             id: 3,
