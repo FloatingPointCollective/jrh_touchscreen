@@ -227,7 +227,7 @@ angular
             },
             {   
                 id:3, pos:'bottom',
-                quote:'“Work was a condition of survival”', width:"400",
+                quote:'“Work was a condition of survival”',
                 sources: ['This World, December 15, 1991','San Francisco Examiner, March 22, 1998']
             },
             {   
@@ -258,12 +258,17 @@ angular
                 caption:'Jimmy (in back, near fan) joins his fellow seafarers in the ship’s mess hall (ILWU Archives)',
                 note:"jimmy joins the union, photo in kitchen"
             },
+             {   
+                id:20, pos:'bottom', quote:'“Get a job, join a union”',
+                sources: ['This World, December 15, 1991']
+            },
             {   
                 id:13, pos:'bottom',
                 quote:'',
                 caption:'San Francisco Waterfront ca. 1945 (San Francisco Maritime National Historical Park).',
                 note:"SF Port Photo"
             },
+
             {   
                 id:12,
                 quote:'', pos:'bottom',
@@ -272,13 +277,10 @@ angular
             },
             {   
                 id:'14a', pos:'bottom',
-                quote:'“I never took a backseat”', width:"400",
+                quote:'“I never took a backseat”',
                 sources: ['This World, December 15, 1991']
             },
-            {   
-                id:20, pos:'bottom', quote:'“Get a job, join a union”', width:"400",
-                sources: ['This World, December 15, 1991']
-            },
+            
             {   
                 id:23, pos:'bottom', quote:'', note:"Junta boycott",
                 caption:'Jimmy leads demonstration in support of the El Salvador coffee boycott in San Francisco, 1989 (photo by Fred Ross, Jr., ILWU Archives)'
@@ -311,7 +313,7 @@ angular
                 note:"anti-aparthied arrest"
             },
             {   
-                id:24, pos:'top', quote:'', caption:'Jimmy retires from the ILWU (ILWU Archives)',
+                id:24, pos:'bottom', quote:'', caption:'Jimmy retires from the ILWU (ILWU Archives)',
                 sources:['ILWU Convention, 1991'],
                 note:"Jimmy portrait at Local 34, Jimmy retires"
 
@@ -327,7 +329,7 @@ angular
             }
             ,
             {   
-                id:26, pos:'bottom', quote:'', caption:'(ILWU Archives)',
+                id:26, pos:'top', quote:'', caption:'Pier 27 (Port of San Francisco)',
                 note:"terminal"
             }
         ];

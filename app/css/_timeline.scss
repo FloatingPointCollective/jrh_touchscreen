@@ -7,7 +7,7 @@
 	white-space: nowrap;
 	display: inline-block;
 	overflow: hidden;
-	width: 5500px;
+	width: 5550px;
 	.images{
 		clear:both;
 		height: 400px;
@@ -29,7 +29,7 @@
 		.quote{
 			padding: 0px 40px 0px 40px;
 			background-color: rgba(185,185,185,.3);
-			width: 500px;
+			width: 350px;
 			height: 400px;
 			font-family: 'Futura';
 			font-size: 44px;
@@ -50,7 +50,7 @@
 		position: relative;
 		box-shadow: inset 0px 0px 40px 10px rgba(0,0,0,.8);
 
-		$eventWidth: 350px;
+		$eventWidth: 360px;
 
 		$arrowColor: $dark-grey;
 		$arrowWidth: 30px;
