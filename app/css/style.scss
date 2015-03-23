@@ -407,12 +407,17 @@ video{
 			text-align: center;
 			padding: 100px 100px;
 
+			#year{
+				font-size: 25px;
+				opacity: .5;
+			}
+
 			#contButton {
 				font-size: 36px;
 				color: rgba(255, 255, 255, .8);
 				width: 300px;
 				height: 40px;
-				margin: 100px auto;
+				margin: 50px auto;
 				padding: 20px 0px 20px 5px;
 				border: 1px solid rgba(255, 255, 255, .8);
 				background-color: rgba(40,40,40,0.8);
