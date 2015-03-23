@@ -211,7 +211,7 @@ angular
             {   
                 year:'1994',
                 text:'Port of San Francisco Honors Jimmy',
-                imageID:24
+                imageID:26
             },
             {   
                 year:'1998',
@@ -324,6 +324,11 @@ angular
             {   
                 id:25, pos:'bottom', quote:'', caption:'(ILWU Archives)',
                 note:"death, final photo"
+            }
+            ,
+            {   
+                id:26, pos:'bottom', quote:'', caption:'(ILWU Archives)',
+                note:"terminal"
             }
         ];
 

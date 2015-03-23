@@ -85,7 +85,7 @@ video#bgvid {
   width: 100%;
   height: 100%; }
   #wrapper #main-view {
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden; }
 
 #timeoutWarning {
