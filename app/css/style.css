@@ -571,6 +571,8 @@ footer {
       text-align: right;
       margin-top: 10px;
       font-size: 20px; }
+  #section-detail .visuals.ilwu {
+    width: 1000px; }
   #section-detail .sidebar {
     float: right;
     width: 600px;
@@ -619,5 +621,12 @@ footer {
           float: left; }
         #section-detail .sidebar .description #backButton p {
           width: 200px; }
+  #section-detail .sidebar.ilwu {
+    width: 900px; }
+    #section-detail .sidebar.ilwu .description {
+      width: 770px; }
+
+#section-detail.ilwu.visuals {
+  width: 1000px; }
 
 /*# sourceMappingURL=style.css.map */

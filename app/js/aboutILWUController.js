@@ -33,14 +33,15 @@ angular
             title:'Who the ILWU Represents', 
             description:'partial', 
             imageID:'representation', 
-            caption:'A longshore worker on the docks in Southern California (ILWU Archives)'
+            caption:'A longshore worker on the docks in Southern California (ILWU Archives)',
         },
         {
             id: 3,
             title:'Ten Guiding Principles', 
             description:'partial', 
             imageID:'principles', 
-            caption:''
+            caption:'',
+            width:'700'
         }
     ];
 

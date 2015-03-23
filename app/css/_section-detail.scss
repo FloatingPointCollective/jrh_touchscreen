@@ -1,3 +1,5 @@
+
+
 #section-detail {
 		background-color: rgba(0,0,0,.8);
 		padding-top: 0px;
@@ -43,6 +45,12 @@
 			}
 		}
 
+
+		.visuals.ilwu{
+			width: 1000px;
+		}
+
+		
 
 		.sidebar {
 			float: right;
@@ -110,4 +118,17 @@
 				}
 			}
 		}
+
+		.sidebar.ilwu{
+			width:900px;
+			.description{
+				width: 770px;
+			}
+		}
 	}
+
+#section-detail.ilwu.visuals{
+			width: 1000px;
+		}
+
+	
