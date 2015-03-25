@@ -27,7 +27,7 @@ angular
             quote:'"The ultimate corruption is seen in the vast numbers of unemployment, the denial of a secure and dignified retirement, the denial of childcare to working mothers."',
             year:"1973",
             description:'Jimmy devoted his life to helping working people everywhere.  His labor activism began when he led a successful strike at age 15.  His commitment expanded when he joined the National Union of Marine Cooks and Stewards (MCS), an organization representing workers on ocean liners and other vessels.  Jimmy identified with the MCS’s inclusionary, anti-racist politics of the 1940’s. His work with the MCS drew him to the International Longshore and Warehouse Union, which he later joined a few years after settling in San Francisco in 1947.  In the ILWU, he spent decades advocating for universal workers’ rights.', 
-            imageID:'laborRights', 
+            imageID:'laborrights', 
             caption:'Leroy King, ILWU Local 6; Jack Henning, California Labor Federation; Cesar Chavez, United Farm Workers; unidentified; and Jimmy Herman protest against California Proposition 22, which would have outlawed strikes and job actions by agricultural workers, 1972 (ILWU Archives).'
         },
         {   
