@@ -319,7 +319,7 @@ angular
 
             },
             {   
-                id:'24a', pos:'bottom', quote:'', caption:'Exterior of Delancey Street Foundation Restaurant, San Francisco, 1974 (San Francisco Public Library)',
+                id:'24a', pos:'bottom', quote:'', caption:'Mimi Silbert, Dianne Feinstein, and Jimmy Herman break ground for the new Delancey Street home (Delancey Street Foundation)',
                 note:"DELANCEY STREET"
 
             },
@@ -329,7 +329,7 @@ angular
             }
             ,
             {   
-                id:26, pos:'top', quote:'', caption:'Pier 27 (Port of San Francisco)',
+                id:26, pos:'top', quote:'', caption:'Pier 27, The James R. Herman Cruise Terminal (Port of San Francisco)',
                 note:"terminal"
             }
         ];
