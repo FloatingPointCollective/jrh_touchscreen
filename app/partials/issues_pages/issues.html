@@ -6,7 +6,7 @@
         </div> 
     </header>
     <div id="wdysf_main">
-        <div id="wdysfButton{{$index+1}}" ng-repeat="issue in issuePages" ui-sref="quote({issue:issue.id})" ng-click="setCurrentIssue(issue)" style="background: url(../img/wdysf/thumbs/{{issue.imageID}}.jpg);">
+        <div id="wdysfButton{{$index+1}}" ng-repeat="issue in issuePages" ui-sref="quote({issue:issue.id})" ng-click="setCurrentIssue(issue)" style="background: url(img/wdysf/thumbs/{{issue.imageID}}.jpg);">
             <span>{{issue.title}}</span>
         </div>
     </div>
