@@ -111,6 +111,8 @@ angular
                 //ON OPEN
                 WebSocket.onopen(function() {
                     console.log('connection open');
+                    //clear text on LED screens
+                    WebSocket.send(0);
                     //WebSocket.send('Hello World');
                     //clear the connection timer
                     clearInterval($scope.connectTimer);
