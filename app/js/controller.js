@@ -126,7 +126,7 @@ angular
                 WebSocket.onmessage(function(event) {
                     console.log("got message: "+event.data);
                     if(event.data === 'mute') {
-                        console.log("go mute message");
+                        console.log("got mute message");
                         $rootScope.muted = true; //set muted global variable to true
                         console.log("$rootScope.muted: "+$rootScope.muted);
                         $rootScope.$broadcast('mute', true); //broadcast muted global variable as true
