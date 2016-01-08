@@ -4,3 +4,5 @@
 *.webm
 *.DS_Store
 .DS_Store
+
+app/data/settings.json
