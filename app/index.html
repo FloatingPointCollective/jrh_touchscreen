@@ -10,6 +10,10 @@
 
     <body ng-app="jrhApp" ng-keyup="onKeyUp($event)" ng-controller="uiCtrl" class="showCursor-{{showMouse}}" ng-mousemove="onMouseMove()" ng-click="onClick()" ng-init="init()">
 
+        <video autoplay loop poster="img/bg_water.jpg" id="bgvid">
+            <source src="video/bg_video.webm" type="video/webm">
+        </video>
+
         <div id="wrapper">
             <div id="timeoutWarning" ng-show="showTimeout">
                 
@@ -22,7 +26,9 @@
 
             <div ui-view="main" id="main-view" class="clearfix"></div>
             
-        </div> 
+        </div>
+
+        
 
         <footer ui-view="footer" ng-hide="footerMenuIsHidden"></footer>
 
@@ -34,6 +40,7 @@
         <script src="js/issuesController.js"></script>
         <script src="js/videoController.js"></script>
         <script src="js/timelineController.js"></script>
+        <script src="js/aboutILWUController.js"></script>
 
 
     </body>

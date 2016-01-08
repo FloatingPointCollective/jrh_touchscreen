@@ -1,10 +1,9 @@
 angular
     .module('jrhApp')
 
-    .controller('uiCtrl', ['$scope', '$rootScope', '$stateParams', '$state', 'WebSocket',  function($scope, $rootScope, $stateParams, $state, WebSocket) {
+    .controller('uiCtrl', ['$scope', '$http', '$rootScope', '$stateParams', '$state', 'WebSocket',  function($scope, $http, $rootScope, $stateParams, $state, WebSocket) {
         //define global vars
-
-        $scope.showMouse = true;
+        
         $scope.videoPlaying = false;
         $scope.activeVideoName = "";
         $scope.footerMenuIsHidden = false;
@@ -18,7 +17,6 @@ angular
         $scope.countDown = 10;
         $scope.timeoutTime = $scope.warnTime+$scope.countDown; //+10 seconds
 
-
         console.log($stateParams);
         //console.log($scope.mediaPlayer)
         window.$scope = $scope;
@@ -31,17 +29,21 @@ angular
 
         // $scope.messages = MessagesService.get();
         // $scope.status = TestWebSocket.status();
-         var wsUri = "ws://127.0.0.1:9092";
+        // var wsUri = "ws://127.0.0.1:9092"; //local
+        //"remoteUri": "ws://45.19.216.114:9092" //remote
+
+         
 
         $scope.topLevelPages = [
             {title:"Watch Jimmy's Story"},
             {title:"What Do You Stand For?"},
-            {title:"Interactive Timeline"}
+            {title:"Interactive Timeline"},
+            {title:"The International Longshore and Warehouse Union"}
         ];
 
         $scope.aboutPages = [
-            {label:'About the ILWU', id:'ilwu', displayHeading:true, hasImage:true},
-            {label:'About the SF Port Commission', id:'port', displayHeading:false, hasImage:true},
+            {label:'About the ILWU', id:'ilwu', displayHeading:true, hasImage:true, hide:true},
+            {label:'About the Port of San Francisco', id:'port', displayHeading:false, hasImage:true},
             {label:'Credits', id:'credits', displayHeading:false, hasImage:false}
         ];
 
@@ -64,6 +66,10 @@ angular
             }
             else if(index === 2) {
                 $state.go('timeline');
+            }
+            else if(index === 3) {
+               // $state.go('about',{aboutId:'ilwu'});
+               $state.go('about_ilwu');
             }
         }
 
@@ -92,16 +98,22 @@ angular
         $scope.startPing = function(){
             //ping server ever 15s
             clearInterval($scope.connectTimer);
-            $scope.connectTimer = setInterval($scope.attemptConnection, 15000);
+            $scope.connectTimer = setInterval($scope.pingServer, 15000);
+        }
+
+        $scope.pingServer = function(){
+            WebSocket.send('ping');
         }
 
         $scope.attemptConnection = function(){
-                WebSocket.new(wsUri);
+                WebSocket.new($scope.wsUri);
 
                 //ON OPEN
                 WebSocket.onopen(function() {
                     console.log('connection open');
-                    WebSocket.send('Hello World');
+                    //clear text on LED screens
+                    WebSocket.send(0);
+                    //WebSocket.send('Hello World');
                     //clear the connection timer
                     clearInterval($scope.connectTimer);
                     $scope.startPing();
@@ -114,8 +126,7 @@ angular
                 WebSocket.onmessage(function(event) {
                     console.log("got message: "+event.data);
                     if(event.data === 'mute') {
-
-                        console.log("go mute message");
+                        console.log("got mute message");
                         $rootScope.muted = true; //set muted global variable to true
                         console.log("$rootScope.muted: "+$rootScope.muted);
                         $rootScope.$broadcast('mute', true); //broadcast muted global variable as true
@@ -146,86 +157,49 @@ angular
         $scope.init = function(){
 
             window.ondragstart = function() { return false; } 
-            $scope.connectToServer();
-
-       /* WebSocket.onopen(function() {
-            console.log('connection open');
-            WebSocket.send('Hello World');
-            //clear the connection timer
-            clearInterval($scope.connectTimer);
-        });
-
-        WebSocket.onclose(function() {
-            console.log('connection closed');
             
-            $scope.connectTimer = setInterval( function() {
-                WebSocket.new(wsUri);
-                WebSocket.onopen(function() {
-                    console.log('connection open');
-                    WebSocket.send('Hello World');
-                    //clear the connection timer
-                    clearInterval($scope.connectTimer);
-                });
-
-                WebSocket.onmessage(function(event) {
-                    console.log("got message: "+event.data);
-                    if(event.data === 'mute') {
-
-                        console.log("go mute message");
-                        $rootScope.muted = true; //set muted global variable to true
-                        console.log("$rootScope.muted: "+$rootScope.muted);
-                        $rootScope.$broadcast('mute', true); //broadcast muted global variable as true
-
-                    } else if (event.data === 'unmute') {
-
-                        $rootScope.muted = false; //set muted global variable to false
-                        console.log("$rootScope.muted: "+$rootScope.muted);
-                        $rootScope.$broadcast('mute', false); //broadcast muted global variable as false
-                        
-                        console.log('unmute video');
-
-                    } else if (event.data === 'off') {
-                        console.log('turn off');
-                        $state.go('black');
-                    } else if (event.data === 'on') {
-                        console.log('turn on');
-                        $state.go('home');
-                    }
-                });
-
-            }, 1000); 
-           
-        });
-
-        WebSocket.onmessage(function(event) {
-            console.log("got message: "+event.data);
-            if(event.data === 'mute') {
-
-                console.log("got mute message");
-                $rootScope.muted = true; //set muted global variable to true
-                console.log("$rootScope.muted: "+$rootScope.muted);
-                $rootScope.$broadcast('mute', true); //broadcast muted global variable as true
-
-            } else if (event.data === 'unmute') {
-
-                $rootScope.muted = false; //set muted global variable to false
-                console.log("$rootScope.muted: "+$rootScope.muted);
-                $rootScope.$broadcast('mute', false); //broadcast muted global variable as false
-                
-                console.log('unmute video');
-
-            } else if (event.data === 'off') {
-                console.log('turn off');
-                $state.go('black');
-            } else if (event.data === 'on') {
-                console.log('turn on');
-                $state.go('home');
-            }
-        });*/
 
             //Increment the idle time counter.
             $scope.idleInterval = setInterval($scope.timerIncrement, 1000); // 1 second
 
+            //force video loop
+            $scope.myVideo = document.getElementById('bgvid');
+            if (typeof $scope.myVideo.loop == 'boolean') { // loop supported
+                $scope.myVideo.loop = true;
+            } else { // loop property not supported
+                $scope.myVideo.on('ended', function () {
+                this.currentTime = 0;
+                this.play();
+                }, false);
+            }
+            $scope.myVideo.play();
+
+             //load settings data file
+            $http.get('data/settings.json')
+           .then(function(res){
+            //check status of http response
+            console.log("http load json status: "+res.status);
+            if(res.status>=400){
+                //there was some error, use the default settings
+                $scope.settings =
+                {
+                    "live": false,
+                    "remoteUri": "ws://127.0.0.1:9092"
+                };
+            }
+            else{
+                //on data loaded
+                //define settings from loaded json file
+                $scope.settings = res.data;
+            }
+
+            $scope.wsUri = $scope.settings.remoteUri;
+            $scope.showMouse = !$scope.settings.live;
+
+            //connect websocket
+            $scope.connectToServer();
+
+            });
         }
 
         $scope.onMouseMove = function(){
@@ -234,6 +208,9 @@ angular
 
         $scope.onClick = function(){
             $scope.resetTimeout();
+
+            //check to see if bg video is playing
+            $scope.myVideo.play();
         }
 
         $scope.resetTimeout = function(){
@@ -244,7 +221,7 @@ angular
 
         $scope.timerIncrement = function () {
             //only do if we are not already home
-            if($state.current.name != 'home'){
+            if($state.current.name != 'home' && $state.current.name != 'black' && $state.current.name != 'video'){
 
                 $scope.idleTime += 1;
                 if ($scope.idleTime == $scope.warnTime) { // 5 minutes

@@ -62,6 +62,18 @@ body {
   height: 100%;
   overflow: hidden; }
 
+video#bgvid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background: url(../img/bg_water.jpg) no-repeat;
+  background-size: cover; }
+
 #offScreen {
   width: 100%;
   height: 1200px;
@@ -73,7 +85,7 @@ body {
   width: 100%;
   height: 100%; }
   #wrapper #main-view {
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden; }
 
 #timeoutWarning {
@@ -165,34 +177,46 @@ video {
   font-size: 20px; }
   #aboutPages h1 {
     text-transform: uppercase;
-    font-size: 40px; }
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: 40px; }
   #aboutPages h2 {
     font-family: FuturaBold;
     font-size: 20px;
     padding-top: 10px;
     text-transform: uppercase; }
   #aboutPages .aboutPage {
-    padding: 50px;
-    /*		width: 960px;*/ }
-  #aboutPages .credits {
+    padding: 50px; }
+  #aboutPages .centered {
     line-height: 200%;
     text-align: center;
     display: table-cell;
     vertical-align: middle;
     height: 970px;
     width: 1920px; }
+  #aboutPages .credits {
+    line-height: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 120px; }
   #aboutPages .about-left-column {
     float: left;
     width: 45%; }
   #aboutPages .about-right-column {
     float: right;
+    margin-right: 50px;
     width: 45%; }
   #aboutPages .logo {
     /*background: url(../img/ilwu_logo.png) no-repeat;*/
     width: 362px;
-    height: 362px; }
+    height: 362px;
+    margin-bottom: 20px; }
   #aboutPages p {
-    padding: 20px 0px; }
+    padding: 10px 0px; }
+  #aboutPages .source {
+    color: #b9b9b9;
+    font-size: 15px; }
   #aboutPages ul {
     padding: 5px 0px; }
 
@@ -226,7 +250,7 @@ video {
     height: 995px;
     position: relative;
     padding-top: 80px; }
-    #wdysf #wdysf_main #wdysfButton1, #wdysf #wdysf_main #wdysfButton2, #wdysf #wdysf_main #wdysfButton3, #wdysf #wdysf_main #wdysfButton4, #wdysf #wdysf_main #wdysfButton5, #wdysf #wdysf_main #wdysfButton6 {
+    #wdysf #wdysf_main #wdysfButton1, #wdysf #wdysf_main #wdysfButton2, #wdysf #wdysf_main #wdysfButton3, #wdysf #wdysf_main #wdysfButton4, #wdysf #wdysf_main #wdysfButton5, #wdysf #wdysf_main #wdysfButton6, #wdysf #wdysf_main #ilwuButton1, #wdysf #wdysf_main #ilwuButton2, #wdysf #wdysf_main #ilwuButton3 {
       background: url(../img/wdysf_laborrights_alt.jpg);
       width: 580px;
       height: 255px;
@@ -234,7 +258,7 @@ video {
       margin: 0px 5px 5px 0px;
       box-shadow: 0px 0px 50px #000;
       float: left; }
-      #wdysf #wdysf_main #wdysfButton1 span, #wdysf #wdysf_main #wdysfButton2 span, #wdysf #wdysf_main #wdysfButton3 span, #wdysf #wdysf_main #wdysfButton4 span, #wdysf #wdysf_main #wdysfButton5 span, #wdysf #wdysf_main #wdysfButton6 span {
+      #wdysf #wdysf_main #wdysfButton1 span, #wdysf #wdysf_main #wdysfButton2 span, #wdysf #wdysf_main #wdysfButton3 span, #wdysf #wdysf_main #wdysfButton4 span, #wdysf #wdysf_main #wdysfButton5 span, #wdysf #wdysf_main #wdysfButton6 span, #wdysf #wdysf_main #ilwuButton1 span, #wdysf #wdysf_main #ilwuButton2 span, #wdysf #wdysf_main #ilwuButton3 span {
         position: absolute;
         bottom: 0;
         right: 0;
@@ -242,7 +266,7 @@ video {
         font-size: 38px;
         padding: 10px 20px;
         text-transform: uppercase; }
-      #wdysf #wdysf_main #wdysfButton1:before, #wdysf #wdysf_main #wdysfButton2:before, #wdysf #wdysf_main #wdysfButton3:before, #wdysf #wdysf_main #wdysfButton4:before, #wdysf #wdysf_main #wdysfButton5:before, #wdysf #wdysf_main #wdysfButton6:before {
+      #wdysf #wdysf_main #wdysfButton1:before, #wdysf #wdysf_main #wdysfButton2:before, #wdysf #wdysf_main #wdysfButton3:before, #wdysf #wdysf_main #wdysfButton4:before, #wdysf #wdysf_main #wdysfButton5:before, #wdysf #wdysf_main #wdysfButton6:before, #wdysf #wdysf_main #ilwuButton1:before, #wdysf #wdysf_main #ilwuButton2:before, #wdysf #wdysf_main #ilwuButton3:before {
         content: '';
         position: absolute;
         top: 0;
@@ -265,6 +289,18 @@ video {
       width: 640px; }
     #wdysf #wdysf_main #wdysfButton6 {
       background: url(../img/wdysf_intlsolidarity.jpg);
+      width: 640px;
+      margin: 0px 0px 5px 0px; }
+    #wdysf #wdysf_main #ilwuButton1 {
+      background: url(../img/ilwu_votingworkers.jpg);
+      width: 640px;
+      margin: 0px 0px 5px 0px; }
+    #wdysf #wdysf_main #ilwuButton2 {
+      background: url(../img/ilwu_womanlasher.jpg);
+      width: 640px;
+      margin: 0px 0px 5px 0px; }
+    #wdysf #wdysf_main #ilwuButton3 {
+      background: url(../img/ilwu_logo.jpg);
       width: 640px;
       margin: 0px 0px 5px 0px; }
 
@@ -292,12 +328,15 @@ video {
     color: white;
     text-align: center;
     padding: 100px 100px; }
+    #wdysf_quotes .wdysf_quote .quote #year {
+      font-size: 25px;
+      opacity: .5; }
     #wdysf_quotes .wdysf_quote .quote #contButton {
       font-size: 36px;
       color: rgba(255, 255, 255, 0.8);
       width: 300px;
       height: 40px;
-      margin: 100px auto;
+      margin: 50px auto;
       padding: 20px 0px 20px 5px;
       border: 1px solid rgba(255, 255, 255, 0.8);
       background-color: rgba(40, 40, 40, 0.8); }
@@ -326,12 +365,13 @@ footer {
       font-size: 24px;
       opacity: .8; }
   footer h1 {
-    font-family: 'Futura LT Light', Futura, sans-serif;
+    font-family: FuturaBold;
     text-transform: uppercase;
-    padding: 35px;
+    padding: 35px 0px 0px 50px;
     opacity: .8;
     display: inline-block;
-    float: left; }
+    float: left;
+    color: #b9b9b9; }
   footer .homeBtn {
     float: right;
     height: 100%;
@@ -341,22 +381,72 @@ footer {
     line-height: 114px;
     padding: 0px 45px; }
 
+#homeScreen #instruction {
+  text-align: center;
+  width: 100%;
+  font-size: 25px;
+  margin-top: 10px;
+  color: #141414;
+  opacity: .5; }
+#homeScreen #topLevelButtons {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center; }
+#homeScreen .sectionButton {
+  width: 450px;
+  height: 650px;
+  position: relative;
+  margin: 20px 10px;
+  box-shadow: 0px 0px 50px #888888;
+  display: inline-block;
+  background-position: center; }
+  #homeScreen .sectionButton span {
+    position: absolute;
+    width: 80%;
+    bottom: 0;
+    left: -5px;
+    color: white;
+    font-size: 38px;
+    padding: 20px 37px;
+    text-transform: uppercase;
+    text-align: left; }
+  #homeScreen .sectionButton:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom left, transparent 60%, black 90%); }
+
 #timeline {
   white-space: nowrap;
-  display: inline-block; }
+  display: inline-block;
+  overflow: hidden;
+  width: 5550px; }
   #timeline .images {
     clear: both;
     height: 400px; }
     #timeline .images .image {
+      position: relative;
+      transition: box-shadow 0.1s ease;
+      box-shadow: 0px 0px 0px 0px transparent, inset 0px 0px 40px 10px rgba(255, 255, 255, 0.8);
+      z-index: 1;
       display: inline-block;
       border: none;
       height: 400px; }
+      #timeline .images .image:active {
+        box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.8), inset 0px 0px 40px 10px rgba(255, 255, 255, 0.8);
+        z-index: 666; }
       #timeline .images .image img {
-        border-right: 1px solid #b9b9b9; }
+        position: relative;
+        border-right: 1px solid #b9b9b9;
+        z-index: -2; }
     #timeline .images .quote {
       padding: 0px 40px 0px 40px;
       background-color: rgba(185, 185, 185, 0.3);
-      width: 520px;
+      width: 350px;
       height: 400px;
       font-family: 'Futura';
       font-size: 44px;
@@ -372,9 +462,12 @@ footer {
     text-align: center;
     display: inline-block;
     float: left;
-    position: relative; }
+    position: relative;
+    box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 0.8); }
     #timeline #events #arrow-left, #timeline #events #arrow-right {
-      transition: all 0.1s ease;
+      transition: box-shadow 0.1s ease;
+      transition: opacity 0.1s ease;
+      transition: opacity 0.1s ease;
       position: fixed;
       height: 180px;
       padding: 0px 28px 0px 20px;
@@ -409,14 +502,16 @@ footer {
       #timeline #events .text .event {
         font-size: 24px;
         color: #b9b9b9;
-        width: 800px;
+        width: 720px;
         padding-top: 21px;
         display: inline-block;
         position: relative; }
     #timeline #events .top {
-      padding-left: 400px; }
+      padding-left: 0;
+      padding-right: 720px; }
     #timeline #events .bottom {
-      margin-left: 0; }
+      padding-left: 360px;
+      padding-right: 720px; }
     #timeline #events #dates {
       display: inline-block;
       clear: both;
@@ -426,14 +521,16 @@ footer {
       overflow: auto;
       height: 60px;
       font-size: 28px;
-      background-color: rgba(255, 255, 255, 0.5); }
+      background-color: rgba(255, 255, 255, 0.5);
+      padding-left: 180px; }
       #timeline #events #dates .date, #timeline #events #dates .date-top, #timeline #events #dates .date-bottom {
         line-height: 70px;
         height: 100%;
-        width: 400px;
+        width: 360px;
         padding-top: 0px;
         display: inline-block;
-        background-repeat: no-repeat; }
+        background-repeat: no-repeat;
+        float: left; }
       #timeline #events #dates .date-top {
         background-image: url("../img/timeline/up_arrow.png");
         background-position: bottom; }
@@ -473,7 +570,10 @@ footer {
       color: white;
       display: block;
       text-align: right;
-      margin-top: 10px; }
+      margin-top: 10px;
+      font-size: 20px; }
+  #section-detail .visuals.ilwu {
+    width: 1000px; }
   #section-detail .sidebar {
     float: right;
     width: 600px;
@@ -492,6 +592,21 @@ footer {
       font-size: 1.5em;
       line-height: 40px;
       width: 500px; }
+      #section-detail .sidebar .description ol {
+        list-style-type: upper-roman; }
+      #section-detail .sidebar .description #sources {
+        margin-top: 40px;
+        font-size: 10px;
+        color: #b9b9b9; }
+        #section-detail .sidebar .description #sources h1 {
+          text-transform: uppercase;
+          margin: 0px;
+          padding: 0px;
+          line-height: 25px; }
+        #section-detail .sidebar .description #sources .source {
+          font-style: italic;
+          line-height: 20px;
+          font-size: 15px; }
       #section-detail .sidebar .description #backButton {
         font-size: 34px;
         text-transform: uppercase;
@@ -507,5 +622,12 @@ footer {
           float: left; }
         #section-detail .sidebar .description #backButton p {
           width: 200px; }
+  #section-detail .sidebar.ilwu {
+    width: 900px; }
+    #section-detail .sidebar.ilwu .description {
+      width: 770px; }
+
+#section-detail.ilwu.visuals {
+  width: 1000px; }
 
 /*# sourceMappingURL=style.css.map */

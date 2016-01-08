@@ -2,11 +2,11 @@
     <header>
         <h2>What do <strong>you</strong> stand for?</h2>
         <div class="description">         
-            <p>James R. Herman spent his life fighting for many social justice causes. <br>Select the issue that is most relevant to your life, and see the common ground that you and Jimmy share.</p>
+            <p>Jimmy Herman spent his life fighting for social justice.  Select the issue below that represents the common ground you and Jimmy share.</p>
         </div> 
     </header>
     <div id="wdysf_main">
-        <div id="wdysfButton{{$index+1}}" ng-repeat="issue in issuePages" ui-sref="quote({issue:issue.id})" ng-click="setCurrentIssue(issue)">
+        <div id="wdysfButton{{$index+1}}" ng-repeat="issue in issuePages" ui-sref="quote({issue:issue.id})" ng-click="setCurrentIssue(issue)" style="background: url(img/wdysf/thumbs/{{issue.imageID}}.jpg);">
             <span>{{issue.title}}</span>
         </div>
     </div>

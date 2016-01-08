@@ -1,0 +1,16 @@
+<!--ABOUT THE ILWU SECTION -->
+<div id="wdysf">
+    <header>
+        <h2>The International Longshore and Warehouse Union</h2>
+        <div class="description">         
+            <p>There is Absolute Democracy in the International Longshore and Warehouse Union’s Affairs.</p>
+        </div> 
+    </header>
+    <div id="wdysf_main">
+        <div id="ilwuButton{{$index+1}}" ng-repeat="ilwu in ilwuPages" ui-sref="about_ilwu_desc({ilwu:ilwu.id})" ng-click="setCurrentIlwu(ilwu)">
+            <span>{{ilwu.title}}</span>
+        </div>
+    </div>
+</div>
+
+

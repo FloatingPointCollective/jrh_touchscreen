@@ -4,38 +4,37 @@
 
     		<img src="img/timeline/small/{{image.id}}.jpg" ng-switch-when="" >
     		
-    		<div class="quote" ng-switch-default>
+    		<div class="quote" ng-switch-default style="width:{{image.width}}px">
     			{{image.quote}}
     		</div>
 
     	</div>
     </div>
-    <div id="events">
-        
+    <div id="events" style="margin-left:{{eventsX}}px">
 
     	<!--EVENT TEXT TOP-->
     	<div class="text top" >
-    		<div class="event" ng-repeat="event in events" ng-if="$index%2==1">
+    		<div class="event" ng-repeat="event in events" ng-if="$index%2==0" ng-click="clickOnDetailById(event.imageID)" style="width:{{event.width}}px">
     			{{event.text}}
     		</div>
     	</div>
 
     	<!--YEARS-->
     	<div id="dates">
-    		<div class="date-{{$index%2 ? 'bottom':'top'}}" ng-repeat="event in events">
+    		<div class="date-{{$index%2 ? 'top':'bottom'}}" ng-repeat="event in events" ng-click="clickOnDetailById(event.imageID)" style="padding-left:{{event.shift}}px">
     			{{event.year}}
     		</div>
     	</div>
 
     	<!--EVENT TEXT BOTTOM-->
     	<div class="text bottom">
-    		<div class="event" ng-repeat="event in events" ng-if="$index%2==0">
+    		<div class="event" ng-repeat="event in events" ng-if="$index%2==1" ng-click="clickOnDetailById(event.imageID)"style="padding-left:{{event.shift}}px">
     			{{event.text}}
     		</div>
     	</div>
 
-        <div id="arrow-left" ng-click="scroll(-1)"><div class="arrow"></div></div>
-        <div id="arrow-right" ng-click="scroll(1)"><div class="arrow"></div></div>
+        <div id="arrow-left" style="margin-left:{{-eventsX}}px" ng-click="scroll(-1)" ng-show="showLeftArrow"><div class="arrow"></div></div>
+        <div id="arrow-right" ng-click="scroll(1)"ng-show="showRightArrow"><div class="arrow"></div></div>
 
     </div>
 
@@ -44,7 +43,7 @@
 
     		<img src="img/timeline/small/{{image.id}}.jpg" ng-switch-when="">
 
-    		<div class="quote" ng-switch-default>
+    		<div class="quote" ng-switch-default style="width:{{image.width}}px">
     			{{image.quote}}
     		</div>
 

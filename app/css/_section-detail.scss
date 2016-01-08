@@ -1,3 +1,5 @@
+
+
 #section-detail {
 		background-color: rgba(0,0,0,.8);
 		padding-top: 0px;
@@ -39,9 +41,16 @@
 				display:block;
 				text-align: right;
 				margin-top: 10px;
+				font-size: 20px;
 			}
 		}
 
+
+		.visuals.ilwu{
+			width: 1000px;
+		}
+
+		
 
 		.sidebar {
 			float: right;
@@ -66,6 +75,26 @@
 				font-size: 1.5em;
 				line-height: 40px;
 				width: 500px;
+				ol{
+					list-style-type: upper-roman;
+				}
+
+				#sources{
+					margin-top: 40px;
+					font-size: 10px;
+					color: $light-grey;
+					h1{
+						text-transform: uppercase;
+						margin: 0px;
+						padding: 0px;
+						line-height: 25px;
+					}
+					.source{
+						font-style: italic;
+						line-height: 20px;
+						font-size: 15px;
+					}
+				}
 
 				#backButton {
 					font-size: 34px;
@@ -89,4 +118,17 @@
 				}
 			}
 		}
+
+		.sidebar.ilwu{
+			width:900px;
+			.description{
+				width: 770px;
+			}
+		}
 	}
+
+#section-detail.ilwu.visuals{
+			width: 1000px;
+		}
+
+	

@@ -1,0 +1,15 @@
+*.DS_Store
+*.mp4
+*.ogg
+*.webm
+*.DS_Store
+.DS_Store
+<<<<<<< HEAD
+
+app/data/settings.json
+=======
+!bg_video.mp4
+!bg_video.webm
+!bg_video.ogv
+app/data/settings.json
+>>>>>>> gh-pages

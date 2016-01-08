@@ -4,5 +4,7 @@
 *.webm
 *.DS_Store
 .DS_Store
-
+!bg_video.mp4
+!bg_video.webm
+!bg_video.ogv
 app/data/settings.json

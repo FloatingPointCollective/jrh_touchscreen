@@ -6,21 +6,30 @@
 #timeline{
 	white-space: nowrap;
 	display: inline-block;
+	overflow: hidden;
+	width: 5550px;
 	.images{
 		clear:both;
 		height: 400px;
 		.image{
+			
+			position: relative;
+			@include shadowDown();
 			display: inline-block;
 			border:none;
 			height: 400px;
+			
+
 			img{
+				position: relative;
 				border-right: 1px solid $light-grey;
+				z-index: -2;
 			}
 		}
 		.quote{
 			padding: 0px 40px 0px 40px;
 			background-color: rgba(185,185,185,.3);
-			width: 520px;
+			width: 350px;
 			height: 400px;
 			font-family: 'Futura';
 			font-size: 44px;
@@ -39,14 +48,17 @@
 		display: inline-block;
 		float: left;
 		position: relative;
+		box-shadow: inset 0px 0px 40px 10px rgba(0,0,0,.8);
 
-		$eventWidth: 400px;
+		$eventWidth: 360px;
 
 		$arrowColor: $dark-grey;
 		$arrowWidth: 30px;
 
 		#arrow-left{
-			transition: all 0.1s ease;
+			transition: box-shadow 0.1s ease;
+			transition: opacity 0.1s ease;
+			transition: opacity 0.1s ease;
 			position: fixed;
 			height: 180px;
 			padding: 0px 28px 0px 20px;
@@ -97,11 +109,13 @@
 			}
 		}
 		.top{
-			padding-left: $eventWidth;
+			padding-left: 0;
+			padding-right: $eventWidth*2;
 		}
 
 		.bottom{
-			margin-left: 0;
+			padding-left: $eventWidth;
+			padding-right: $eventWidth*2;
 		}
 		#dates{
 			display: inline-block;
@@ -113,6 +127,7 @@
 			height: 60px;
 			font-size: 28px;
 			background-color: rgba(255,255,255,.5);
+			padding-left: $eventWidth/2;
 			.date{
 				line-height: 70px;
 				height: 100%;
@@ -120,6 +135,7 @@
 				padding-top: 0px;
 				display: inline-block;
 				background-repeat: no-repeat;
+				float:left;
 			}
 			.date-top{
 				@extend .date;

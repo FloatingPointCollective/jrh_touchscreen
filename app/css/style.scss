@@ -1,5 +1,6 @@
 @import '_colors';
 @import '_fonts';
+@import '_mixins';
 
 .clearfix:after {
      visibility: hidden;
@@ -53,6 +54,14 @@ body{
   	overflow: hidden;
 }
 
+video#bgvid {
+position: fixed; right: 0; bottom: 0;
+min-width: 100%; min-height: 100%;
+width: auto; height: auto; z-index: -100;
+background: url(../img/bg_water.jpg) no-repeat;
+background-size: cover;
+}
+
 #offScreen {
 	width:100%;
 	height: 1200px;
@@ -65,7 +74,7 @@ body{
 	width: 100%;
 	height: 100%;
 	#main-view{
-		overflow-x: scroll;
+		overflow-x: hidden;
 		overflow-y: hidden;
 		
 	}
@@ -177,6 +186,8 @@ video{
 	h1 {
 		text-transform: uppercase;
 		font-size: 40px;
+		margin-bottom: 10px;
+		margin-top: 40px;
 	}
 
 	h2{
@@ -188,16 +199,23 @@ video{
 
 	.aboutPage{
 		padding: 50px;
-/*		width: 960px;*/
 	}
 
-	.credits {
+	.centered {
 		line-height: 200%;
 		text-align: center;
 		display: table-cell;
 		vertical-align: middle;
 		height: 970px;
 		width: 1920px;
+	}
+
+	.credits{
+		line-height: 30px;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding-bottom: 120px;
 	}
 
 	.about-left-column {
@@ -207,6 +225,7 @@ video{
 
 	.about-right-column {
 		float: right;
+		margin-right: 50px;
 		width: 45%;
 	}
 
@@ -214,14 +233,24 @@ video{
 		/*background: url(../img/ilwu_logo.png) no-repeat;*/
 		width: 362px;
 		height: 362px;
+		margin-bottom: 20px;
 	}
 
 	p {
-		padding: 20px 0px;
+		padding: 10px 0px;
+	}
+
+	.source{
+		color: $light-grey;
+		font-size: 15px;
 	}
 
 	ul {
 		padding: 5px 0px;
+	}
+
+	br{
+
 	}
 
 	
@@ -326,6 +355,27 @@ video{
 			width: 640px;
 			margin: 0px 0px 5px 0px;
 		}
+
+		#ilwuButton1 {
+			@extend #wdysfButton1;
+			background: url(../img/ilwu_votingworkers.jpg);
+			width: 640px;
+			margin: 0px 0px 5px 0px;
+		}
+
+		#ilwuButton2 {
+			@extend #wdysfButton1;
+			background: url(../img/ilwu_womanlasher.jpg);
+			width: 640px;
+			margin: 0px 0px 5px 0px;
+		}
+
+		#ilwuButton3 {
+			@extend #wdysfButton1;
+			background: url(../img/ilwu_logo.jpg);
+			width: 640px;
+			margin: 0px 0px 5px 0px;
+		}
 	}
 }
 
@@ -358,12 +408,17 @@ video{
 			text-align: center;
 			padding: 100px 100px;
 
+			#year{
+				font-size: 25px;
+				opacity: .5;
+			}
+
 			#contButton {
 				font-size: 36px;
 				color: rgba(255, 255, 255, .8);
 				width: 300px;
 				height: 40px;
-				margin: 100px auto;
+				margin: 50px auto;
 				padding: 20px 0px 20px 5px;
 				border: 1px solid rgba(255, 255, 255, .8);
 				background-color: rgba(40,40,40,0.8);
@@ -401,12 +456,13 @@ footer{
 	}
 
 	h1{
-		font-family: 'Futura LT Light', Futura, sans-serif;
+		font-family: FuturaBold;
 		text-transform: uppercase;
-		padding: 35px;
+		padding: 35px 0px 0px 50px;
 		opacity: .8;
 		display: inline-block;
 		float: left;
+		color: $light-grey;
 	}
 
 	.homeBtn{
@@ -420,6 +476,7 @@ footer{
 	}
 }
 
+@import '_home';
 @import '_timeline';
 @import '_section-detail';
 

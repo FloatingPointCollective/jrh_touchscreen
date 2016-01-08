@@ -4,28 +4,15 @@ angular
 
     $scope.showMouse = true;
     $scope.showHomeScreen = false;
-    // $scope.showIssues= true;
-    // $scope.activeAboutPage = null;
-    // $scope.debug = false;
     $scope.issueId = $stateParams.issue;
     $scope.setCurrentIssue = setCurrentIssue;
     $scope.clearCurrentIssue = clearCurrentIssue;
 
     console.log($stateParams);
 
-    // $scope.getIssue = function(id) {
-    //     return $scope.issuePages.filter(function(issue) {
-    //         return issue.id == id;
-    //     })[0];
-    // }
-
-    // $scope.issue = $scope.getIssue($stateParams.issueId);
-
     function setCurrentIssue(issue) {
         console.log(issue.id);
         WebSocket.send(issue.id); //send issue to LED Control machine
-        //$scope.currentIssue = issue;
-//        $state.go('quote', {issue: issue.title});
     }
 
     function clearCurrentIssue() {
@@ -37,54 +24,57 @@ angular
         {   
             id: 1,
             title:'Labor Rights', 
-            quote:'"The ultimate corruption is seen in the vast numbers of unemployment, the denial of a secure and dignified retirement, the denial of childcare to working mothers."', 
-            description:'Herman devoted his life to improving the situation of working people everywhere. His labor activism began when he joined the Marine Cooks and Stewards Union, which advocated to increase the wages for “low-level” jobs, such as cooking and cleaning, on luxury ocean liners. After settling in San Francisco in 1947, he spent the rest of his life fighting for fair wages and  benefits for his fellow ILWU constituents, as well as for members of other unions and working people worldwide.', 
-            imageID:'laborRights', 
-            caption:''
+            quote:'"The ultimate corruption is seen in the vast numbers of unemployment, the denial of a secure and dignified retirement, the denial of childcare to working mothers."',
+            year:"1973",
+            description:'Jimmy devoted his life to helping working people everywhere.  His labor activism began when he led a successful strike at age 15.  His commitment expanded when he joined the National Union of Marine Cooks and Stewards (MCS), an organization representing workers on ocean liners and other vessels.  Jimmy identified with the MCS’s inclusionary, anti-racist politics of the 1940’s. His work with the MCS drew him to the International Longshore and Warehouse Union, which he later joined a few years after settling in San Francisco in 1947.  In the ILWU, he spent decades advocating for universal workers’ rights.', 
+            imageID:'laborrights', 
+            caption:'Leroy King, ILWU Local 6; Jack Henning, California Labor Federation; Cesar Chavez, United Farm Workers; unidentified; and Jimmy Herman protest against California Proposition 22, which would have outlawed strikes and job actions by agricultural workers, 1972 (ILWU Archives).'
         },
         {   
             id: 2,
             title:'Rehabilitation', 
-            quote:'"Mimi Silbert created an organization that resurrects people, that understands human failure, that has a point of view about what should and can and must be done … It is a microcosm worthy of everybody imitating, where people of all colors and races and ethnic groups, with every description of tough backgrounds you can imagine, come together, form a family, emerge as the people they were intended to be with their lives straightened out because there is such an organization under such dedicated leadership."', 
-            description:'Herman approached Mimi Silbert in the early 1970s after he heard about the Delancey Street Foundation, a center she founded to treat people with drug and alcohol addiction, and provide employment for the homeless and ex-convicts getting back on their feet. Herman was worried about members of the union with serious drug and alcohol problems, and wanted to find a way to help them. Under his lead, the ILWU formed a very progressive policy towards members with alcoholism and drug addiction, which advocated treatment over termination.', 
+            quote:'"[The Delancey Street Foundation is] an organization that resurrects people, that understands human failure, that has a point of view about what should and can and must be done … It is a microcosm worthy of everybody imitating, where people of all colors and races and ethnic groups, with every description of tough backgrounds you can imagine, come together, form a family, emerge as the people they were intended to be with their lives straightened out because there is such an organization under such dedicated leadership."',
+            year:"1991",
+            description:'Jimmy believed in giving people a second chance.  In the 1970s, he discovered the Delancey Street Foundation, a San Francisco nonprofit dedicated to treating people with drug and alcohol addiction and providing them with job training and employment. Jimmy worked with the International Longshore and Warehouse Union and the Port Commission to help the Delancey Street Foundation secure waterfront property for its housing and other facilities.  Jimmy was also integral in forming the ILWU’s progressive policies toward members with drug and alcohol addiction, advocating treatment over termination.', 
             imageID:'rehabilitation', 
-            caption:'From Delancey Street Website - Mimi Silbert, founder of Delancey Street, then San Francisco Mayor Dianne Feinstein and James R. Herman break ground at the future home of the Delancey Street Foundation in Pacific Heights.'
+            caption:'Mimi Silbert, Dianne Feinstein, and Jimmy Herman break ground for the new Delancey Street home (Delancey Street Foundation)'
         },
         {
             id: 3,
             title:'Economic Justice', 
-            quote:'"How do you explain the American dream to kids without school lunches, to teenagers with nothing better to do than hang out, or to workers and farmers whose homes and farms have been foreclosed, to people without medical care who are physically hurting, and to some - too many - who are without food?"', 
-            description:'Herman dreamed of a world where the working class got a fair chance and spent his career advocating for stable jobs for underprivileged citizens. He criticized President Reagan’s “trickle-down” economic policy and his military spending, arguing that they would increase inflation, imbalance the federal budget, and make the rich richer and the poor poorer. He pushed the union to strategize and unify to create a coherent economic program that supported a bigger job market and higher wages. Just as Herman advocated for the rights of union members, like better wages and health care benefits, he also fought for job creation so that everyone who wanted a job could have one. He led the union during a time of transition in the United States, from a manufacturing to a service-based economy, and tried to accommodate modernization and mechanization while maintaining job placement for ILWU members. He sympathized with those who wanted to work but couldn’t, and fought to find a balance with the shipping companies to maintain longshore jobs along the coast.', 
+            quote:'"How do you explain the American dream to kids without school lunches, to teenagers with nothing better to do than hang out, or to workers and farmers whose homes and farms have been foreclosed, to people without medical care who are physically hurting, and to some - too many - who are without food?"',
+            year:"1983", 
+            description:'Jimmy dreamed of a world in which the working class got a fair chance. He criticized President Ronald Reagan’s “trickle down” economic policies and U.S. military spending for perpetuating wealth inequality.  Under his leadership, the International Longshore and Warehouse Union fought for both improved working conditions for its members and job creation for all workers.  He struggled to preserve work opportunities as the U.S. changed from a manufacturing to a service economy while negotiating to preserve longshore jobs in an increasingly mechanized waterfront.', 
             imageID:'econjustice', 
-            caption:''
+            caption:'Jimmy speaks at United Farm Workers Convention, 1977 (ILWU Archives)'
         },
         {   
             id: 4,
             title:'Civil Rights', 
-            quote:'"Racism runs deep in this country. It got off the boat with the first settlers and the first slaves hundreds of years ago. We have made some small progress perhaps, but I fear that in times of great stress and uncertainty that it will strike with renewed venom. We must be committed as a union that our full resources will be used in the struggle against it."', 
-            description:'Herman began his union career in the Marine Cooks and Stewards Union, one of the first racially integrated unions in the U.S. When he joined the ILWU it already had a reputation for fair employment for workers of all ethnicities. As ILWU President he worked alongside other union leaders to implement contracts, memorandums, and agreements that clearly defined the policies of the ILWU to eliminate racial discrimination. Herman also fought against racial prejudice outside the union. He led numerous boycotts against South Africa’s apartheid government, even getting arrested for his actions at one anti-apartheid protest in 1985. He also pushed for reparations to workers of Japanese heritage who had been interned during WWII. Herman consistently voiced his concerns to allow immigrants to have equal working rights as US Citizens. His work in support of the United Farm Workers union benefitted many immigrants from Mexico and Latin America, who came north to work in low paid agriculture jobs in California.', 
+            quote:'“Racism runs deep in this country. It got off the boat with the first settlers and the first slaves hundreds of years ago. We have made some small progress perhaps, but I fear that in times of great stress and uncertainty that it will strike with renewed venom. We must be committed as a union that our full resources will be used in the struggle against it."',
+            year:"1981", 
+            description:'Jimmy spent a lifetime calling for civil rights for all.  While still a young man, he joined the National Union of Marine Cooks and Stewards, one of the first racially integrated unions in the U.S. After joining the International Longshore and Warehouse Union, he fought discriminatory hiring and integrated his own local.  Jimmy’s anti-racist vision extended beyond the union hall and the workplace.  While he was ILWU International President, the union participated in civil rights protests, opposed apartheid by boycotting South African cargo, and advocated for reparations to Japanese Americans interned during World War II.', 
             imageID:'civilrights', 
-            caption:'Herman and Desmond Tutu at an anti-apartheid rally'
+            caption:'Jimmy meets with Desmond Tutu, 1986 (ILWU Archives, photo by George Kruse)'
         },
         {
             id: 5,
             title:'Affordable Housing', 
-            quote:'"There is no greater priority in San Francisco than the construction of housing for low and middle income working people."', 
-            description:'Herman firmly backed efforts to increase affordable housing in San Francisco, and did not want to see the working class driven out of the city. In 1963, under the leadership of Lou Goldblatt, the ILWU battled with the federal government and real estate companies to build St. Francis Square, a housing development for union members in the heart of the city that was owned and run by the residents. Building on the success of St. Francis Square, Herman continued affordable housing efforts in 1984 with the Amancino Ergina Affordable Housing project, which advanced pension funds to build low- and moderate-income family housing in San Francisco.', 
+            quote:'"There is no greater priority in San Francisco than the construction of housing for low and middle income working people."',
+            year:"1978", 
+            description:'Jimmy did not want to see the working class driven out of town due to high housing costs.  He advocated for increased low cost housing in San Francisco while building on the International Longshore and Warehouse Union’s record of investing in affordable developments.  In 1963, the ILWU drew upon longshore pension funds to build St. Francis Square, an affordable housing development owned and run by residents in the heart of the city.  Jimmy expanded upon such efforts in 1984 with the Amancio Ergina development, which also utilized union resources to build low and moderate income family housing.', 
             imageID:'affordablehousing', 
-            caption:'Amancino Ergina Groundbreak - Western Addition, 1984'
+            caption:'Amancio Ergina Groundbreaking in San Francisco’s Western Addition, 1984 (ILWU Archives)'
         },
         {
             id: 6,
             title:'International Solidarity', 
-            quote:'"[We have] the solemn obligation of […] looking at the world around us, where there are things happening that we disagree with […] and [mobilizing] to extend a hand of friendship and brotherhood to those people engaged in struggle for democracy and decency."', 
-            description:'Just as Herman fought for the rights of union members and working people, he also helped shaped the policies of the ILWU to reflect a larger worldview, supporting the rights of marginalized people all over the world. Herman traveled to Japan, Canada, Australia and other countries with active ports to help international unions organize. He also lent support of the union to help shape international policy, such as protesting the apartheid government in South Africa, and boycotting Salvadoran coffee in protest against the brutal death squads of the government in El Salvador.', 
+            quote:'"[We have] the solemn obligation of … looking at the world around us, where there are things happening that we disagree with … and [mobilizing] to extend a hand of friendship and brotherhood to those people engaged in struggle for democracy and decency."', 
+            year:"1988",
+            description:'The International Longshore and Warehouse Union has a storied history of working in solidarity with struggling people across the globe.  Jimmy’s predecessor, ILWU International President Harry Bridges, said, "sure as hell--that’s our job--that’s our privilege--that’s our right--that’s our duty."  Jimmy carried on that tradition, traveling to Japan, Canada, Australia, and other countries to demonstrate ILWU solidarity. Under his leadership, the ILWU sent strong messages to countries with oppressive regimes, boycotting South African Cargo to protest apartheid, refusing to handle munitions headed to Chile to support a military junta, and refusing to unload Salvadoran coffee in response to death squads.', 
             imageID:'intlsolidarity', 
-            caption:''
+            caption:'Jimmy leads a boycott of Salvadoran coffee to protest the El Salvadoran government’s sanctioned death squads, 1989 (ILWU Archives)'
         }
     ];
-
-    
-
 
 }]);

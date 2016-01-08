@@ -1,13 +1,14 @@
 <!-- WDYSF QUOTE-->
 <div id="wdysf_quotes">
-    <div class="wdysf_quote" ng-repeat="issue in issuePages" ng-show="issue.id === issueId">
+    <div class="wdysf_quote">
         <div class="intro">
             <h1>Jimmy Herman on</h1>
-            <h2>{{issue.title}}</h2>
+            <h2>{{issuePages[issueId-1].title}}</h2>
         </div>
         <div class="quote">
-            <div>{{issue.quote}}</div>
-            <div id="contButton" ui-sref="synopsis({issue:issue.id})">Continue
+            <div>{{issuePages[issueId-1].quote}}</div>
+            <div id="year">{{issuePages[issueId-1].year}}</div>
+            <div id="contButton" ui-sref="synopsis({issue:issueId})">Continue
                 <img src="img/continue_arrow.png"/>
             </div>
         </div>

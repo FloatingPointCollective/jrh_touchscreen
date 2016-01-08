@@ -1,0 +1,30 @@
+<!-- ABOUT ILWU DESCRIPTION-->
+<div id="section-detail" class="ilwu">
+    <div>
+        <div class="visuals ilwu">
+
+            <div class="photo">
+                
+                <img src="img/{{ilwuPages[ilwuId-1].imageID}}.jpg">
+                <div class="caption">{{ilwuPages[ilwuId-1].caption}}</div>
+
+            </div>
+        </div>
+    <div class="sidebar ilwu">
+        <div class="intro">
+            <h2>{{ilwuPages[ilwuId-1].title}}</h2>
+        </div>
+        <div class="description">
+             <!-- PARTIAL FOR DESCRIPTION TEXT -->
+            <div>
+                <ng-include src="'partials/about_ilwu/' + ilwuId + '.html'"></ng-include>
+            </div>
+            <div id="backButton" ui-sref="about_ilwu">
+                <div>
+                    <img src="img/arrow_left.png" />
+                    <p>Back</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
